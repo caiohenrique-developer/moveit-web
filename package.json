@@ -1,15 +1,48 @@
 {
-  "name": "moveit-next",
+  "name": "moveit-web",
+  "description": "🙅‍♂️ This app suggests that you stretch your body if you stay in the same position for a long time.",
+  "main": "index.js",
+  "repository": "https://github.com/caiohenrique-developer/moveit-web.git",
+  "bugs": {
+    "url": "https://github.com/caiohenrique-developer/moveit-web/issues"
+  },
+  "author": "Caio Henrique <caiohenrique.developer@gmail.com> (https://github.com/caiohenrique-developer)",
   "version": "0.1.0",
+  "license": "MIT",
   "private": true,
+  "keywords": [],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "commit": "git-cz",
+    "release": "semantic-release --no-ci"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "./.cz-config.js"
+    }
   },
   "dependencies": {
     "next": "10.0.7",
     "react": "17.0.1",
     "react-dom": "17.0.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.0.0",
+    "@commitlint/config-conventional": "^12.0.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@types/node": "^14.14.31",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "commitizen": "^4.2.3",
+    "cz-customizable": "^6.3.0",
+    "husky": "^5.1.1",
+    "semantic-release": "^17.3.9",
+    "typescript": "^4.1.5"
   }
 }

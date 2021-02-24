@@ -72,7 +72,7 @@ export function CountDown() {
                                         onClick={resetContDown}
                                     >
                                         Abandonar ciclo
-                                        <img src="icons/close.svg" alt="Close icon - To abandon a cycle" />
+                                        <img src="icons/close-white.svg" alt="Close icon - To abandon a cycle" />
                                     </button>
                                 ) : (
                                         <button

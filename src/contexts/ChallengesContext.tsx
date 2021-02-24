@@ -7,6 +7,7 @@ interface ChallengesProviderProps { children: ReactNode; }
 
 interface Challenge {
     type: 'body' | 'eye';
+    title: string;
     description: string;
     amount: number;
 }

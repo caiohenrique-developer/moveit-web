@@ -66,3 +66,5 @@
     background: var(--red);
     color: var(--white);
 }
+
+.countDownButtonActive:not(:hover) > img { filter: invert(1); }

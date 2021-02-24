@@ -3,7 +3,7 @@ import styles from '../styles/components/Profile.module.css'
 export function Profile() {
     return (
         <div className={styles.profileContainer}>
-            <img src="https://github.com/caiohenrique-developer.png" alt="Profile avatar GitHub" />
+            <img src="github-profile-avatar.jpeg" alt="GitHub profile avatar" />
             <div>
                 <strong> Caio Henrique </strong>
                 <p>

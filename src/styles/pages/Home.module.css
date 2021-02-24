@@ -15,3 +15,9 @@
     gap: 6.25rem;
     align-items: center;
 }
+
+.container section > div:last-child {
+    display: block;
+    height: 100%;
+    max-height: 530px;
+}

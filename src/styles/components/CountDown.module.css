@@ -46,4 +46,25 @@
     transition: 0.2s;
 }
 
-.countDownButton:hover { background: var(--blue-dark); }
+.countDownButton img { margin: 0 5px; }
+
+.countDownButton:not(:disabled):hover { background: var(--blue-dark); }
+
+.countDownButton:disabled {
+    background: var(--white);
+    color: var(--text);
+    cursor: not-allowed;
+    border-bottom: 4px solid var(--green);
+}
+
+.countDownButtonActive {
+    background: var(--white);
+    color: var(--title);
+}
+
+/* .countDownButtonActive img { filter: invert(1); } */
+
+.countDownButtonActive:not(:disabled):hover {
+    background: var(--red);
+    color: var(--white);
+}

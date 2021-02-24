@@ -1,0 +1,25 @@
+.challengeBoxContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+    height: 100%;
+    background: var(--white);
+    border-radius: 5px;
+    box-shadow: 0 0 60px rgba(0,0,0,0.05);
+    padding: 1.5rem 2rem;
+}
+
+.challengeNotActive {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.challengeNotActive strong {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.4;
+}

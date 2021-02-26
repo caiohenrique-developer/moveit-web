@@ -19,3 +19,28 @@
 <p align="center">
   🚧 WIP - Work in Progess... 🚧
 </p>
+
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+## ☎ Contact Me
+
+<p align="left">
+  <img align="left" alt="Profile Avatar" src="./public/professional.png" width="80" />
+
+  <br>
+
+  <img align="center" alt="LinkedIn" src="https://img.shields.io/badge/Caio%20Henrique-0077B5?logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/caio-henrique-024627171/&style=flat-square" />
+  <img align="center" alt="Gmail" src="https://img.shields.io/badge/caiohenrique.developer@gmail.com-D14836?logo=gmail&logoColor=white&link=mailto:caiohenrique.developer@gmail.com&style=flat-square" />
+  <img align="center" alt="Whatsapp" src="https://img.shields.io/badge/(11)%2094390%202438-25D366?style=social&logo=whatsapp&logoColor=black&link=tel:5511943902438" />
+</p>
+
+<!-- ![Profile Views](https://komarev.com/ghpvc?username=caiohenrique-developer) -->
+
+<br>
+
+---
+
+<blockquote align="center">“Always running in search of the goals!”</blockquote>

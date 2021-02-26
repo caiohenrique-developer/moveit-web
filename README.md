@@ -32,12 +32,16 @@
 
   <br>
 
-  <img align="center" alt="LinkedIn" src="https://img.shields.io/badge/Caio%20Henrique-0077B5?logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/caio-henrique-024627171/&style=flat-square" />
-  <img align="center" alt="Gmail" src="https://img.shields.io/badge/caiohenrique.developer@gmail.com-D14836?logo=gmail&logoColor=white&link=mailto:caiohenrique.developer@gmail.com&style=flat-square" />
-  <img align="center" alt="Whatsapp" src="https://img.shields.io/badge/(11)%2094390%202438-25D366?style=social&logo=whatsapp&logoColor=black&link=tel:5511943902438" />
+  <a href="https://www.linkedin.com/in/caio-henrique-024627171">
+    <img align="center" alt="LinkedIn" src="https://img.shields.io/badge/Caio%20Henrique-0077B5?logo=linkedin&logoColor=white&style=flat-square" />
+  </a>
+  <a href="mailto:caiohenrique.developer@gmail.com">
+    <img align="center" alt="Gmail" src="https://img.shields.io/badge/caiohenrique.developer@gmail.com-D14836?logo=gmail&logoColor=white&style=flat-square" />
+  </a>
+  <a href="tel:5511943902438">
+    <img align="center" alt="Whatsapp" src="https://img.shields.io/badge/(11)%2094390%202438-25D366?style=social&logo=whatsapp&logoColor=black" />
+  </a>
 </p>
-
-<!-- ![Profile Views](https://komarev.com/ghpvc?username=caiohenrique-developer) -->
 
 <br>
 

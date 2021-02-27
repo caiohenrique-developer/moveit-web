@@ -1,14 +1,10 @@
-### <a href="top"></a>
+### <a name="top"></a>
 
-<a href="top"></a>
+<p>teste</p>
 
 ### <a name="abcd"></a>
 
-<a name="abcd"></a>
-
-### <a name="head1234"></a>A Heading in this SO entry!
-
-[🔝](#top)
+<!-- <a name="abcd"></a> -->
 
 <a href="#contact-me-phone">Contact Me ☎</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#-contact-me-">Contact Me</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -70,22 +66,13 @@
 ## Contact Me ☎
 ## Contact Me :phone:
 
-and we can even [link](#head1234) to it so:
-
 [🔝](#top)
-[🔝](#logotipo)
-[🔝](#flying_saucer-technologies)
-[🔝](##flying_saucer-technologies)
 
-<a href="head1234">head1234</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-
-<a href="abcd">abcd</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 
 [top](#top)
 
 [abcd](#abcd)
 
-[head1234](#head1234)
 
 
 

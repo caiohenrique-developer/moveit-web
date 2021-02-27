@@ -1,4 +1,28 @@
+### <a href="top"></a>
+
 <a href="top"></a>
+
+### <a name="abcd"></a>
+
+<a name="abcd"></a>
+
+### <a name="head1234"></a>A Heading in this SO entry!
+
+[🔝](#top)
+
+<a href="#contact-me-phone">Contact Me ☎</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#-contact-me-">Contact Me</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+
+
+
+
+
+
 
 <h1 align="center">
   <a href="logotipo">
@@ -40,12 +64,39 @@
 <br><br>
 <br><br>
 
-##  Contact Me ☎
+
+
+
+## Contact Me ☎
+## Contact Me :phone:
+
+and we can even [link](#head1234) to it so:
 
 [🔝](#top)
 [🔝](#logotipo)
 [🔝](#flying_saucer-technologies)
 [🔝](##flying_saucer-technologies)
+
+<a href="head1234">head1234</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+
+<a href="abcd">abcd</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+
+[top](#top)
+
+[abcd](#abcd)
+
+[head1234](#head1234)
+
+
+
+
+
+
+
+
+
+
+
 
 <p align="left">
   <img align="left" alt="Profile Avatar" src="./public/professional.png" width="80" />

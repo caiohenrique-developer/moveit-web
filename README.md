@@ -1,3 +1,5 @@
+<a href="#top"></a>
+
 <h1 align="center">
   <!-- <a href="#logotipo"> -->
     <img alt="Move.it logotipo" src="./public/logo-full.svg" />
@@ -7,6 +9,14 @@
 <h5 align="center">
     🙅‍♂️ This app suggests that you stretch your body if you stay in the same position for a long time.
 </h5>
+
+<p align="center">
+  <a href="#flying_saucer-technologies">🛸 Technologies</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#warning-prerequisites">⚠️ Prerequisites</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#grey_question-how-to-use">❔ How To Use</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#bookmark-badges">🔖 Badges</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#closed_lock_with_key-license">🔐 License</a>
+</p>
 
 <br><br>
 
@@ -25,7 +35,12 @@
 <br><br>
 <br><br>
 
-## ☎ Contact Me
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+## [🔝](#top) Contact Me ☎
 
 <p align="left">
   <img align="left" alt="Profile Avatar" src="./public/professional.png" width="80" />

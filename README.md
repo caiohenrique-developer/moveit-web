@@ -1,9 +1,9 @@
-<a href="#top"></a>
+<a href="top"></a>
 
 <h1 align="center">
-  <!-- <a href="#logotipo"> -->
+  <a href="logotipo">
     <img alt="Move.it logotipo" src="./public/logo-full.svg" />
-  <!-- </a> -->
+  </a>
 </h1>
 
 <h5 align="center">
@@ -40,7 +40,12 @@
 <br><br>
 <br><br>
 
-## [🔝](#top) Contact Me ☎
+##  Contact Me ☎
+
+[🔝](#top)
+[🔝](#logotipo)
+[🔝](#flying_saucer-technologies)
+[🔝](##flying_saucer-technologies)
 
 <p align="left">
   <img align="left" alt="Profile Avatar" src="./public/professional.png" width="80" />

@@ -1,10 +1,12 @@
-## <a name="top"></a>
+### <a name="top"></a>
 
 <h1 align="center">
   <a href="logotipo">
     <img alt="Move.it logotipo" src="./public/logo-full.svg" />
   </a>
 </h1>
+
+<a href="#-contact-me-">Contact Me ☎</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 
 <h5 align="center">
     🙅‍♂️ This app suggests that you stretch your body if you stay in the same position for a long time.
@@ -18,7 +20,7 @@
   <a href="#-bookmark-">Badges 🔖</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-contact-me-">☎ Contact Me</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-contact-me-">Contact Me ☎</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-contact-me">Contact Me ☎</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-contact-me-phone">Contact Me ☎</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#closed_lock_with_key-license">🔐 License</a>
 </p>
 

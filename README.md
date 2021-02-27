@@ -1,24 +1,4 @@
-### <a name="top"></a>
-
-<p>teste</p>
-
-### <a name="abcd"></a>
-
-<!-- <a name="abcd"></a> -->
-
-<a href="#contact-me-phone">Contact Me ☎</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-<a href="#-contact-me-">Contact Me</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-
-
-
-
-
-
-
-
-
-
-
+## <a name="top"></a>
 
 <h1 align="center">
   <a href="logotipo">
@@ -35,6 +15,11 @@
   <a href="#warning-prerequisites">⚠️ Prerequisites</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
   <a href="#grey_question-how-to-use">❔ How To Use</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#bookmark-badges">🔖 Badges</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#contact-me-phone">Contact Me ☎</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-contact-me-phone">Contact Me ☎ 2</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-contact-me-phone-">Contact Me ☎ 3</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-contact-me-">Contact Me ☎ 4</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-contact-me-☎">Contact Me ☎ 5</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#closed_lock_with_key-license">🔐 License</a>
 </p>
 
@@ -60,30 +45,7 @@
 <br><br>
 <br><br>
 
-
-
-
-## Contact Me ☎
-## Contact Me :phone:
-
-[🔝](#top)
-
-
-[top](#top)
-
-[abcd](#abcd)
-
-
-
-
-
-
-
-
-
-
-
-
+## [🔝](#top) Contact Me :phone:
 
 <p align="left">
   <img align="left" alt="Profile Avatar" src="./public/professional.png" width="80" />
@@ -102,6 +64,8 @@
 </p>
 
 <br>
+
+## [🔝](#top) Contact Me ☎
 
 ---
 

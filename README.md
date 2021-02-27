@@ -1,12 +1,14 @@
 ### <a name="top"></a>
 
 <h1 align="center">
-  <a href="logotipo">
+  <a name="logotipo">
     <img alt="Move.it logotipo" src="./public/logo-full.svg" />
   </a>
 </h1>
 
 <!-- <a href="#-contact-me-">Contact Me ☎</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; -->
+
+<!-- <a href="#-bookmark-">🔖 Badges</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; -->
 
 <h5 align="center">
     🙅‍♂️ This app suggests that you stretch your body if you stay in the same position for a long time.
@@ -16,8 +18,8 @@
   <a href="#flying_saucer-technologies">🛸 Technologies</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#warning-prerequisites">⚠️ Prerequisites</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
   <a href="#grey_question-how-to-use">❔ How To Use</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-bookmark-">🔖 Badges</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-bookmark-">Badges 🔖</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-badges-">🔖 Badges</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-badges-bookmark">Badges 🔖</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-contact-me-">☎ Contact Me</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-contact-me-">Contact Me ☎</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-contact-me-phone">Contact Me ☎</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -71,3 +73,5 @@
 ---
 
 <blockquote align="center">“Always running in search of the goals!”</blockquote>
+
+## [🔝](#logotipo) Logotipo

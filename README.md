@@ -6,7 +6,7 @@
   </a>
 </h1>
 
-<a href="#-contact-me-">Contact Me ☎</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<!-- <a href="#-contact-me-">Contact Me ☎</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; -->
 
 <h5 align="center">
     🙅‍♂️ This app suggests that you stretch your body if you stay in the same position for a long time.

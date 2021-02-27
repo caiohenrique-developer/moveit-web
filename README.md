@@ -1,7 +1,7 @@
 ### <a name="top"></a>
 
 <h1 align="center">
-  <a name="logotipo">
+  <a href="https://moveit-web-phi.vercel.app/">
     <img alt="Move.it logotipo" src="./public/logo-full.svg" />
   </a>
 </h1>
@@ -44,38 +44,56 @@
 ## [🔝](#top) Badges 🔖
 
 <p align="center">
-  <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/caiohenrique-developer/react-deploy">
+  <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/caiohenrique-developer/moveit-web">
 
-  <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/caiohenrique-developer/react-deploy">
+  <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/caiohenrique-developer/moveit-web">
 
-  <a href="https://www.codacy.com/app/caiohenrique-developer/react-deploy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=caiohenrique-developer/react-deploy&amp;utm_campaign=Badge_Grade">
+  <a href="https://www.codacy.com/app/caiohenrique-developer/moveit-web?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=caiohenrique-developer/moveit-web&amp;utm_campaign=Badge_Grade">
     <img alt="Codacy Grade" src="https://img.shields.io/codacy/grade/4f87fc059ec846118f2ef2950200b13a.svg">
   </a>
 
-  <a href="https://github.com/caiohenrique-developer/react-deploy/commits/master">
-    <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/caiohenrique-developer/react-deploy">
+  <a href="https://github.com/caiohenrique-developer/moveit-web/commits/master">
+    <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/caiohenrique-developer/moveit-web">
   </a>
 
-  <a href="https://github.com/caiohenrique-developer/react-deploy/releases">
-    <img alt="GitHub Releases" src="https://img.shields.io/github/release-date/caiohenrique-developer/react-deploy">
+  <a href="https://github.com/caiohenrique-developer/moveit-web/releases">
+    <img alt="GitHub Releases" src="https://img.shields.io/github/release-date/caiohenrique-developer/moveit-web">
   </a>
 
-  <br>
-
-  <a href="https://github.com/caiohenrique-developer/react-deploy/tags">
-    <img alt="GitHub Tags" src="https://img.shields.io/github/package-json/v/caiohenrique-developer/react-deploy/master">
+  <a href="https://github.com/caiohenrique-developer/moveit-web/tags">
+    <img alt="GitHub Tags" src="https://img.shields.io/github/package-json/v/caiohenrique-developer/moveit-web/master">
   </a>
 
-  <a href="https://github.com/caiohenrique-developer/react-deploy/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/caiohenrique-developer/react-deploy">
+  <a href="https://github.com/caiohenrique-developer/moveit-web/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/caiohenrique-developer/moveit-web">
   </a>
 
-  <img alt="Repository Size" src="https://img.shields.io/github/repo-size/caiohenrique-developer/react-deploy">
+  <img alt="Repository Size" src="https://img.shields.io/github/repo-size/caiohenrique-developer/moveit-web">
 
-  <img alt="GitHub License" src="https://img.shields.io/github/license/caiohenrique-developer/react-deploy">
+  <img alt="GitHub License" src="https://img.shields.io/github/license/caiohenrique-developer/moveit-web">
 
-  <a href="https://app.netlify.com/sites/gobarber-react-web/deploys">
-    <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/dd225487-0a31-4b67-8d9c-8006280cce71/deploy-status">
+  <a href="https://github.com/semantic-release/semantic-release">
+    <img alt="semantic-release" src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg">
+  </a>
+
+  <img src="https://img.shields.io/badge/Markdown-000000?style=flat&logo=markdown&logoColor=white"/>
+
+  <img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=flat&logo=visual%20studio%20code&logoColor=white"/>
+
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white"/>
+
+  <!-- <img src="https://img.shields.io/badge/styled--components-DB7093?style=flat&logo=styled-components&logoColor=white"/> -->
+
+  <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white"/>
+
+  <img src="https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white"/>
+
+  <img src="https://img.shields.io/badge/Yarn-2C8EBB?style=flat&logo=yarn&logoColor=white"/>
+
+  <img src="https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB"/>
+
+  <a href="https://moveit-web-phi.vercel.app/">
+    <img src="https://img.shields.io/badge/next.js-000000?style=flat&logo=next.js&logoColor=white"/>
   </a>
 </p>
 
@@ -83,13 +101,6 @@
 
 Copyright © [MIT](https://github.com/caiohenrique-developer/moveit-web/blob/master/LICENSE) .
 ###### _This project is under the MIT license. See the license for more information._
-
-[nodejs]: https://nodejs.org/
-[yarn]: https://yarnpkg.com/
-[vc]: https://code.visualstudio.com/
-[vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
-[vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
-[vcprettier]: https://prettier.io/
 
 ## [🔝](#top) Contact Me ☎
 
@@ -115,3 +126,10 @@ Copyright © [MIT](https://github.com/caiohenrique-developer/moveit-web/blob/mas
 
 <blockquote align="center">“Always running in search of the goals!”</blockquote>
 <blockquote align="center">Done with ♥ by myself ☝️ <a href="#-contact-me-">Get in touch!</a></blockquote>
+
+[nodejs]: https://nodejs.org/
+[yarn]: https://yarnpkg.com/
+[vc]: https://code.visualstudio.com/
+[vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
+[vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+[vcprettier]: https://prettier.io/

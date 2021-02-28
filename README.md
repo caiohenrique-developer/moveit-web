@@ -41,6 +41,31 @@
 <br><br>
 <br><br>
 
+## [🔝](#top) How To Use ❔
+
+To clone and run this application locally, you'll need [Git](https://git-scm.com), [Node.js v10.16][nodejs] or higher + [Yarn v1.13][yarn] or higher installed on your computer.
+
+<details open>
+  <summary>Hit me to toggle collapse: 🕹️<sup>🤏</sup></summary>
+
+  _From your `command line` follow these steps..._
+
+  ```bash
+  # Clone the project
+  $ git clone https://github.com/caiohenrique-developer/moveit-web 'Move.it Web' && cd 'Move.it Web'
+
+  # Install dependencies
+  $ yarn
+  # or
+  $ npm i
+
+  # Start the project
+  $ yarn dev
+  
+  # Very well, now you can enjoy this project! ;)
+  ```
+</details>
+
 ## [🔝](#top) Badges 🔖
 
 <p align="center">

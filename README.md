@@ -27,6 +27,8 @@
 
 <br><br>
 
+<h2 align="center">Project Stats</h2>
+
 <p align="center">
   🚧 WIP - Work in Progess... 🚧
 </p>
@@ -40,6 +42,10 @@
 <br><br>
 <br><br>
 <br><br>
+
+## [🔝](#top) Technologies 🛸
+
+## [🔝](#top) Prerequisites ⚠️
 
 ## [🔝](#top) How To Use ❔
 
@@ -124,8 +130,8 @@ To clone and run this application locally, you'll need [Git](https://git-scm.com
 
 ## [🔝](#top) License 🔐
 
-Copyright © [MIT](https://github.com/caiohenrique-developer/moveit-web/blob/master/LICENSE) .
-###### _This project is under the MIT license. See the license for more information._
+Copyright © 2021 [MIT](https://github.com/caiohenrique-developer/moveit-web/blob/master/LICENSE) .
+###### _This project is under the <sup>MIT</sup> license. See the license for more information._
 
 ## [🔝](#top) Contact Me ☎
 

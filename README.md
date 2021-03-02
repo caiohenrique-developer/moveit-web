@@ -47,6 +47,9 @@
 
 ## [🔝](#top) Prerequisites ⚠️
 
+In order to use and test this project locally, you should've already setup the development environment. <br>
+_Or go to [**moveit-web-phi.vercel.app**](http://moveit-web-phi.vercel.app/) to see the project in a production environment._
+
 ## [🔝](#top) How To Use ❔
 
 To clone and run this application locally, you'll need [Git](https://git-scm.com), [Node.js v10.16][nodejs] or higher + [Yarn v1.13][yarn] or higher installed on your computer.

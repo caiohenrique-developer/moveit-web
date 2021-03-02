@@ -45,6 +45,12 @@
 
 ## [🔝](#top) Technologies 🛸
 
+<table>
+  <tr>
+    <th><kbd>Coming soon...</kbd> </th>
+  </tr>
+</table>
+
 ## [🔝](#top) Prerequisites ⚠️
 
 In order to use and test this project locally, you should've already setup the development environment. <br>

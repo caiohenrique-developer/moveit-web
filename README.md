@@ -139,7 +139,7 @@ To clone and run this application locally, you'll need [Git](https://git-scm.com
 
 ## [🔝](#top) License 🔐
 
-Copyright © 2021 [MIT](https://github.com/caiohenrique-developer/moveit-web/blob/master/LICENSE) .
+Copyright © 2021 MoveIt, [MIT](https://github.com/caiohenrique-developer/moveit-web/blob/master/LICENSE) .
 ###### _This project is under the <sup>MIT</sup> license. See the license for more information._
 
 ## [🔝](#top) Contact Me ☎

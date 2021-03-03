@@ -47,7 +47,25 @@
 
 <table>
   <tr>
-    <th><kbd>Coming soon...</kbd> </th>
+    <th align="center" colspan="2"><kbd>Coming soon...</kbd></th>
+  </tr>
+  <tr align="center">
+    <th>dependencies</th>
+    <th>devDependencies</th>
+  </tr>
+  <tr align="center">
+    <td>row 1 - column 1</td>
+    <td rowspan="2" align="center">row 1 & 2 - column 2</td>
+  </tr>
+  <tr align="center">
+    <td>row 2 - column 1</td>
+  </tr>
+  <tr align="center">
+    <td>row 3 - column 1</td>
+    <td>row 3 - column 2</td>
+  </tr>
+  <tr align="center">
+    <td>row 4 - column 1</td>
   </tr>
 </table>
 
@@ -80,6 +98,12 @@ To clone and run this application locally, you'll need [Git](https://git-scm.com
   # Very well, now you can enjoy this project! ;)
   ```
 </details>
+
+<br>
+
+<p align="center">
+  <img alt="Move.it background image" src="./public/Thumb-OneNumber.png" width="700" />
+</p>
 
 ## [🔝](#top) Badges 🔖
 

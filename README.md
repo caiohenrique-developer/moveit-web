@@ -1,5 +1,9 @@
 ### <a name="top"></a>
 
+<img src="https://img.shields.io/badge/Doc%20Status%20-🚧%20(WIP)%20🚧-2C8EBB?style=flat&logo=statuspage&logoColor=white&color=yellowgreen"/>
+
+<br><br>
+
 <h1 align="center">
   <a href="https://moveit-web-phi.vercel.app/">
     <img alt="Move.it logotipo" src="./public/logo-full.svg" />
@@ -24,24 +28,6 @@
 <p align="center">
   <img alt="Move.it mockup image" src="./public/mockup.png" width="100%" />
 </p>
-
-<br><br>
-
-<h2 align="center">Project Stats</h2>
-
-<p align="center">
-  🚧 WIP - Work in Progess... 🚧
-</p>
-
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-
-<br><br>
-<br><br>
-<br><br>
-<br><br>
 
 ## [🔝](#top) Technologies 🛸
 

@@ -29,6 +29,8 @@
   <img alt="Move.it mockup image" src="./public/mockup.png" width="100%" />
 </p>
 
+<br>
+
 ## [🔝](#top) Technologies 🛸
 
 <table>
@@ -152,6 +154,10 @@ To clone and run this application locally, you'll need [Git](https://git-scm.com
 Copyright © 2021 MoveIt, [MIT](https://github.com/caiohenrique-developer/moveit-web/blob/master/LICENSE) .
 ###### _This project is under the <sup>MIT</sup> license. See the license for more information._
 
+---
+
+<blockquote align="center">“Always running in search of the goals!” <br> Done with ♥ by myself 👇 <a href="#-contact-me-">Get in touch!</a></blockquote>
+
 ## [🔝](#top) Contact Me ☎
 
 <p align="left">
@@ -169,13 +175,6 @@ Copyright © 2021 MoveIt, [MIT](https://github.com/caiohenrique-developer/moveit
     <img align="center" alt="Whatsapp" src="https://img.shields.io/badge/(11)%2094390%202438-25D366?style=social&logo=whatsapp&logoColor=black" />
   </a>
 </p>
-
-<br>
-
----
-
-<blockquote align="center">“Always running in search of the goals!”</blockquote>
-<blockquote align="center">Done with ♥ by myself ☝️ <a href="#-contact-me-">Get in touch!</a></blockquote>
 
 [nodejs]: https://nodejs.org/
 [yarn]: https://yarnpkg.com/

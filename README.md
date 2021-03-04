@@ -40,12 +40,13 @@
 - [x] Experience
 - [x] Pop-up congratulations
 - [ ] Effects & Animations
+- [ ] Dark mode (default), Light mode toggle
 - [ ] PWA
 - [ ] Change your avatar and profile name
 - [ ] GitHub login
 - [ ] Share experiences in any social community
 - Any suggestion?
-  - <a href="#-contact-me-">Contact me!</a>
+  - <a href="#-contact-me-phone">Contact me!</a>
 
 ## [🔝](#top) Techs :flying_saucer:
 
@@ -174,7 +175,7 @@ Copyright © 2021 MoveIt, [MIT](https://github.com/caiohenrique-developer/moveit
 
 ---
 
-<blockquote align="center">“Always running in search of the goals!” <br> Done with ♥ by myself 👇 <a href="#-contact-me-">Get in touch!</a></blockquote>
+<blockquote align="center">“Always running in search of the goals!” <br> Done with ♥ by myself 👇 <a href="#-contact-me-phone">Get in touch!</a></blockquote>
 
 ## [🔝](#top) Contact Me :phone:
 

@@ -1,5 +1,9 @@
 ### <a name="top"></a>
 
+<img src="https://img.shields.io/badge/Doc%20Status%20-🚧%20(WIP)%20🚧-2C8EBB?style=flat&logo=statuspage&logoColor=white&color=yellowgreen"/>
+
+<br><br>
+
 <h1 align="center">
   <a href="https://moveit-web-phi.vercel.app/">
     <img alt="Move.it logotipo" src="./public/logo-full.svg" />
@@ -11,7 +15,8 @@
 </h5>
 
 <p align="center">
-  <a href="#-technologies-">🛸 Technologies</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-feat-">💎 Feat</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-techs-">🛸 Techs</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-prerequisites-">⚠️ Prerequisites</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
   <a href="#-how-to-use-">❔ How To Use</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-badges-">🔖 Badges</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -25,29 +30,50 @@
   <img alt="Move.it mockup image" src="./public/mockup.png" width="100%" />
 </p>
 
-<br><br>
+<br>
 
-<h2 align="center">Project Stats</h2>
+## [🔝](#top) Feat 💎
 
-<p align="center">
-  🚧 WIP - Work in Progess... 🚧
-</p>
+<img src="https://img.shields.io/badge/Project%20Status%20-🚧%20(WIP)%20🚧-2C8EBB?style=flat&logo=statuspage&logoColor=white&color=yellowgreen"/>
 
-<br><br>
-<br><br>
-<br><br>
-<br><br>
+- [x] Countdown
+  - [x] Restart countdown
+- [x] Challenges
+  - [x] Completed or failed challenges
+- [x] Levels
+- [x] Experience
+- [x] Pop-up congratulations
+- [ ] Effects & Animations
+- [ ] PWA
+- [ ] Change your avatar and profile name
+- [ ] GitHub login
+- [ ] Share experiences in any social community
+- Any suggestion?
+  - <a href="#-contact-me-">Contact me!</a>
 
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-
-## [🔝](#top) Technologies 🛸
+## [🔝](#top) Techs 🛸
 
 <table>
   <tr>
-    <th><kbd>Coming soon...</kbd> </th>
+    <th colspan="2" align="center"><kbd>Coming soon...</kbd></th>
+  </tr>
+  <tr align="center">
+    <th>dependencies</th>
+    <th>devDependencies</th>
+  </tr>
+  <tr align="center">
+    <td>row 1 - column 1</td>
+    <td rowspan="2" align="center">row 1 & 2 - column 2</td>
+  </tr>
+  <tr align="center">
+    <td>row 2 - column 1</td>
+  </tr>
+  <tr align="center">
+    <td>row 3 - column 1</td>
+    <td>row 3 - column 2</td>
+  </tr>
+  <tr align="center">
+    <td>row 4 - column 1</td>
   </tr>
 </table>
 
@@ -80,6 +106,12 @@ To clone and run this application locally, you'll need [Git](https://git-scm.com
   # Very well, now you can enjoy this project! ;)
   ```
 </details>
+
+<br>
+
+<p align="center">
+  <img alt="Move.it background image" src="./public/Thumb-OneNumber.png" width="700" />
+</p>
 
 ## [🔝](#top) Badges 🔖
 
@@ -139,8 +171,12 @@ To clone and run this application locally, you'll need [Git](https://git-scm.com
 
 ## [🔝](#top) License 🔐
 
-Copyright © 2021 [MIT](https://github.com/caiohenrique-developer/moveit-web/blob/master/LICENSE) .
+Copyright © 2021 MoveIt, [MIT](https://github.com/caiohenrique-developer/moveit-web/blob/master/LICENSE) .
 ###### _This project is under the <sup>MIT</sup> license. See the license for more information._
+
+---
+
+<blockquote align="center">“Always running in search of the goals!” <br> Done with ♥ by myself 👇 <a href="#-contact-me-">Get in touch!</a></blockquote>
 
 ## [🔝](#top) Contact Me ☎
 
@@ -159,13 +195,6 @@ Copyright © 2021 [MIT](https://github.com/caiohenrique-developer/moveit-web/blo
     <img align="center" alt="Whatsapp" src="https://img.shields.io/badge/(11)%2094390%202438-25D366?style=social&logo=whatsapp&logoColor=black" />
   </a>
 </p>
-
-<br>
-
----
-
-<blockquote align="center">“Always running in search of the goals!”</blockquote>
-<blockquote align="center">Done with ♥ by myself ☝️ <a href="#-contact-me-">Get in touch!</a></blockquote>
 
 [nodejs]: https://nodejs.org/
 [yarn]: https://yarnpkg.com/

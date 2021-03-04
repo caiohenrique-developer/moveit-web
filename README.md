@@ -11,13 +11,13 @@
 </h5>
 
 <p align="center">
-  <a href="#-feat-">💎 Feat</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-techs-">🛸 Techs</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-prerequisites-">⚠️ Prerequisites</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#-how-to-use-">❔ How To Use</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-badges-">🔖 Badges</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-license-">🔐 License</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-contact-me-">☎ Contact Me</a>
+  <a href="#-feat-gem">💎 Feat</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-techs-flying_saucer">🛸 Techs</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-prerequisites-warning">⚠️ Prerequisites</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#-how-to-use-grey_question">❔ How To Use</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-badges-bookmark">🔖 Badges</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-license-closed_lock_with_key">🔐 License</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-contact-me-phone">☎ Contact Me</a>
 </p>
 
 <br><br>
@@ -28,7 +28,7 @@
 
 <br>
 
-## [🔝](#top) Feat 💎
+## [🔝](#top) Feat :gem:
 
 <img align="right" src="https://img.shields.io/badge/Project%20Status%20-🚧%20(WIP)%20🚧-2C8EBB?style=flat&logo=statuspage&logoColor=white&color=yellowgreen"/>
 
@@ -40,14 +40,15 @@
 - [x] Experience
 - [x] Pop-up congratulations
 - [ ] Effects & Animations
+- [ ] Dark mode (default), Light mode toggle
 - [ ] PWA
 - [ ] Change your avatar and profile name
 - [ ] GitHub login
 - [ ] Share experiences in any social community
 - Any suggestion?
-  - <a href="#-contact-me-">Contact me!</a>
+  - <a href="#-contact-me-phone">Contact me!</a>
 
-## [🔝](#top) Techs 🛸
+## [🔝](#top) Techs :flying_saucer:
 
 <table>
   <tr align="center">
@@ -75,12 +76,12 @@
   </tr>
 </table>
 
-## [🔝](#top) Prerequisites ⚠️
+## [🔝](#top) Prerequisites :warning:
 
 In order to use and test this project locally, you should've already setup the development environment. <br>
 _Or go to [**moveit-web-phi.vercel.app**](http://moveit-web-phi.vercel.app/) to see the project in a production environment._
 
-## [🔝](#top) How To Use ❔
+## [🔝](#top) How To Use :grey_question:
 
 To clone and run this application locally, you'll need [Git](https://git-scm.com), [Node.js v10.16][nodejs] or higher + [Yarn v1.13][yarn] or higher installed on your computer.
 
@@ -111,7 +112,7 @@ To clone and run this application locally, you'll need [Git](https://git-scm.com
   <img alt="Move.it background image" src="./public/Thumb-OneNumber.png" width="700" />
 </p>
 
-## [🔝](#top) Badges 🔖
+## [🔝](#top) Badges :bookmark:
 
 <p align="center">
   <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/caiohenrique-developer/moveit-web">
@@ -167,16 +168,16 @@ To clone and run this application locally, you'll need [Git](https://git-scm.com
   </a>
 </p>
 
-## [🔝](#top) License 🔐
+## [🔝](#top) License :closed_lock_with_key:
 
 Copyright © 2021 MoveIt, [MIT](https://github.com/caiohenrique-developer/moveit-web/blob/master/LICENSE) .
 ###### _This project is under the <sup>MIT</sup> license. See the license for more information._
 
 ---
 
-<blockquote align="center">“Always running in search of the goals!” <br> Done with ♥ by myself 👇 <a href="#-contact-me-">Get in touch!</a></blockquote>
+<blockquote align="center">“Always running in search of the goals!” <br> Done with ♥ by myself 👇 <a href="#-contact-me-phone">Get in touch!</a></blockquote>
 
-## [🔝](#top) Contact Me ☎
+## [🔝](#top) Contact Me :phone:
 
 <p align="left">
   <img align="left" alt="Profile Avatar" src="./public/professional.png" width="80" />

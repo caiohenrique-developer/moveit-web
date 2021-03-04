@@ -15,6 +15,7 @@
 </h5>
 
 <p align="center">
+  <a href="#-features-">💎 Features</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-technologies-">🛸 Technologies</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-prerequisites-">⚠️ Prerequisites</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
   <a href="#-how-to-use-">❔ How To Use</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -31,11 +32,30 @@
 
 <br>
 
+## [🔝](#top) Features 💎
+
+<img src="https://img.shields.io/badge/Project%20Status%20-🚧%20(WIP)%20🚧-2C8EBB?style=flat&logo=statuspage&logoColor=white&color=yellowgreen"/>
+
+- [ ] Countdown
+  - [ ] Restart countdown
+- [x] Challenges
+  - [x] Completed or failed challenges
+- [x] Levels
+- [ ] Experience
+- [x] Pop-up congratulations
+- [x] Effects & Animations
+- [x] PWA
+- [x] Change your avatar and profile name
+- [x] GitHub login
+- [x] Share experiences in any social community
+- Any suggestion?
+  - <a href="#-contact-me-">Contact me!</a>
+
 ## [🔝](#top) Technologies 🛸
 
 <table>
   <tr>
-    <th align="center" colspan="2"><kbd>Coming soon...</kbd></th>
+    <th colspan="2" align="center"><kbd>Coming soon...</kbd></th>
   </tr>
   <tr align="center">
     <th>dependencies</th>

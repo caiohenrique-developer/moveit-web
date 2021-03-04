@@ -11,7 +11,7 @@
 </h5>
 
 <p align="center">
-  <!-- <a href="#-feat-">💎 Feat</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; -->
+  <a href="#-feat-">💎 Feat</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-techs-">🛸 Techs</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-prerequisites-">⚠️ Prerequisites</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
   <a href="#-how-to-use-">❔ How To Use</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -74,6 +74,8 @@
     <td><a href="https://www.typescriptlang.org/">TypeScript</a></td>
   </tr>
 </table>
+
+## [🔝](#top) Prerequisites ⚠️
 
 ## [🔝](#top) Prerequisites ⚠️
 

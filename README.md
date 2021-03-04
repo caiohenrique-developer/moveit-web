@@ -1,9 +1,5 @@
 ### <a name="top"></a>
 
-<img src="https://img.shields.io/badge/Doc%20Status%20-🚧%20(WIP)%20🚧-2C8EBB?style=flat&logo=statuspage&logoColor=white&color=yellowgreen"/>
-
-<br><br>
-
 <h1 align="center">
   <a href="https://moveit-web-phi.vercel.app/">
     <img alt="Move.it logotipo" src="./public/logo-full.svg" />
@@ -34,7 +30,7 @@
 
 ## [🔝](#top) Feat 💎
 
-<img src="https://img.shields.io/badge/Project%20Status%20-🚧%20(WIP)%20🚧-2C8EBB?style=flat&logo=statuspage&logoColor=white&color=yellowgreen"/>
+<img align="right" src="https://img.shields.io/badge/Project%20Status%20-🚧%20(WIP)%20🚧-2C8EBB?style=flat&logo=statuspage&logoColor=white&color=yellowgreen"/>
 
 - [x] Countdown
   - [x] Restart countdown
@@ -54,26 +50,28 @@
 ## [🔝](#top) Techs 🛸
 
 <table>
-  <tr>
-    <th colspan="2" align="center"><kbd>Coming soon...</kbd></th>
-  </tr>
   <tr align="center">
     <th>dependencies</th>
     <th>devDependencies</th>
   </tr>
   <tr align="center">
-    <td>row 1 - column 1</td>
-    <td rowspan="2" align="center">row 1 & 2 - column 2</td>
+    <td><a href="https://github.com/js-cookie/js-cookie">JavaScript Cookie</a></td>
+    <td><a href="https://github.com/conventional-changelog/commitlint">Commitlint</a></td>
   </tr>
   <tr align="center">
-    <td>row 2 - column 1</td>
+    <td><a href="https://vercel.com/solutions/nextjs">Next.js</a></td>
+    <td><a href="https://github.com/commitizen/cz-cli">Commitizen</a></td>
   </tr>
   <tr align="center">
-    <td>row 3 - column 1</td>
-    <td>row 3 - column 2</td>
+    <td><a href="https://reactjs.org/">ReactJS</a></td>
+    <td><a href="https://github.com/typicode/husky">Husky</a></td>
   </tr>
   <tr align="center">
-    <td>row 4 - column 1</td>
+    <td rowspan="2"></td>
+    <td><a href="https://semantic-release.gitbook.io/semantic-release/">Semantic-release</a></td>
+  </tr>
+  <tr align="center">
+    <td><a href="https://www.typescriptlang.org/">TypeScript</a></td>
   </tr>
 </table>
 

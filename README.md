@@ -15,8 +15,8 @@
 </h5>
 
 <p align="center">
-  <a href="#-features-">💎 Features</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-technologies-">🛸 Technologies</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-feat-">💎 Feat</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-techs-">🛸 Techs</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-prerequisites-">⚠️ Prerequisites</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
   <a href="#-how-to-use-">❔ How To Use</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-badges-">🔖 Badges</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -32,7 +32,7 @@
 
 <br>
 
-## [🔝](#top) Features 💎
+## [🔝](#top) Feat 💎
 
 <img src="https://img.shields.io/badge/Project%20Status%20-🚧%20(WIP)%20🚧-2C8EBB?style=flat&logo=statuspage&logoColor=white&color=yellowgreen"/>
 
@@ -51,7 +51,7 @@
 - Any suggestion?
   - <a href="#-contact-me-">Contact me!</a>
 
-## [🔝](#top) Technologies 🛸
+## [🔝](#top) Techs 🛸
 
 <table>
   <tr>

@@ -36,18 +36,18 @@
 
 <img src="https://img.shields.io/badge/Project%20Status%20-🚧%20(WIP)%20🚧-2C8EBB?style=flat&logo=statuspage&logoColor=white&color=yellowgreen"/>
 
-- [ ] Countdown
-  - [ ] Restart countdown
+- [x] Countdown
+  - [x] Restart countdown
 - [x] Challenges
   - [x] Completed or failed challenges
 - [x] Levels
-- [ ] Experience
+- [x] Experience
 - [x] Pop-up congratulations
-- [x] Effects & Animations
-- [x] PWA
-- [x] Change your avatar and profile name
-- [x] GitHub login
-- [x] Share experiences in any social community
+- [ ] Effects & Animations
+- [ ] PWA
+- [ ] Change your avatar and profile name
+- [ ] GitHub login
+- [ ] Share experiences in any social community
 - Any suggestion?
   - <a href="#-contact-me-">Contact me!</a>
 

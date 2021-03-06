@@ -39,6 +39,7 @@
 - [x] Levels
 - [x] Experience
 - [x] Pop-up congratulations
+- [ ] Responsive
 - [ ] Effects & Animations
 - [ ] Dark mode (default), Light mode toggle
 - [ ] PWA

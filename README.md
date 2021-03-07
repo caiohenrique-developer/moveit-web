@@ -40,6 +40,7 @@
 - [x] Experience
 - [x] Pop-up congratulations
 - [ ] Responsive
+- [ ] Manage countdown time
 - [ ] Effects & Animations
 - [ ] Dark mode (default), Light mode toggle
 - [ ] PWA

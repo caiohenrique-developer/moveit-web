@@ -82,7 +82,7 @@ To clone and run this application locally, you'll need [Git](https://git-scm.com
 
   ```bash
   # Clone the project
-  $ git clone https://github.com/caiohenrique-developer/1st-version 'Move.it 1st' && cd 'Move.it 1st'
+  $ git clone https://github.com/caiohenrique-developer/moveit-web -b 1st-version 'Move.it 1st' && cd 'Move.it 1st'
 
   # Install dependencies
   $ yarn

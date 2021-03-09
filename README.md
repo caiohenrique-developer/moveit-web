@@ -30,8 +30,6 @@
 
 ## [🔝](#top) Feat :gem:
 
-<img align="right" src="https://img.shields.io/badge/Project%20Status%20-🚧%20(WIP)%20🚧-2C8EBB?style=flat&logo=statuspage&logoColor=white&color=yellowgreen"/>
-
 - [x] Countdown
   - [x] Restart countdown
 - [x] Challenges
@@ -39,16 +37,6 @@
 - [x] Levels
 - [x] Experience
 - [x] Pop-up congratulations
-- [ ] Responsive
-- [ ] Manage countdown time
-- [ ] Effects & Animations
-- [ ] Dark mode (default), Light mode toggle
-- [ ] PWA
-- [ ] Change your avatar and profile name
-- [ ] GitHub login
-- [ ] Share experiences in any social community
-- Any suggestion?
-  - <a href="#-contact-me-phone">Contact me!</a>
 
 ## [🔝](#top) Techs :flying_saucer:
 
@@ -94,7 +82,7 @@ To clone and run this application locally, you'll need [Git](https://git-scm.com
 
   ```bash
   # Clone the project
-  $ git clone https://github.com/caiohenrique-developer/moveit-web 'Move.it Web' && cd 'Move.it Web'
+  $ git clone https://github.com/caiohenrique-developer/1st-version 'Move.it 1st' && cd 'Move.it 1st'
 
   # Install dependencies
   $ yarn

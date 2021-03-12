@@ -9,7 +9,7 @@ import { CountDownProvider } from '../contexts/CountDownContext';
 import { GetServerSideProps } from 'next';
 import { ChallengesProvider } from '../contexts/ChallengesContext';
 
-import styles from "../styles/pages/Home.module.css"
+import styles from "../styles/pages/Home.module.css";
 
 interface HomeProps {
   level: number;

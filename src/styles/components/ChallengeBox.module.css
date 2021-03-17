@@ -92,3 +92,18 @@
 
 .challengeActive footer button.challengeFailedButton { background: var(--red); }
 .challengeActive footer button.challengeSucceededButton { background: var(--green); }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .challengeActive main strong { font-size: 1.5rem; }
+
+    .challengeActive main img {
+        max-width: 100px;
+        margin-top: 20px;
+    }
+
+    .challengeActive main p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+}

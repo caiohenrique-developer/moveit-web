@@ -52,3 +52,10 @@
     font-size: 0;
     background: transparent;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .container { width: 90%; }
+
+    .container p { font-size: 1.1rem; }
+}

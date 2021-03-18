@@ -21,3 +21,17 @@
     height: 100%;
     max-height: 530px;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .container section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 80px;
+        padding-bottom: 2.5rem;
+        grid-gap: 4.25rem;
+        gap: 4.25rem;
+    }
+
+    .container section > div { width: 100%; }
+}

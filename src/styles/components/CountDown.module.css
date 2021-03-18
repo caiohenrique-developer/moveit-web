@@ -68,3 +68,11 @@
 }
 
 .countDownButtonActive:not(:hover) > img { filter: invert(1); }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .countDownContainer > span,
+    .countDownContainer > div {
+        font-size: 5.5rem;
+    }
+}

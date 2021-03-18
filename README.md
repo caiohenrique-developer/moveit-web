@@ -39,7 +39,8 @@
 - [x] Levels
 - [x] Experience
 - [x] Pop-up congratulations
-- [ ] Responsive
+- [x] Responsive
+- [ ] Manage countdown time
 - [ ] Effects & Animations
 - [ ] Dark mode (default), Light mode toggle
 - [ ] PWA
@@ -69,10 +70,11 @@
     <td><a href="https://github.com/typicode/husky">Husky</a></td>
   </tr>
   <tr align="center">
-    <td rowspan="2"></td>
+    <td><a href="https://styled-components.com/">Styled-components</a></td>
     <td><a href="https://semantic-release.gitbook.io/semantic-release/">Semantic-release</a></td>
   </tr>
   <tr align="center">
+    <td></td>
     <td><a href="https://www.typescriptlang.org/">TypeScript</a></td>
   </tr>
 </table>

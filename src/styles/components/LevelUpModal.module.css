@@ -52,3 +52,17 @@
     font-size: 0;
     background: transparent;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .container { width: 90%; }
+
+    .container p { font-size: 1.1rem; }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .container button { transition: 0.3s; }
+
+    .container button:hover { transform: rotate(180deg); }
+}

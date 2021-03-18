@@ -9,7 +9,7 @@ import { CountDownProvider } from '../contexts/CountDownContext';
 import { GetServerSideProps } from 'next';
 import { ChallengesProvider } from '../contexts/ChallengesContext';
 
-import styles from "../styles/pages/Home.module.css"
+import styles from "../styles/pages/Home.module.css";
 
 interface HomeProps {
   level: number;
@@ -18,8 +18,6 @@ interface HomeProps {
 }
 
 export default function Home(props: HomeProps) {
-  console.log(props);
-
   return (
     <ChallengesProvider
       level={props.level}

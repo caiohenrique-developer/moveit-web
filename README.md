@@ -11,12 +11,12 @@
 </h5>
 
 <p align="center">
-  <a href="#-roadmap-gem">💎 Roadmap</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-techs-flying_saucer">🛸 Techs</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-prerequisites-warning">⚠️ Prerequisites</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#-how-to-use-grey_question">❔ How To Use</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-badges-bookmark">🔖 Badges</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-license-closed_lock_with_key">🔐 License</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-roadmap-gem">💎 Roadmap</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#-techs-flying_saucer">🛸 Techs</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#-prerequisites-warning">⚠️ Prerequisites</a>&nbsp;&nbsp;&nbsp;|&nbsp;
+  <a href="#-how-to-use-grey_question">❔ How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#-badges-bookmark">🔖 Badges</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#-license-closed_lock_with_key">🔐 License</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
   <a href="#-contact-me-phone">☎ Contact Me</a>
 </p>
 

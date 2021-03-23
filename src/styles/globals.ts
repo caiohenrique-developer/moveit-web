@@ -8,12 +8,12 @@ export default createGlobalStyle`
         outline: none;
     }
 
-    /* Colors */
+    /* Dark mode (Default) */
     :root {
-        --white:#fff;
-        --background:#f2f3f5;
+        --white:#222222;
+        --background:#121212;
         --gray-line:#dcdde0;
-        --text:#666;
+        --text:#f7f7f7;
         --text-highlight:#b3b9ff;
         --title:#2e384d;
         --red:#e83f5b;
@@ -24,6 +24,21 @@ export default createGlobalStyle`
     }
 
     body {
+        /* Light mode */
+        &.light-mode {
+            --white:#fff;
+            --background:#f2f3f5;
+            --gray-line:#dcdde0;
+            --text:#666;
+            --text-highlight:#b3b9ff;
+            --title:#2e384d;
+            --red:#e83f5b;
+            --green:#4cd62b;
+            --blue:#5965e0;
+            --blue-dark:#4953b8;
+            --blue-twitter:#2aa9e0;
+        }
+
         background: var(--background);
         color: var(--text);
     }

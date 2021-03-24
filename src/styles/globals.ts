@@ -8,22 +8,40 @@ export default createGlobalStyle`
         outline: none;
     }
 
-    /* Colors */
+    /* Dark mode (Default) */
     :root {
-        --white:#fff;
-        --background:#f2f3f5;
+        --white:#222222;
+        /* --background:#121212; */
+        --background:linear-gradient(180deg, rgba(18,18,18,1) 0%, rgba(18,18,18,1) 70%, rgba(59,59,59,1) 100%);
         --gray-line:#dcdde0;
-        --text:#666;
+        --text:#f7f7f7;
         --text-highlight:#b3b9ff;
-        --title:#2e384d;
+        --title:#ffbe00bf;
         --red:#e83f5b;
         --green:#4cd62b;
-        --blue:#5965e0;
+        --blue:#f1b300;
         --blue-dark:#4953b8;
         --blue-twitter:#2aa9e0;
+        --border:#121212;
     }
 
     body {
+        /* Light mode */
+        &.light-mode {
+            --white:#fff;
+            --background:#f2f3f5;
+            --gray-line:#dcdde0;
+            --text:#666;
+            --text-highlight:#b3b9ff;
+            --title:#2e384d;
+            --red:#e83f5b;
+            --green:#4cd62b;
+            --blue:#5965e0;
+            --blue-dark:#4953b8;
+            --blue-twitter:#2aa9e0;
+            --border:#f0f1f3;
+        }
+
         background: var(--background);
         color: var(--text);
     }

@@ -21,8 +21,8 @@
 
 .countDownContainer > div span { flex: 1; }
 
-.countDownContainer > div span:first-child { border-right: 1px solid #f0f1f3; }
-.countDownContainer > div span:last-child { border-left: 1px solid #f0f1f3; }
+.countDownContainer > div span:first-child { border-right: 1px solid var(--border); }
+.countDownContainer > div span:last-child { border-left: 1px solid var(--border); }
 
 .countDownContainer > span {
     font-size: 6.25rem;

@@ -8,6 +8,8 @@ import { ChallengeBox } from "../components/ChallengeBox";
 import { CountDownProvider } from '../contexts/CountDownContext';
 import { GetServerSideProps } from 'next';
 import { ChallengesProvider } from '../contexts/ChallengesContext';
+import { useContext } from 'react';
+import { ToggleThemeModeProvider } from '../contexts/ThemeModeContext';
 
 import styles from "../styles/pages/Home.module.css";
 
@@ -18,6 +20,11 @@ interface HomeProps {
 }
 
 export default function Home(props: HomeProps) {
+  const { toggleThemeMode, theme } = useContext(ToggleThemeModeProvider);
+  
+  console.log('theme')
+  console.log(theme)
+  
   return (
     <ChallengesProvider
       level={props.level}
@@ -28,6 +35,16 @@ export default function Home(props: HomeProps) {
         <Head>
           <title>Move.it | Boost yourself!</title>
         </Head>
+
+        <button
+          type="button"
+          className={styles.darkModeBTN}
+          onClick={toggleThemeMode}
+        >
+          <span className={`material-icons ${theme}`}>brightness_4</span>
+          <span className="material-icons">brightness_5</span>
+          <span className="material-icons">brightness_7</span>
+        </button>
 
         <ExperienceBar />
 

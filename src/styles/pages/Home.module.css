@@ -8,6 +8,14 @@
     padding: 2.5rem 2rem;
 }
 
+.container > .darkModeBTN {
+    background: transparent;
+    color: var(--title);
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
 .container section {
     flex: 1;
     display: grid;

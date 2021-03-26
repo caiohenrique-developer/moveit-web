@@ -4,6 +4,7 @@ export default createGlobalStyle`
     * {
         margin: 0;
         padding: 0;
+        border: 0;
         box-sizing: border-box;
         outline: none;
     }
@@ -27,7 +28,7 @@ export default createGlobalStyle`
 
     body {
         /* Light mode */
-        &.light-mode {
+        &.lightMode {
             --white:#fff;
             --background:#f2f3f5;
             --gray-line:#dcdde0;

@@ -9,9 +9,9 @@ export function Profile() {
         <div className={styles.profileContainer}>
             <img src="github-profile-avatar.jpeg" alt="GitHub profile avatar" />
             <div>
-                <strong> Caio Henrique </strong>
+                <strong>Caio Henrique</strong>
                 <p>
-                    <img src="icons/level.svg" alt="Level" /> level {level}
+                    <img src="icons/level.svg" alt="Level" />level {level}
                 </p>
             </div>
         </div>

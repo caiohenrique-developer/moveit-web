@@ -11,7 +11,7 @@ export const themeMode = {
         title:'#ffbe00bf',
         red:'#e83f5b',
         green:'#4cd62b',
-        blue:'#f1b300',
+        blue:'#f9aa33',
         blueDark:'#4953b8',
         blueTwitter:'#2aa9e0',
         border:'#121212',

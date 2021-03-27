@@ -18,6 +18,7 @@ interface HomeProps {
 }
 
 export default function Home(props: HomeProps) {
+  
   return (
     <ChallengesProvider
       level={props.level}
@@ -28,6 +29,16 @@ export default function Home(props: HomeProps) {
         <Head>
           <title>Move.it | Boost yourself!</title>
         </Head>
+
+        <button
+          type="button"
+          className={styles.darkModeBTN}
+          // onClick={toggleThemeMode}
+        >
+          <span className="material-icons">brightness_4</span>
+          <span className="material-icons">brightness_5</span>
+          <span className="material-icons">brightness_7</span>
+        </button>
 
         <ExperienceBar />
 

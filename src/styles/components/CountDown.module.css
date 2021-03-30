@@ -48,6 +48,10 @@
 
 .countDownButton img { margin: 0 5px; }
 
+.countDownButton:is(:disabled) img { margin: 0 8px; }
+
+.countDownButton:not(:disabled) img { filter: var(--invert); }
+
 .countDownButton:not(:disabled):hover { background: var(--blue-dark); }
 
 .countDownButton:disabled {
@@ -59,15 +63,17 @@
 
 .countDownButtonActive {
     background: var(--white);
-    color: var(--title);
+    color: var(--button-title);
 }
+
+.countDownButtonActive img { margin: 0 8px; }
 
 .countDownButtonActive:not(:disabled):hover {
     background: var(--red);
     color: var(--white);
 }
 
-.countDownButtonActive:not(:hover) > img { filter: invert(1); }
+.countDownButtonActive:not(:hover) > img { filter: var(--revert); }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {

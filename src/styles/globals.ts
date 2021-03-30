@@ -9,27 +9,33 @@ export const themeMode = {
         grayLine:'#dcdde0',
         textHighlight:'#b3b9ff',
         title:'#ffbe00bf',
+        buttonTitle:'#dcdde0',
         red:'#e83f5b',
         green:'#4cd62b',
         blue:'#f9aa33',
-        blueDark:'#4953b8',
+        blueDark:'#dc8b12',
         blueTwitter:'#2aa9e0',
         border:'#121212',
+        invert: 'invert(1)',
+        revert: 'invert(0)'
     },
     /* Light mode */
     light: {
-        background:'#f2f3f5',
+        background:'linear-gradient(180deg, rgba(242,243,245,1) 0%, rgba(242,243,245,1) 70%, rgba(203,203,203,1) 100%)',
         text:'#666',
         white:'#fff',
         grayLine:'#dcdde0',
         textHighlight:'#b3b9ff',
         title:'#2e384d',
+        buttonTitle:'#2e384d',
         red:'#e83f5b',
         green:'#4cd62b',
         blue:'#5965e0',
         blueDark:'#4953b8',
         blueTwitter:'#2aa9e0',
-        border:'#f0f1f3'
+        border:'#f0f1f3',
+        invert: 'invert(0)',
+        revert: 'invert(1)'
     }
 }
 
@@ -50,12 +56,15 @@ export default createGlobalStyle`
         --gray-line: ${({ theme }) => theme.grayLine};
         --text-highlight: ${({ theme }) => theme.textHighlight};
         --title: ${({ theme }) => theme.title};
+        --button-title: ${({ theme }) => theme.buttonTitle};
         --red: ${({ theme }) => theme.red};
         --green: ${({ theme }) => theme.green};
         --blue: ${({ theme }) => theme.blue};
-        --blue-dark: ${({ theme }) => theme.dark};
-        --blue-twitter: ${({ theme }) => theme.twitter};
+        --blue-dark: ${({ theme }) => theme.blueDark};
+        --blue-twitter: ${({ theme }) => theme.blueTwitter};
         --border: ${({ theme }) => theme.border};
+        --invert: ${({ theme }) => theme.invert};
+        --revert: ${({ theme }) => theme.revert};
     }
 
     body {

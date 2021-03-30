@@ -15,10 +15,10 @@ interface HomeProps {
   level: number;
   currentExperience: number;
   challengesComplited: number;
+  toggleThemeMode: () => void;
 }
 
 export default function Home(props: HomeProps) {
-  
   return (
     <ChallengesProvider
       level={props.level}
@@ -33,7 +33,7 @@ export default function Home(props: HomeProps) {
         <button
           type="button"
           className={styles.darkModeBTN}
-          // onClick={toggleThemeMode}
+          onClick={props.toggleThemeMode}
         >
           <span className="material-icons">brightness_4</span>
           <span className="material-icons">brightness_5</span>

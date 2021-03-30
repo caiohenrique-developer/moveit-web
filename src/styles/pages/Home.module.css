@@ -9,11 +9,12 @@
 }
 
 .container > .darkModeBTN {
-    background: transparent;
-    color: var(--title);
     position: absolute;
     top: 40px;
     left: 40px;
+    
+    background: transparent;
+    color: var(--title);
 }
 
 .container section {

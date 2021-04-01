@@ -1,5 +1,6 @@
 import Head from 'next/head'
 
+import { useContext } from 'react';
 import { CompletedChallenges } from "../components/CompletedChallenges";
 import { CountDown } from "../components/CountDown";
 import { ExperienceBar } from "../components/ExperienceBar";
@@ -8,6 +9,7 @@ import { ChallengeBox } from "../components/ChallengeBox";
 import { CountDownProvider } from '../contexts/CountDownContext';
 import { GetServerSideProps } from 'next';
 import { ChallengesProvider } from '../contexts/ChallengesContext';
+import { ThemeModeContext } from '../contexts/ThemeModeContext';
 
 import styles from "../styles/pages/Home.module.css";
 
@@ -15,10 +17,11 @@ interface HomeProps {
   level: number;
   currentExperience: number;
   challengesComplited: number;
-  toggleThemeMode: () => void;
 }
 
 export default function Home(props: HomeProps) {
+  const { handleThemeModeToggle } = useContext(ThemeModeContext);
+  
   return (
     <ChallengesProvider
       level={props.level}
@@ -33,7 +36,7 @@ export default function Home(props: HomeProps) {
         <button
           type="button"
           className={styles.darkModeBTN}
-          onClick={props.toggleThemeMode}
+          onClick={handleThemeModeToggle}
         >
           <span className="material-icons">brightness_4</span>
           <span className="material-icons">brightness_5</span>

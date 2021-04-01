@@ -1,21 +1,14 @@
-import { useState } from 'react';
-import GlobalStyle, { themeMode } from '../styles/globals'
-import { ThemeProvider } from 'styled-components'
+import GlobalStyle from '../styles/globals'
+import { ThemeModeProvider } from '../contexts/ThemeModeContext';
 
 function MyApp({ Component, pageProps }) {
-  const [theme, setTheme] = useState('dark');
-
-  const handleThemeModeToggle = () => { theme === 'dark' ? setTheme('light') : setTheme('dark'); }
-  
   return (
-    <>
-      <ThemeProvider theme={ theme === 'dark' ? themeMode.dark : themeMode.light }>
-        <Component {...pageProps} toggleThemeMode={handleThemeModeToggle} />
+    <ThemeModeProvider>
+        <Component {...pageProps} />
 
         <GlobalStyle />
-      </ThemeProvider>
-    </>
+    </ThemeModeProvider>
   )
 }
 
-export default MyApp
+export default MyApp;

@@ -1,25 +1,50 @@
 .profileContainer {
+    position: relative;
+    
     display: flex;
     align-items: center;
 }
 
-.profileContainer > img {
+.profileContainer .profileAvatar img {
     width: 5.5rem;
     height: 5.5rem;
     border-radius: 50%;
 }
 
-.profileContainer div { margin-left: 1.5rem; }
+.profileContainer .profileAvatar label {
+    position: absolute;
+    top: 0;
 
-.profileContainer div strong {
+    display: block;
+
+    overflow: hidden;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.profileContainer .profileAvatar label:hover {
+    background: #000;
+    border: 5px solid #fff;
+    opacity: 0.2;
+}
+
+.profileContainer .profileAvatar label input { display: none; }
+
+.profileContainer > div { margin-left: 1.5rem; }
+
+.profileContainer > div strong {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--title);
 }
 
-.profileContainer div p {
+.profileContainer > div p {
     font-size: 1rem;
     margin-top: 0.5rem;
 }
 
-.profileContainer div p img { margin-right: 0.5rem; }
+.profileContainer > div p img { margin-right: 0.5rem; }

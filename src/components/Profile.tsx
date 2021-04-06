@@ -1,4 +1,4 @@
-import { ChangeEvent, useContext, useState } from 'react';
+import { ChangeEvent, FormEvent, useContext, useState } from 'react';
 import { ChallengesContext } from '../contexts/ChallengesContext';
 import styles from '../styles/components/Profile.module.css'
 
@@ -8,7 +8,14 @@ export function Profile() {
     const [avatar, setAvatar] = useState('');
     const [name, setName] = useState('');
 
-    const handleProfileAvatar = (ev: ChangeEvent<HTMLInputElement>) => {
+    const handleFormSubmit = (ev: FormEvent<HTMLFormElement>): void => {
+        ev.preventDefault();
+
+        console.log(avatar);
+        console.log(name);
+    }
+    
+    const handleProfileAvatar = (ev: ChangeEvent<HTMLInputElement>): void => {
         // ToDo: img base64!
         console.log('Aqui vem o nome do arquivo.');
         setAvatar(ev.target.files[0].name);
@@ -16,7 +23,10 @@ export function Profile() {
     }
 
     return (
-        <div className={styles.profileContainer}>
+        <form
+            className={styles.profileContainer}
+            onSubmit={handleFormSubmit}
+        >
             <div className={styles.profileAvatar}>
                 <img src={"github-profile-avatar.jpeg"} alt="GitHub profile avatar" />
                 <label htmlFor="avatar">
@@ -44,6 +54,6 @@ export function Profile() {
                     <img src="icons/level.svg" alt="Level" />level {level}
                 </p>
             </div>
-        </div>
+        </form>
     );
 }

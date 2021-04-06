@@ -1,9 +1,10 @@
-import { ChangeEvent, FormEvent, useContext, useState } from 'react';
-import { ChallengesContext } from '../contexts/ChallengesContext';
-import styles from '../styles/components/Profile.module.css'
+import { ChangeEvent, FormEvent, useState } from 'react';
+import { useChallenges } from '../hooks/useChallenges';
+
+import styles from '../styles/components/Profile.module.css';
 
 export function Profile() {
-    const { level } = useContext(ChallengesContext);
+    const { level } = useChallenges();
 
     const [avatar, setAvatar] = useState('');
     const [name, setName] = useState('');

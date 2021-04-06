@@ -1,26 +1,19 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
-import { useContext } from 'react';
+import { GetServerSideProps } from 'next';
+import { CountDownProvider } from '../hooks/useCountDown';
+import { ChallengesProvider } from '../hooks/useChallenges';
+import { ChallengesProviderProps } from "../utils/types/hooks";
 import { CompletedChallenges } from "../components/CompletedChallenges";
 import { CountDown } from "../components/CountDown";
 import { ExperienceBar } from "../components/ExperienceBar";
 import { Profile } from "../components/Profile";
 import { ChallengeBox } from "../components/ChallengeBox";
-import { CountDownProvider } from '../contexts/CountDownContext';
-import { GetServerSideProps } from 'next';
-import { ChallengesProvider } from '../contexts/ChallengesContext';
-import { ThemeModeContext } from '../contexts/ThemeModeContext';
+import { ThemeButton } from "../components/ButtonTheme";
 
 import styles from "../styles/pages/Home.module.css";
 
-interface HomeProps {
-  level: number;
-  currentExperience: number;
-  challengesComplited: number;
-}
-
-export default function Home(props: HomeProps) {
-  const { handleThemeModeToggle } = useContext(ThemeModeContext);
+export default function Home(props: ChallengesProviderProps) {
   
   return (
     <ChallengesProvider
@@ -33,15 +26,7 @@ export default function Home(props: HomeProps) {
           <title>Move.it | Boost yourself!</title>
         </Head>
 
-        <button
-          type="button"
-          className={styles.darkModeBTN}
-          onClick={handleThemeModeToggle}
-        >
-          <span className="material-icons">brightness_4</span>
-          <span className="material-icons">brightness_5</span>
-          <span className="material-icons">brightness_7</span>
-        </button>
+        <ThemeButton />
 
         <ExperienceBar />
 

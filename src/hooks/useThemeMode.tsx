@@ -1,17 +1,11 @@
-import { createContext, ReactNode, useState } from "react";
+import { createContext, useContext, useState } from "react";
+import { ContextFormat, ChildrenGlobalType } from '../utils/types/hooks';
 import { themeMode } from '../styles/globals';
 import { ThemeProvider } from 'styled-components';
 
-interface ChildrenProps { children: ReactNode }
+const ThemeModeContext = createContext({} as ContextFormat);
 
-interface ContextFormat {
-    theme: string;
-    handleThemeModeToggle(): void;
-}
-
-export const ThemeModeContext = createContext({} as ContextFormat);
-
-export const ThemeModeProvider = ({ children }: ChildrenProps) => {
+export const ThemeModeProvider = ({ children }: ChildrenGlobalType) => {
     const [theme, setTheme] = useState('dark');
 
     const handleThemeModeToggle = () => { theme === 'dark' ? setTheme('light') : setTheme('dark'); }
@@ -23,4 +17,10 @@ export const ThemeModeProvider = ({ children }: ChildrenProps) => {
             </ThemeProvider>
         </ThemeModeContext.Provider>
     )
+}
+
+export const useThemeMode = () => {
+    const context = useContext(ThemeModeContext);
+
+    return context;
 }

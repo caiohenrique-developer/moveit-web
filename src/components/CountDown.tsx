@@ -1,10 +1,16 @@
-import { useContext } from "react";
-import { CountDownContext } from "../contexts/CountDownContext";
+import { useCountDown } from '../hooks/useCountDown';
 
-import styles from "../styles/components/CountDown.module.css"
+import styles from "../styles/components/CountDown.module.css";
 
 export function CountDown() {
-    const { minutes, seconds, hasFinished, isActive, resetCountDown, startCountDown } = useContext(CountDownContext);
+    const {
+        minutes,
+        seconds,
+        hasFinished,
+        isActive,
+        resetCountDown,
+        startCountDown
+    } = useCountDown();
 
     const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('');
     const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('');

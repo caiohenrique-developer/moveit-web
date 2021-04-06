@@ -1,38 +1,11 @@
-import { ReactNode, useEffect, useState } from 'react'
-import { createContext } from "react";
+import { createContext, useContext, useEffect, useState } from 'react';
 import { LevelUpModal } from '../components/LevelUpModal';
+import { ChallengesContextData, ChallengesProviderProps } from '../utils/types/hooks';
 
 import Cookies from 'js-cookie';
-import challenges from '../../challenges.json'
+import challenges from '../../challenges.json';
 
-interface ChallengesProviderProps {
-    children: ReactNode;
-    level: number;
-    currentExperience: number;
-    challengesComplited: number;
-}
-
-interface Challenge {
-    type: 'body' | 'eye';
-    title: string;
-    description: string;
-    amount: number;
-}
-
-interface ChallengesContextData {
-    level: number;
-    currentExperience: number;
-    activeChallenge: Challenge;
-    challengesComplited: number;
-    experienceToNextLevel: number;
-    levelUp: () => void;
-    resetChallenge: () => void;
-    startNewChallenge: () => void;
-    completeChallenge: () => void;
-    closeLevelUpModal: () => void;
-}
-
-export const ChallengesContext = createContext({} as ChallengesContextData);
+const ChallengesContext = createContext({} as ChallengesContextData);
 
 export function ChallengesProvider({ children, ...rest }: ChallengesProviderProps) {
     const [level, setLevel] = useState(rest.level ?? 1);
@@ -114,4 +87,10 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
             {isLevelUpModalOpen && <LevelUpModal />}
         </ChallengesContext.Provider>
     )
+}
+
+export const useChallenges = () => {
+    const context = useContext(ChallengesContext);
+
+    return context;
 }

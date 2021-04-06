@@ -6,8 +6,10 @@ export function Profile() {
     const { level } = useContext(ChallengesContext);
 
     const [avatar, setAvatar] = useState('');
+    const [name, setName] = useState('');
 
     const handleProfileAvatar = (ev: ChangeEvent<HTMLInputElement>) => {
+        // ToDo: img base64!
         console.log('Aqui vem o nome do arquivo.');
         setAvatar(ev.target.files[0].name);
         console.log(avatar);
@@ -29,7 +31,15 @@ export function Profile() {
             </div>
             
             <div>
-                <strong>Caio Henrique</strong>
+                <label>
+                    <input
+                        type="text"
+                        placeholder="Qual o seu nome?"
+                        value={name}
+                        onChange={(ev) => setName(ev.target.value)}
+                    />
+                    <button type="button">Botão de ação pro form que vou colocar</button>
+                </label>
                 <p>
                     <img src="icons/level.svg" alt="Level" />level {level}
                 </p>

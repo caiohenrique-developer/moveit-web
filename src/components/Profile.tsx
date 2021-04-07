@@ -1,7 +1,8 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
+import { FiCheckSquare } from "react-icons/fi";
 import { useChallenges } from '../hooks/useChallenges';
 
-import styles from '../styles/components/Profile.module.css';
+import { FormContainer } from '../styles/components/Profile';
 
 export function Profile() {
     const { level } = useChallenges();
@@ -24,11 +25,8 @@ export function Profile() {
     }
 
     return (
-        <form
-            className={styles.profileContainer}
-            onSubmit={handleFormSubmit}
-        >
-            <div className={styles.profileAvatar}>
+        <FormContainer onSubmit={handleFormSubmit} >
+            <section>
                 <img src={"github-profile-avatar.jpeg"} alt="GitHub profile avatar" />
                 <label htmlFor="avatar">
                     <input
@@ -39,9 +37,9 @@ export function Profile() {
                         onChange={handleProfileAvatar}
                     />
                 </label>
-            </div>
+            </section>
             
-            <div>
+            <section>
                 <label>
                     <input
                         type="text"
@@ -49,12 +47,12 @@ export function Profile() {
                         value={name}
                         onChange={(ev) => setName(ev.target.value)}
                     />
-                    <button type="button">Botão de ação pro form que vou colocar</button>
+                    <button type="submit"><FiCheckSquare /></button>
                 </label>
                 <p>
                     <img src="icons/level.svg" alt="Level" />level {level}
                 </p>
-            </div>
-        </form>
+            </section>
+        </FormContainer>
     );
 }

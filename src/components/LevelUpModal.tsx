@@ -1,13 +1,13 @@
 import { useChallenges } from '../hooks/useChallenges';
 
-import styles from '../styles/components/LevelUpModal.module.css';
+import { Container } from '../styles/components/LevelUpModal';
 
 export function LevelUpModal() {
     const { level, closeLevelUpModal } = useChallenges();
 
     return (
-        <div className={styles.overlay}>
-            <div className={styles.container}>
+        <Container>
+            <div>
                 <header>{level}</header>
 
                 <strong>Parabéns</strong>
@@ -18,6 +18,6 @@ export function LevelUpModal() {
                     <img src="icons/close.svg" alt="Close modal icon" />
                 </button>
             </div>
-        </div>
+        </Container>
     )
 }

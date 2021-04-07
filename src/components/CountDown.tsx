@@ -1,6 +1,6 @@
 import { useCountDown } from '../hooks/useCountDown';
 
-import styles from "../styles/components/CountDown.module.css";
+import { Container } from "../styles/components/CountDown";
 
 export function CountDown() {
     const {
@@ -16,8 +16,8 @@ export function CountDown() {
     const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('');
 
     return (
-        <div>
-            <div className={styles.countDownContainer}>
+        <Container>
+            <div>
                 <div>
                     <span>{minuteLeft}</span>
                     <span>{minuteRight}</span>
@@ -33,7 +33,7 @@ export function CountDown() {
                 hasFinished ? (
                     <button
                         disabled
-                        className={styles.countDownButton}
+                        // className={styles.countDownButton}
                     >
                         Ciclo encerrado
                         <img src="icons/check_circle.svg" alt="Check icon - Cycle checked" />
@@ -44,7 +44,7 @@ export function CountDown() {
                                 isActive ? (
                                     <button
                                         type="button"
-                                        className={`${styles.countDownButton} ${styles.countDownButtonActive}`}
+                                        // className={`${styles.countDownButton} ${styles.countDownButtonActive}`}
                                         onClick={resetCountDown}
                                     >
                                         Abandonar ciclo
@@ -53,7 +53,7 @@ export function CountDown() {
                                 ) : (
                                         <button
                                             type="button"
-                                            className={styles.countDownButton}
+                                            // className={styles.countDownButton}
                                             onClick={startCountDown}
                                         >
                                             Iniciar um ciclo
@@ -64,6 +64,6 @@ export function CountDown() {
                         </>
                     )
             }
-        </div>
+        </Container>
     );
 }

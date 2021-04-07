@@ -1,6 +1,6 @@
 import { useCountDown } from '../hooks/useCountDown';
 
-import { Container } from "../styles/components/CountDown";
+import { Container, Button } from "../styles/components/CountDown";
 
 export function CountDown() {
     const {
@@ -31,31 +31,30 @@ export function CountDown() {
 
             {
                 hasFinished ? (
-                    <button disabled>
+                    <Button disabled>
                         Ciclo encerrado
                         <img src="icons/check_circle.svg" alt="Check icon - Cycle checked" />
-                    </button>
+                    </Button>
                 ) : (
                         <>
                             {
                                 isActive ? (
-                                    <button
+                                    <Button
+                                        active
                                         type="button"
-                                        // active
-                                        className={`countDownButtonActive`}
                                         onClick={resetCountDown}
                                     >
                                         Abandonar ciclo
                                         <img src="icons/close-white.svg" alt="Close icon - To abandon a cycle" />
-                                    </button>
+                                    </Button>
                                 ) : (
-                                        <button
+                                        <Button
                                             type="button"
                                             onClick={startCountDown}
                                         >
                                             Iniciar um ciclo
                                             <img src="icons/play_arrow.svg" alt="Play icon - Start a cycle" />
-                                        </button>
+                                        </Button>
                                     )
                             }
                         </>

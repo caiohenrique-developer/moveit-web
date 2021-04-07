@@ -66,20 +66,20 @@ export const Container = styled.div`
             img { margin: 0 8px; }
         }
     }
-
-    /* .countDownButtonActive {
+    .countDownButtonActive {
         background: var(--white);
         color: var(--button-title);
+
+        img { margin: 0 8px; }
+
+        &:not(:disabled):hover {
+            background: var(--red);
+            color: var(--white);
+        }
+        &:not(:hover) {
+            > img { filter: var(--revert); }
+        }
     }
-
-    .countDownButtonActive img { margin: 0 8px; }
-
-    .countDownButtonActive:not(:disabled):hover {
-        background: var(--red);
-        color: var(--white);
-    }
-
-    .countDownButtonActive:not(:hover) > img { filter: var(--revert); } */
 
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {

@@ -11,7 +11,7 @@ import { Profile } from "../components/Profile";
 import { ChallengeBox } from "../components/ChallengeBox";
 import { ThemeButton } from "../components/ButtonTheme";
 
-import styles from "../styles/pages/Home.module.css";
+import { Container } from "../styles/pages/Home";
 
 export default function Home(props: ChallengesProviderProps) {
   
@@ -21,7 +21,7 @@ export default function Home(props: ChallengesProviderProps) {
       currentExperience={props.currentExperience}
       challengesComplited={props.challengesComplited}
     >
-      <div className={styles.container}>
+      <Container>
         <Head>
           <title>Move.it | Boost yourself!</title>
         </Head>
@@ -42,7 +42,7 @@ export default function Home(props: ChallengesProviderProps) {
             </div>
           </section>
         </CountDownProvider>
-      </div>
+      </Container>
     </ChallengesProvider>
   )
 }

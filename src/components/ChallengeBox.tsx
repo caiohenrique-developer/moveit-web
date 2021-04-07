@@ -1,7 +1,7 @@
 import { useChallenges } from '../hooks/useChallenges';
 import { useCountDown } from '../hooks/useCountDown';
 
-import styles from '../styles/components/ChallengeBox.module.css'
+import { Container } from '../styles/components/ChallengeBox'
 
 export function ChallengeBox() {
     const { activeChallenge, resetChallenge, completeChallenge } = useChallenges();
@@ -18,10 +18,10 @@ export function ChallengeBox() {
     }
 
     return (
-        <div className={styles.challengeBoxContainer}>
+        <Container>
             {
                 activeChallenge ? (
-                    <div className={styles.challengeActive}>
+                    <div className={'challengeActive'}>
                         <header>Ganhe {activeChallenge.amount} xp</header>
                         <main>
                             <img src={`icons/${activeChallenge.type}.svg`} alt="Body icon" />
@@ -31,14 +31,14 @@ export function ChallengeBox() {
                         <footer>
                             <button
                                 type="button"
-                                className={styles.challengeFailedButton}
+                                className={'challengeFailedButton'}
                                 onClick={handleChallengeFailed}
                             >
                                 Não completei
                             </button>
                             <button
                                 type="button"
-                                className={styles.challengeSucceededButton}
+                                className={'challengeSucceededButton'}
                                 onClick={handleChallengeSucceeded}
                             >
                                 Completei
@@ -46,7 +46,7 @@ export function ChallengeBox() {
                         </footer>
                     </div>
                 ) : (
-                        <div className={styles.challengeNotActive}>
+                        <div className={'challengeNotActive'}>
                             <strong>Finalize um ciclo para receber um desafio</strong>
                             <p>
                                 <img src="icons/level-up.svg" alt="Level up icon" />
@@ -55,6 +55,6 @@ export function ChallengeBox() {
                         </div>
                     )
             }
-        </div>
+        </Container>
     )
 }

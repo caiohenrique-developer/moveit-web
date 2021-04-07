@@ -31,10 +31,7 @@ export function CountDown() {
 
             {
                 hasFinished ? (
-                    <button
-                        disabled
-                        // className={styles.countDownButton}
-                    >
+                    <button disabled>
                         Ciclo encerrado
                         <img src="icons/check_circle.svg" alt="Check icon - Cycle checked" />
                     </button>
@@ -44,7 +41,8 @@ export function CountDown() {
                                 isActive ? (
                                     <button
                                         type="button"
-                                        // className={`${styles.countDownButton} ${styles.countDownButtonActive}`}
+                                        // active
+                                        className={`countDownButtonActive`}
                                         onClick={resetCountDown}
                                     >
                                         Abandonar ciclo
@@ -53,7 +51,6 @@ export function CountDown() {
                                 ) : (
                                         <button
                                             type="button"
-                                            // className={styles.countDownButton}
                                             onClick={startCountDown}
                                         >
                                             Iniciar um ciclo

@@ -17,13 +17,12 @@ export const Container = styled.div`
         background: transparent;
         color: var(--title);
     }
-
     > section {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 6.25rem;
-        align-items: center;
         flex: 1;
+        gap: 6.25rem;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
 
         > div {
             &:last-child {
@@ -36,7 +35,7 @@ export const Container = styled.div`
 
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {
-        section {
+        > section {
             display: flex;
             flex-direction: column;
             grid-gap: 4.25rem;

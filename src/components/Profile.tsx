@@ -1,7 +1,6 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
 import { FiCheckSquare } from "react-icons/fi";
 import { useChallenges } from '../hooks/useChallenges';
-
 import { FormContainer } from '../styles/components/Profile';
 
 export function Profile() {

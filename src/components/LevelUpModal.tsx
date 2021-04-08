@@ -1,5 +1,4 @@
 import { useChallenges } from '../hooks/useChallenges';
-
 import { Container } from '../styles/components/LevelUpModal';
 
 export function LevelUpModal() {

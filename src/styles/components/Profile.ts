@@ -40,13 +40,19 @@ export const FormContainer = styled.form`
 
             label {
                 display: flex;
+                align-items: center;
+                justify-content: space-between;
 
                 input {
+                    display: block;
+                    width: 100%;
+                    height: 25px;
                     font-size: 1.5rem;
                     font-weight: 600;
                     color: var(--title);
-                    padding: 5px 10px;
-                    /* background: transparent; */
+                    padding-right: 10px;
+                    margin-right: 10px;
+                    background: transparent;
 
                     &::-webkit-input-placeholder { /* Edge */
                         font-size: 1rem;
@@ -71,7 +77,9 @@ export const FormContainer = styled.form`
                     align-items: center;
                     justify-content: center;
 
-                    background: red;
+                    padding: 5px;
+                    border-radius: 5px;
+                    /* background: red; */
 
                     svg {}
                 }

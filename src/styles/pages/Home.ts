@@ -11,15 +11,15 @@ export const Container = styled.div`
 
     > button {
         position: absolute;
-        top: 40px;
-        left: 40px;
+        bottom: 40px;
+        right: 40px;
         
         background: transparent;
         color: var(--title);
     }
     > section {
         flex: 1;
-        gap: 6.25rem;
+        gap: 4rem;
         display: grid;
         align-items: center;
         grid-template-columns: 1fr 1fr;

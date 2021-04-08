@@ -10,11 +10,9 @@ import { ExperienceBar } from "../components/ExperienceBar";
 import { Profile } from "../components/Profile";
 import { ChallengeBox } from "../components/ChallengeBox";
 import { ThemeButton } from "../components/ButtonTheme";
-
 import { Container } from "../styles/pages/Home";
 
 export default function Home(props: ChallengesProviderProps) {
-  
   return (
     <ChallengesProvider
       level={props.level}

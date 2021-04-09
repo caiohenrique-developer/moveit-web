@@ -48,8 +48,16 @@ export const Label = styled.label<ProfileFormProps>`
                 transition: .3s;
 
                 &:hover {
-                    background: #000;
-                    border: 4px solid #fff;
+                    background: ${ ({ theme }) =>
+                        theme.dark
+                        ? css`var(--white)`
+                        : css`var(--white)`
+                    };
+                    border: 4px solid ${ ({ theme }) =>
+                        theme.dark
+                        ? css`var(--blue)`
+                        : css`var(--blue)`
+                    };
                     opacity: 0.2;
                     transform: scale(1.3);
                 }
@@ -99,8 +107,16 @@ export const Input = styled.input<ProfileFormProps>`
                 &:focus {
                     height: 35px;
                     padding: 10px;
-                    box-shadow: inset 0 0 30px rgb(255 255 255 / 18%);
-                    border: 1px solid #ffffff2e;
+                    box-shadow: inset 0 0 30px ${ ({ theme }) =>
+                        theme.dark
+                        ? css`var(--boxShadow)`
+                        : css`var(--boxShadow)`
+                    };
+                    border: 1px solid ${ ({ theme }) =>
+                        theme.dark
+                        ? css`var(--inputProfileColor)`
+                        : css`var(--inputProfileColor)`
+                    };
                     border-radius: 4px;
 
                     &::-webkit-input-placeholder { font-size: 0.75rem; } /* Edge */

@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { ProfileFormProps } from "../../utils/types/components";
 
 export const FormContainer = styled.form`
     position: relative;
@@ -13,7 +14,26 @@ export const FormContainer = styled.form`
                 height: 5.5rem;
                 border-radius: 50%;
             }
-            label {
+        }
+        &:nth-of-type(2) {
+            margin-left: 1.5rem;
+
+            p {
+                font-size: 1rem;
+                margin-top: 0.5rem;
+
+                img { margin-right: 0.5rem; }
+            }
+        }
+    }
+`
+
+export const Label = styled.label<ProfileFormProps>`
+    /* userAvatar */
+    ${
+        ({ elementSection }) =>
+            elementSection === 'userAvatar'
+            ? css`
                 position: absolute;
                 top: 0;
 
@@ -34,12 +54,10 @@ export const FormContainer = styled.form`
                     transform: scale(1.3);
                 }
                 input { display: none; }
-            }
-        }
-        &:nth-of-type(2) {
-            margin-left: 1.5rem;
-
-            label {
+            `
+            /* userName */
+            : elementSection === 'userName'
+            ? css`
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -62,6 +80,10 @@ export const FormContainer = styled.form`
                         box-shadow: inset 0 0 30px rgb(255 255 255 / 25%);
                         border: 1px solid #ffffff40;
                         border-radius: 4px;
+
+                        &::-webkit-input-placeholder { font-size: 0.75rem; } /* Edge */
+                        &:-ms-input-placeholder { font-size: 0.75rem; } /* Internet Explorer 10-11 */
+                        &::placeholder { font-size: 0.75rem; } /* Default */
                     }
                     &::-webkit-input-placeholder { /* Edge */
                         font-size: 0.95rem;
@@ -89,13 +111,7 @@ export const FormContainer = styled.form`
 
                     svg {}
                 }
-            }
-            p {
-                font-size: 1rem;
-                margin-top: 0.5rem;
-
-                img { margin-right: 0.5rem; }
-            }
-        }
+            `
+            : ''
     }
 `

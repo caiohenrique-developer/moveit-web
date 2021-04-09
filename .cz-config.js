@@ -24,7 +24,7 @@ module.exports = {
                 '[ CHORE ]: Changes to the build process or auxiliary tools\n and libraries such as documentation generation',
         },
         { value: ':back: [ REVERT ]', name: '[ REVERT ]: Revert to a commit' },
-        { value: ':chart_with_upwards_trend: [ WIP ]', name: '[ WIP ]: Work in progress' },
+        { value: ':construction: [ WIP ]', name: '[ WIP ]: Work in progress' },
 
         // To create release tags
         { value: 'perf', name: '{ MAJOR - TAG }: Add a release tag of perf type' },

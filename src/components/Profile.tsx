@@ -1,7 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
 import { FiCheckSquare } from "react-icons/fi";
 import { useChallenges } from '../hooks/useChallenges';
-import { FormContainer } from '../styles/components/Profile';
+import { FormContainer, Label } from '../styles/components/Profile';
 
 export function Profile() {
     const { level } = useChallenges();
@@ -27,7 +27,7 @@ export function Profile() {
         <FormContainer onSubmit={handleFormSubmit} >
             <section>
                 <img src={"github-profile-avatar.jpeg"} alt="GitHub profile avatar" />
-                <label htmlFor="avatar">
+                <Label elementSection="userAvatar" htmlFor="avatar">
                     <input
                         type="file"
                         id="avatar"
@@ -35,11 +35,11 @@ export function Profile() {
                         capture
                         onChange={handleProfileAvatar}
                     />
-                </label>
+                </Label>
             </section>
             
             <section>
-                <label>
+                <Label elementSection="userName">
                     <input
                         type="text"
                         placeholder="Qual o seu nome?"
@@ -47,7 +47,7 @@ export function Profile() {
                         onChange={(ev) => setName(ev.target.value)}
                     />
                     <button type="submit"><FiCheckSquare /></button>
-                </label>
+                </Label>
                 <p>
                     <img src="icons/level.svg" alt="Level" />level {level}
                 </p>

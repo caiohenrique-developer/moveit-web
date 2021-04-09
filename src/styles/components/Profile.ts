@@ -53,7 +53,6 @@ export const Label = styled.label<ProfileFormProps>`
                     opacity: 0.2;
                     transform: scale(1.3);
                 }
-                input { display: none; }
             `
             /* userName */
             : elementSection === 'userName'
@@ -62,45 +61,6 @@ export const Label = styled.label<ProfileFormProps>`
                 align-items: center;
                 justify-content: space-between;
 
-                input {
-                    display: block;
-                    width: 100%;
-                    height: 25px;
-                    font-size: 1.5rem;
-                    font-weight: 600;
-                    color: var(--title);
-                    padding-right: 10px;
-                    margin-right: 15px;
-                    background: transparent;
-                    transition: .4s;
-
-                    &:focus {
-                        height: 35px;
-                        padding: 10px;
-                        box-shadow: inset 0 0 30px rgb(255 255 255 / 25%);
-                        border: 1px solid #ffffff40;
-                        border-radius: 4px;
-
-                        &::-webkit-input-placeholder { font-size: 0.75rem; } /* Edge */
-                        &:-ms-input-placeholder { font-size: 0.75rem; } /* Internet Explorer 10-11 */
-                        &::placeholder { font-size: 0.75rem; } /* Default */
-                    }
-                    &::-webkit-input-placeholder { /* Edge */
-                        font-size: 0.95rem;
-                        font-weight: 400;
-                        color: var(--button-title);
-                    }
-                    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-                        font-size: 0.95rem;
-                        font-weight: 400;
-                        color: var(--button-title);
-                    }
-                    &::placeholder { /* Default */
-                        font-size: 0.95rem;
-                        font-weight: 400;
-                        color: var(--button-title);
-                    }
-                }
                 button {
                     display: flex;
                     align-items: center;
@@ -110,6 +70,57 @@ export const Label = styled.label<ProfileFormProps>`
                     border-radius: 5px;
 
                     svg {}
+                }
+            `
+            : ''
+    }
+`
+
+export const Input = styled.input<ProfileFormProps>`
+    /* userAvatar */
+    ${
+        ({ elementSection }) =>
+            elementSection === 'userAvatar'
+            ? css` display: none; `
+            /* userName */
+            : elementSection === 'userName'
+            ? css`
+                display: block;
+                width: 100%;
+                height: 25px;
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: var(--title);
+                padding-right: 10px;
+                margin-right: 15px;
+                background: transparent;
+                transition: .4s;
+
+                &:focus {
+                    height: 35px;
+                    padding: 10px;
+                    box-shadow: inset 0 0 30px rgb(255 255 255 / 18%);
+                    border: 1px solid #ffffff2e;
+                    border-radius: 4px;
+
+                    &::-webkit-input-placeholder { font-size: 0.75rem; } /* Edge */
+                    &:-ms-input-placeholder { font-size: 0.75rem; } /* Internet Explorer 10-11 */
+                    &::placeholder { font-size: 0.75rem; } /* Default */
+                }
+                &::-webkit-input-placeholder { /* Edge */
+                    font-size: 0.95rem;
+                    font-weight: 400;
+                    color: var(--button-title);
+                }
+                &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                    font-size: 0.95rem;
+                    font-weight: 400;
+                    color: var(--button-title);
+                }
+                &::placeholder { /* Default */
+                    font-size: 0.95rem;
+                    font-weight: 400;
+                    color: var(--button-title);
                 }
             `
             : ''

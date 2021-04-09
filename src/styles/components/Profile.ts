@@ -25,12 +25,13 @@ export const FormContainer = styled.form`
                 border-radius: 50%;
                 background: transparent;
                 cursor: pointer;
-                transition: .2s;
+                transition: .3s;
 
                 &:hover {
                     background: #000;
-                    border: 5px solid #fff;
+                    border: 4px solid #fff;
                     opacity: 0.2;
+                    transform: scale(1.3);
                 }
                 input { display: none; }
             }
@@ -51,25 +52,31 @@ export const FormContainer = styled.form`
                     font-weight: 600;
                     color: var(--title);
                     padding-right: 10px;
-                    margin-right: 10px;
+                    margin-right: 15px;
                     background: transparent;
+                    transition: .4s;
 
+                    &:focus {
+                        height: 35px;
+                        padding: 10px;
+                        box-shadow: inset 0 0 30px rgb(255 255 255 / 25%);
+                        border: 1px solid #ffffff40;
+                        border-radius: 4px;
+                    }
                     &::-webkit-input-placeholder { /* Edge */
-                        font-size: 1rem;
+                        font-size: 0.95rem;
                         font-weight: 400;
-                        color: var(--gray-line);
+                        color: var(--button-title);
                     }
-
                     &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-                        font-size: 1rem;
+                        font-size: 0.95rem;
                         font-weight: 400;
-                        color: var(--gray-line);
+                        color: var(--button-title);
                     }
-
                     &::placeholder { /* Default */
-                        font-size: 1rem;
+                        font-size: 0.95rem;
                         font-weight: 400;
-                        color: var(--gray-line);
+                        color: var(--button-title);
                     }
                 }
                 button {
@@ -79,7 +86,6 @@ export const FormContainer = styled.form`
 
                     padding: 5px;
                     border-radius: 5px;
-                    /* background: red; */
 
                     svg {}
                 }

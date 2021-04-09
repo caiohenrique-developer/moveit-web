@@ -1,47 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
-
-export const themeMode = {
-    /* Dark mode (Default) */
-    dark: {
-        background:'linear-gradient(180deg, rgba(18,18,18,1) 0%, rgba(18,18,18,1) 70%, rgba(59,59,59,1) 100%)',
-        boxShadow:'rgb(255 255 255 / 18%)',
-        inputProfileColor:'#ffffff2e',
-        text:'#f7f7f7',
-        white:'#222222',
-        grayLine:'#dcdde0',
-        textHighlight:'#b3b9ff',
-        title:'#ffbe00bf',
-        buttonTitle:'#dcdde0',
-        red:'#e83f5b',
-        green:'#4cd62b',
-        blue:'#f9aa33',
-        blueDark:'#dc8b12',
-        blueTwitter:'#2aa9e0',
-        border:'#121212',
-        invert: 'invert(1)',
-        revert: 'invert(0)'
-    },
-    /* Light mode */
-    light: {
-        background:'linear-gradient(180deg, rgba(242,243,245,1) 0%, rgba(242,243,245,1) 70%, rgba(203,203,203,1) 100%)',
-        boxShadow:'rgb(0 0 0 / 8%)',
-        inputProfileColor:'#ffffff2b',
-        text:'#666',
-        white:'#fff',
-        grayLine:'#dcdde0',
-        textHighlight:'#b3b9ff',
-        title:'#2e384d',
-        buttonTitle:'#2e384d',
-        red:'#e83f5b',
-        green:'#4cd62b',
-        blue:'#5965e0',
-        blueDark:'#4953b8',
-        blueTwitter:'#2aa9e0',
-        border:'#f0f1f3',
-        invert: 'invert(0)',
-        revert: 'invert(1)'
-    }
-}
+import { createGlobalStyle } from 'styled-components';
+import { ThemeMode } from "../utils/types/styles/components";
 
 export default createGlobalStyle`
     * {

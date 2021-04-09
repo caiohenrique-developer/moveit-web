@@ -42,3 +42,34 @@ export interface ContextFormat {
     theme: string;
     handleThemeModeToggle(): void;
 }
+
+// StyleThemeMode
+export interface StylesThemeModeProps {
+    /* Dark mode (Default) */
+    themeMode?: {
+        dark?: {
+            // background?: string;
+            // [propName: string]: any;
+        },
+        /* Light mode */
+        light?: {
+            background?: string;
+            boxShadow?: string;
+            inputProfileColor?: string;
+            text?: string;
+            white?: string;
+            grayLine?: string;
+            textHighlight?: string;
+            title?: string;
+            buttonTitle?: string;
+            red?: string;
+            green?: string;
+            blue?: string;
+            blueDark?: string;
+            blueTwitter?: string;
+            border?: string;
+            invert?: string;
+            revert?: string;
+        }
+    }
+}

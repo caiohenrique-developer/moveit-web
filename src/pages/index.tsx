@@ -10,7 +10,9 @@ import { ExperienceBar } from "../components/ExperienceBar";
 import { Profile } from "../components/Profile";
 import { ChallengeBox } from "../components/ChallengeBox";
 import { ThemeButton } from "../components/ButtonTheme";
+import { Teste } from "../components/Tst";
 import { Container } from "../styles/pages/Home";
+// import { ThemeMode } from "../styles/components/ThemeMode";
 
 export default function Home(props: ChallengesProviderProps) {
   return (
@@ -29,6 +31,11 @@ export default function Home(props: ChallengesProviderProps) {
         <ExperienceBar />
 
         <CountDownProvider>
+  
+          {/* Retirar isso depois */}
+          <Teste />
+          {/* <ThemeMode /> */}
+  
           <section>
             <div>
               <Profile />

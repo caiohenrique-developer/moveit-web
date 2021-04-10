@@ -17,10 +17,28 @@ export const ThemeModeProvider = ({ children }: ChildrenGlobalType) => {
             light: {} /* Light mode */
         }
     };
-    
+
     const styleProps = {
-        background: theme === 'dark' ? 'blue' : theme === 'light' ? 'green' : '',
-        title: theme === 'dark' ? 'red' : theme === 'light' ? 'yellow' : '',
+        background:
+            theme === 'dark'
+            ? 'linear-gradient(180deg, rgba(18,18,18,1) 0%, rgba(18,18,18,1) 70%, rgba(59,59,59,1) 100%)'
+            : theme === 'light'
+            ? 'linear-gradient(180deg, rgba(242,243,245,1) 0%, rgba(242,243,245,1) 70%, rgba(203,203,203,1) 100%)'
+            : '',
+        text: theme === 'dark' ? '#f7f7f7' : theme === 'light' ? '#666' : '',
+        white: theme === 'dark' ? '#222222' : theme === 'light' ? '#fff' : '',
+        grayLine: theme === 'dark' ? '#dcdde0' : theme === 'light' ? '#dcdde0' : '',
+        textHighlight: theme === 'dark' ? '#b3b9ff' : theme === 'light' ? '#b3b9ff' : '',
+        title: theme === 'dark' ? '#ffbe00bf' : theme === 'light' ? '#2e384d' : '',
+        buttonTitle: theme === 'dark' ? '#dcdde0' : theme === 'light' ? '#2e384d' : '',
+        red: theme === 'dark' ? '#e83f5b' : theme === 'light' ? '#e83f5b' : '',
+        green: theme === 'dark' ? '#4cd62b' : theme === 'light' ? '#4cd62b' : '',
+        blue: theme === 'dark' ? '#f9aa33' : theme === 'light' ? '#5965e0' : '',
+        blueDark: theme === 'dark' ? '#dc8b12' : theme === 'light' ? '#4953b8' : '',
+        blueTwitter: theme === 'dark' ? '#2aa9e0' : theme === 'light' ? '#2aa9e0' : '',
+        border: theme === 'dark' ? '#121212' : theme === 'light' ? '#f0f1f3' : '',
+        invert: theme === 'dark' ? 'invert(1)' : theme === 'light' ? 'invert(0)' : '',
+        revert: theme === 'dark' ? 'invert(0)' : theme === 'light' ? 'invert(1)' : ''
     }
 
     actualTheme.themeMode = {

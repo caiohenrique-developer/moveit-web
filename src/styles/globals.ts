@@ -1,43 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
-
-export const themeMode = {
-    /* Dark mode (Default) */
-    dark: {
-        background:'linear-gradient(180deg, rgba(18,18,18,1) 0%, rgba(18,18,18,1) 70%, rgba(59,59,59,1) 100%)',
-        text:'#f7f7f7',
-        white:'#222222',
-        grayLine:'#dcdde0',
-        textHighlight:'#b3b9ff',
-        title:'#ffbe00bf',
-        buttonTitle:'#dcdde0',
-        red:'#e83f5b',
-        green:'#4cd62b',
-        blue:'#f9aa33',
-        blueDark:'#dc8b12',
-        blueTwitter:'#2aa9e0',
-        border:'#121212',
-        invert: 'invert(1)',
-        revert: 'invert(0)'
-    },
-    /* Light mode */
-    light: {
-        background:'linear-gradient(180deg, rgba(242,243,245,1) 0%, rgba(242,243,245,1) 70%, rgba(203,203,203,1) 100%)',
-        text:'#666',
-        white:'#fff',
-        grayLine:'#dcdde0',
-        textHighlight:'#b3b9ff',
-        title:'#2e384d',
-        buttonTitle:'#2e384d',
-        red:'#e83f5b',
-        green:'#4cd62b',
-        blue:'#5965e0',
-        blueDark:'#4953b8',
-        blueTwitter:'#2aa9e0',
-        border:'#f0f1f3',
-        invert: 'invert(0)',
-        revert: 'invert(1)'
-    }
-}
+import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
     * {
@@ -51,6 +12,10 @@ export default createGlobalStyle`
     /* Root variables */
     :root {
         --background: ${({ theme }) => theme.background};
+
+        --boxShadow: ${({ theme }) => theme ? theme.boxShadow : theme.boxShadow};
+        --inputProfileColor: ${({ theme }) => theme ? theme.inputProfileColor : theme.inputProfileColor};
+        
         --text: ${({ theme }) => theme.text};
         --white: ${({ theme }) => theme.white};
         --gray-line: ${({ theme }) => theme.grayLine};

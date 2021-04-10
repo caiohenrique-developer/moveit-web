@@ -1,12 +1,15 @@
-import { useContext } from 'react';
-import { ChallengesContext } from '../contexts/ChallengesContext';
-import { CountDownContext } from '../contexts/CountDownContext';
-
-import styles from '../styles/components/ChallengeBox.module.css'
+import { useChallenges } from '../hooks/useChallenges';
+import { useCountDown } from '../hooks/useCountDown';
+import {
+    Container,
+    ChallengeNotActive,
+    ChallengeActive,
+    ChallengeButton
+} from '../styles/components/ChallengeBox';
 
 export function ChallengeBox() {
-    const { activeChallenge, resetChallenge, completeChallenge } = useContext(ChallengesContext);
-    const { resetCountDown } = useContext(CountDownContext);
+    const { activeChallenge, resetChallenge, completeChallenge } = useChallenges();
+    const { resetCountDown } = useCountDown();
 
     function handleChallengeSucceeded() {
         completeChallenge();
@@ -19,43 +22,43 @@ export function ChallengeBox() {
     }
 
     return (
-        <div className={styles.challengeBoxContainer}>
+        <Container>
             {
                 activeChallenge ? (
-                    <div className={styles.challengeActive}>
+                    <ChallengeActive>
                         <header>Ganhe {activeChallenge.amount} xp</header>
                         <main>
-                            <img src={`icons/${activeChallenge.type}.svg`} alt="Body icon" />
+                            <img src={`icons/${activeChallenge.type}.svg`} alt="Icon" />
                             <strong>{activeChallenge.title}</strong>
                             <p>{activeChallenge.description}</p>
                         </main>
                         <footer>
-                            <button
+                            <ChallengeButton
                                 type="button"
-                                className={styles.challengeFailedButton}
+                                status="failed"
                                 onClick={handleChallengeFailed}
                             >
                                 Não completei
-                            </button>
-                            <button
+                            </ChallengeButton>
+                            <ChallengeButton
                                 type="button"
-                                className={styles.challengeSucceededButton}
+                                status="succeeded"
                                 onClick={handleChallengeSucceeded}
                             >
                                 Completei
-                            </button>
+                            </ChallengeButton>
                         </footer>
-                    </div>
+                    </ChallengeActive>
                 ) : (
-                        <div className={styles.challengeNotActive}>
+                        <ChallengeNotActive>
                             <strong>Finalize um ciclo para receber um desafio</strong>
                             <p>
                                 <img src="icons/level-up.svg" alt="Level up icon" />
                                 Avance de nível completando desafios.
                             </p>
-                        </div>
+                        </ChallengeNotActive>
                     )
             }
-        </div>
+        </Container>
     )
 }

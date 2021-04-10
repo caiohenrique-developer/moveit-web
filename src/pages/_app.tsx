@@ -1,5 +1,5 @@
 import GlobalStyle from '../styles/globals'
-import { ThemeModeProvider } from '../contexts/ThemeModeContext';
+import { ThemeModeProvider } from '../hooks/useThemeMode';
 
 function MyApp({ Component, pageProps }) {
   return (

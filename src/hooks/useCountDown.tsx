@@ -1,24 +1,14 @@
-import { createContext, ReactNode, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import { useChallenges } from "./useChallenges";
+import { CountDownContextData } from '../utils/types/hooks';
+import { ChildrenGlobalType } from "../utils/types/GlobalTypes";
 
-import { ChallengesContext } from "./ChallengesContext";
-
-interface CountDownContextData {
-    isActive: boolean;
-    hasFinished: boolean;
-    minutes: number;
-    seconds: number;
-    startCountDown: () => void;
-    resetCountDown: () => void;
-}
-
-interface CountDownProviderProps { children: ReactNode; }
-
-export const CountDownContext = createContext({} as CountDownContextData);
+const CountDownContext = createContext({} as CountDownContextData);
 
 let countDownTimeout: NodeJS.Timeout;
 
-export function CountDownProvider({ children }: CountDownProviderProps) {
-    const { startNewChallenge } = useContext(ChallengesContext)
+export function CountDownProvider({ children }: ChildrenGlobalType) {
+    const { startNewChallenge } = useChallenges();
 
     const [time, setTime] = useState(0.1 * 60);
     const [isActive, setIsActive] = useState(false);
@@ -62,4 +52,10 @@ export function CountDownProvider({ children }: CountDownProviderProps) {
             {children}
         </CountDownContext.Provider>
     );
+}
+
+export const useCountDown = () => {
+    const context = useContext(CountDownContext);
+
+    return context;
 }

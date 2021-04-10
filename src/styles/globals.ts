@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import { ThemeMode } from "../utils/types/styles/components";
 
 export default createGlobalStyle`
     * {
@@ -13,8 +12,10 @@ export default createGlobalStyle`
     /* Root variables */
     :root {
         --background: ${({ theme }) => theme.background};
+
         --boxShadow: ${({ theme }) => theme ? theme.boxShadow : theme.boxShadow};
         --inputProfileColor: ${({ theme }) => theme ? theme.inputProfileColor : theme.inputProfileColor};
+        
         --text: ${({ theme }) => theme.text};
         --white: ${({ theme }) => theme.white};
         --gray-line: ${({ theme }) => theme.grayLine};

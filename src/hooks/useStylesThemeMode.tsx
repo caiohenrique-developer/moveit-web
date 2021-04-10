@@ -1,38 +1,24 @@
 import { createContext, useContext } from "react";
 import { useThemeMode } from "./useThemeMode";
-import { ChildrenGlobalType, StylesThemeModeProps } from "../utils/types/hooks";
+import { StylesThemeModeProps } from "../utils/types/hooks";
+import { ChildrenGlobalType } from "../utils/types/GlobalTypes";
 
 const StyleThemeModeContext = createContext({} as StylesThemeModeProps);
 
-export const ThemeMode = ({ children }: ChildrenGlobalType) => {
+export const StylesThemeModeProvider = ({ children }: ChildrenGlobalType) => {
     const { theme } = useThemeMode();
 
-    console.log(theme);
-
-    let tst: StylesThemeModeProps = {
-        themeMode: {
-            dark: {}, /* Dark mode (Default) */
-            light: {} /* Light mode */
+    // const getThemeStyles = (): StylesThemeModeProps => {
+        const styleProps = {
+            background: theme === 'dark' ? 'blue' : theme === 'light' ? 'green' : '',
+            title: theme === 'dark' ? 'red' : theme === 'light' ? 'yellow' : '',
         }
-    };
-    
-    const styleProps = {
-        // background: theme ? 'blue' : theme ? 'green' : ''
-        background: 'red'
-    }
 
-    tst = {
-        themeMode: {
-            dark: styleProps,
-            light: styleProps
-        }
-    }
+        // return styleProps;
+    // }
     
-    console.log('Dark:', tst.themeMode.dark);
-    console.log('Light:', tst.themeMode.light);
-
     return (
-        <StyleThemeModeContext.Provider value={tst.themeMode}>
+        <StyleThemeModeContext.Provider value={{ styleProps }}>
             {children}
         </StyleThemeModeContext.Provider>
     );

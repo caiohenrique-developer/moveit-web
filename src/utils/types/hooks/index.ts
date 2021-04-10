@@ -1,7 +1,4 @@
-import { ReactNode } from "react";
-
-// Global Children type
-export interface ChildrenGlobalType { children?: ReactNode; }
+import { ChildrenGlobalType } from "../GlobalTypes";
 
 // useChallenges
 export interface ChallengesProviderProps extends ChildrenGlobalType {
@@ -43,33 +40,32 @@ export interface ContextFormat {
     handleThemeModeToggle(): void;
 }
 
-// StyleThemeMode
+// useStylesThemeMode
 export interface StylesThemeModeProps {
-    /* Dark mode (Default) */
-    themeMode?: {
-        dark?: {
-            // background?: string;
-            // [propName: string]: any;
-        },
-        /* Light mode */
-        light?: {
-            background?: string;
-            boxShadow?: string;
-            inputProfileColor?: string;
-            text?: string;
-            white?: string;
-            grayLine?: string;
-            textHighlight?: string;
-            title?: string;
-            buttonTitle?: string;
-            red?: string;
-            green?: string;
-            blue?: string;
-            blueDark?: string;
-            blueTwitter?: string;
-            border?: string;
-            invert?: string;
-            revert?: string;
-        }
-    }
+    styleProps: object
+    
+    // themeMode: {
+    //     dark: { /* Dark mode (Default) */
+    //         [propName: string]: any;
+    //     },
+    //     light: { /* Light mode */
+    //         background?: string;
+    //         boxShadow?: string;
+    //         inputProfileColor?: string;
+    //         text?: string;
+    //         white?: string;
+    //         grayLine?: string;
+    //         textHighlight?: string;
+    //         title?: string;
+    //         buttonTitle?: string;
+    //         red?: string;
+    //         green?: string;
+    //         blue?: string;
+    //         blueDark?: string;
+    //         blueTwitter?: string;
+    //         border?: string;
+    //         invert?: string;
+    //         revert?: string;
+    //     }
+    // }
 }

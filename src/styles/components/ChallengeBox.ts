@@ -106,7 +106,7 @@ export const ChallengeButton = styled.button<ChallengeButtonProps>`
         ? css`var(--red);`
         : status === 'succeeded'
         ? css`var(--green);`
-        : css`var(--gray-line);`
+        : css`var(--grayLine);`
     };
     &:hover { filter: brightness(0.9); }
 `

@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
+import { StylesThemeProps } from "../utils/types/styles/GlobalStylesTypes";
 
-export default createGlobalStyle`
+export default createGlobalStyle<StylesThemeProps>`
     * {
         margin: 0;
         padding: 0;
@@ -12,21 +13,19 @@ export default createGlobalStyle`
     /* Root variables */
     :root {
         --background: ${({ theme }) => theme.background};
-
-        --boxShadow: ${({ theme }) => theme ? theme.boxShadow : theme.boxShadow};
-        --inputProfileColor: ${({ theme }) => theme ? theme.inputProfileColor : theme.inputProfileColor};
-        
+        --boxShadow: ${({ theme }) => theme.boxShadow};
+        --inputProfileColor: ${({ theme }) => theme.inputProfileColor};
         --text: ${({ theme }) => theme.text};
         --white: ${({ theme }) => theme.white};
-        --gray-line: ${({ theme }) => theme.grayLine};
-        --text-highlight: ${({ theme }) => theme.textHighlight};
+        --grayLine: ${({ theme }) => theme.grayLine};
+        --textHighlight: ${({ theme }) => theme.textHighlight};
         --title: ${({ theme }) => theme.title};
-        --button-title: ${({ theme }) => theme.buttonTitle};
+        --buttonTitle: ${({ theme }) => theme.buttonTitle};
         --red: ${({ theme }) => theme.red};
         --green: ${({ theme }) => theme.green};
         --blue: ${({ theme }) => theme.blue};
-        --blue-dark: ${({ theme }) => theme.blueDark};
-        --blue-twitter: ${({ theme }) => theme.blueTwitter};
+        --blueDark: ${({ theme }) => theme.blueDark};
+        --blueTwitter: ${({ theme }) => theme.blueTwitter};
         --border: ${({ theme }) => theme.border};
         --invert: ${({ theme }) => theme.invert};
         --revert: ${({ theme }) => theme.revert};

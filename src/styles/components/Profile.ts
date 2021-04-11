@@ -126,17 +126,17 @@ export const Input = styled.input<ProfileFormProps>`
                 &::-webkit-input-placeholder { /* Edge */
                     font-size: 0.95rem;
                     font-weight: 400;
-                    color: var(--button-title);
+                    color: var(--buttonTitle);
                 }
                 &:-ms-input-placeholder { /* Internet Explorer 10-11 */
                     font-size: 0.95rem;
                     font-weight: 400;
-                    color: var(--button-title);
+                    color: var(--buttonTitle);
                 }
                 &::placeholder { /* Default */
                     font-size: 0.95rem;
                     font-weight: 400;
-                    color: var(--button-title);
+                    color: var(--buttonTitle);
                 }
             `
             : ''

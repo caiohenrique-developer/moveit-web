@@ -53,7 +53,7 @@ export const Button = styled.button<ButtonProps>`
     border: 0;
     border-radius: 5px;
     background: ${ ({ active }) => active ? css`var(--white)` : css`var(--blue)` };
-    color: ${ ({ active }) => active ? css`var(--button-title)` : css`var(--white)` };
+    color: ${ ({ active }) => active ? css`var(--buttonTitle)` : css`var(--white)` };
     font-size: 1.25rem;
     font-weight: 600;
     transition: 0.2s;
@@ -63,7 +63,7 @@ export const Button = styled.button<ButtonProps>`
     &:not(:disabled) {
         img { filter: var(--invert); }
 
-        &:hover { background: var(--blue-dark); }
+        &:hover { background: var(--blueDark); }
     }
     &:disabled {
         color: var(--text);

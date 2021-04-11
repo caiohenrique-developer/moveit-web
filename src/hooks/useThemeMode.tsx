@@ -25,6 +25,8 @@ export const ThemeModeProvider = ({ children }: ChildrenGlobalType) => {
             : theme === 'light'
             ? 'linear-gradient(180deg, rgba(242,243,245,1) 0%, rgba(242,243,245,1) 70%, rgba(203,203,203,1) 100%)'
             : '',
+        boxShadow: theme === 'dark' ? 'rgb(255 255 255 / 18%)' : theme === 'light' ? 'rgb(0 0 0 / 8%)' : '',
+        inputProfileColor: theme === 'dark' ? '#ffffff2e' : theme === 'light' ? '#ffffff2b' : '',
         text: theme === 'dark' ? '#f7f7f7' : theme === 'light' ? '#666' : '',
         white: theme === 'dark' ? '#222222' : theme === 'light' ? '#fff' : '',
         grayLine: theme === 'dark' ? '#dcdde0' : theme === 'light' ? '#dcdde0' : '',

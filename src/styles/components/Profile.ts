@@ -85,9 +85,9 @@ export const Label = styled.label<ProfileFormProps>`
 `
 
 export const Input = styled.input<ProfileFormProps>`
-    /* userAvatar */
     ${
         ({ elementSection }) =>
+            /* userAvatar */
             elementSection === 'userAvatar'
             ? css` display: none; `
             /* userName */

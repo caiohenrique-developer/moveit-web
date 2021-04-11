@@ -1,5 +1,4 @@
 import { createContext, useContext, useState } from "react";
-import { useStylesThemeMode } from "./useStylesThemeMode";
 import { ContextFormat } from '../utils/types/hooks';
 import { ChildrenGlobalType } from "../utils/types/GlobalTypes";
 import { ThemeProvider } from 'styled-components';
@@ -7,8 +6,6 @@ import { ThemeProvider } from 'styled-components';
 const ThemeModeContext = createContext({} as ContextFormat);
 
 export const ThemeModeProvider = ({ children }: ChildrenGlobalType) => {
-    // const { styleProps } = useStylesThemeMode();
-
     const [theme, setTheme] = useState('dark');
 
     const styleProps = {

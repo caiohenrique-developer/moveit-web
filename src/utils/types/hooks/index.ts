@@ -42,8 +42,6 @@ export interface ContextFormat {
 
 // useStylesThemeMode
 export interface StylesThemeModeProps {
-    styleProps: object
-    
     // themeMode: {
     //     dark: { /* Dark mode (Default) */
     //         [propName: string]: any;

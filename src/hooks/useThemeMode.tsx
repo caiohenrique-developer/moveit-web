@@ -11,13 +11,6 @@ export const ThemeModeProvider = ({ children }: ChildrenGlobalType) => {
 
     const [theme, setTheme] = useState('dark');
 
-    let actualTheme = {
-        themeMode: {
-            dark: {}, /* Dark mode (Default) */
-            light: {} /* Light mode */
-        }
-    };
-
     const styleProps = {
         background:
             theme === 'dark'
@@ -43,16 +36,18 @@ export const ThemeModeProvider = ({ children }: ChildrenGlobalType) => {
         revert: theme === 'dark' ? 'invert(0)' : theme === 'light' ? 'invert(1)' : ''
     }
 
-    actualTheme.themeMode = {
-        dark: styleProps,
-        light: styleProps
-    }
-    
+    let themeMode = {
+        dark: styleProps, /* Dark mode (Default) */
+        light: styleProps /* Light mode */
+    };
+
     const handleThemeModeToggle = () => { theme === 'dark' ? setTheme('light') : setTheme('dark'); }
+    
+    const changedTheme = () => { return theme === 'dark' ? themeMode.dark : themeMode.light }
 
     return (
         <ThemeModeContext.Provider value={{ theme, handleThemeModeToggle }}>
-            <ThemeProvider theme={ theme === 'dark' ? actualTheme.themeMode.dark : actualTheme.themeMode.light }>
+            <ThemeProvider theme={ changedTheme }>
                 {children}
             </ThemeProvider>
         </ThemeModeContext.Provider>

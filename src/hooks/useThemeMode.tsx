@@ -2,6 +2,7 @@ import { createContext, useContext, useState } from "react";
 import { ContextFormat } from '../utils/types/hooks';
 import { ChildrenGlobalType } from "../utils/types/GlobalTypes";
 import { ThemeProvider } from 'styled-components';
+import { motion } from "framer-motion"
 
 const ThemeModeContext = createContext({} as ContextFormat);
 
@@ -33,21 +34,27 @@ export const ThemeModeProvider = ({ children }: ChildrenGlobalType) => {
         revert: theme === 'dark' ? 'invert(0)' : theme === 'light' ? 'invert(1)' : ''
     }
 
-    let themeMode = {
+    const themeMode = {
         dark: styleProps, /* Dark mode (Default) */
         light: styleProps /* Light mode */
-    };
+    }
 
     const handleThemeModeToggle = () => { theme === 'dark' ? setTheme('light') : setTheme('dark'); }
     
     const changedTheme = () => { return theme === 'dark' ? themeMode.dark : themeMode.light }
 
     return (
-        <ThemeModeContext.Provider value={{ theme, handleThemeModeToggle }}>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2 }}
+        >
             <ThemeProvider theme={ changedTheme }>
-                {children}
+                <ThemeModeContext.Provider value={{ theme, handleThemeModeToggle }}>
+                    {children}
+                </ThemeModeContext.Provider>
             </ThemeProvider>
-        </ThemeModeContext.Provider>
+        </motion.div>
     )
 }
 

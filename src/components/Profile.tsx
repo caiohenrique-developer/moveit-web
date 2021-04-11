@@ -2,6 +2,7 @@ import { ChangeEvent, FormEvent, useState } from 'react';
 import { FiCheckSquare } from "react-icons/fi";
 import { useChallenges } from '../hooks/useChallenges';
 import { FormContainer, Label, Input } from '../styles/components/Profile';
+import { motion } from "framer-motion"
 
 export function Profile() {
     const { level } = useChallenges();
@@ -26,7 +27,13 @@ export function Profile() {
     return (
         <FormContainer onSubmit={handleFormSubmit} >
             <section>
-                <img src={"github-profile-avatar.jpeg"} alt="GitHub profile avatar" />
+                <motion.img
+                    src={"github-profile-avatar.jpeg"}
+                    alt="GitHub profile avatar"
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 0.5 }}
+                />
+
                 <Label elementSection="userAvatar" htmlFor="avatar">
                     <Input
                         type="file"

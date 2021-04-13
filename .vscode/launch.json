@@ -9,6 +9,7 @@
       "request": "launch",
       "name": "Debugging Move.it",
       "url": "http://localhost:3000",
+      "skipFiles": ["<node_modules>/**"],
       "webRoot": "${workspaceFolder}"
     }
   ]

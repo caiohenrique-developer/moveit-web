@@ -1,14 +1,14 @@
-import GlobalStyle from '../styles/globals'
+import GlobalStyle from '../styles/globals';
 import { ThemeModeProvider } from '../hooks/useThemeMode';
 
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeModeProvider>
-        <Component {...pageProps} />
+      <Component {...pageProps} />
 
-        <GlobalStyle />
+      <GlobalStyle />
     </ThemeModeProvider>
-  )
+  );
 }
 
 export default MyApp;

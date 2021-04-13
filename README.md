@@ -91,22 +91,23 @@ To clone and run this application locally, you'll need [Git](https://git-scm.com
 <details open>
   <summary>Hit me to toggle collapse: 🕹️<sup>🤏</sup></summary>
 
-  _From your `command line` follow these steps..._
+_From your `command line` follow these steps..._
 
-  ```bash
-  # Clone the project
-  $ git clone https://github.com/caiohenrique-developer/moveit-web 'Move.it Web' && cd 'Move.it Web'
+```bash
+# Clone the project
+$ git clone https://github.com/caiohenrique-developer/moveit-web 'Move.it Web' && cd 'Move.it Web'
 
-  # Install dependencies
-  $ yarn
-  # or
-  $ npm i
+# Install dependencies
+$ yarn
+# or
+$ npm i
 
-  # Start the project
-  $ yarn dev
-  
-  # Very well, now you can enjoy this project! ;)
-  ```
+# Start the project
+$ yarn dev
+
+# Very well, now you can enjoy this project! ;)
+```
+
 </details>
 
 <br>
@@ -174,6 +175,7 @@ To clone and run this application locally, you'll need [Git](https://git-scm.com
 ## [🔝](#top) License :closed_lock_with_key:
 
 Copyright © 2021 MoveIt, [MIT](https://github.com/caiohenrique-developer/moveit-web/blob/master/LICENSE) .
+
 ###### _This project is under the <sup>MIT</sup> license. See the license for more information._
 
 ---

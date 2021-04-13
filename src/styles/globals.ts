@@ -34,16 +34,42 @@ export default createGlobalStyle<StylesThemeProps>`
     body {
         background: var(--background);
         color: var(--text);
+
+        button { cursor: pointer; }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .modalOverlay {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(242,243,245,0.8);
+
+            .modalContent {
+                position: relative;
+
+                width: 100%;
+                max-width: 400px;
+                padding: 2rem 3rem;
+                border-radius: 5px;
+                text-align: center;
+                background: var(--white);
+                box-shadow: 0 0 60px rgba(0,0,0,0.05);
+            }
+        }
     }
 
     body, input, textarea, button { font: 400 16px 'Inter', sans-serif; }
-
-    button { cursor: pointer; }
-
-    a {
-        color: inherit;
-        text-decoration: none;
-    }
 
     /* Responsive */
     @media(max-width: 1080px) { html { font-size: 93.75%; } }

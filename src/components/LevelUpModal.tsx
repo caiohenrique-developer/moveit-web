@@ -1,12 +1,18 @@
 import { useChallenges } from '../hooks/useChallenges';
 import { Container } from '../styles/components/LevelUpModal';
+import Modal from 'react-modal';
 
 export function LevelUpModal() {
-    const { level, closeLevelUpModal } = useChallenges();
+    const { level, closeLevelUpModal, isLevelUpModalOpen } = useChallenges();
 
     return (
-        <Container>
-            <div>
+        <Modal
+            overlayClassName="modalOverlay"
+            className="modalContent"
+            isOpen={isLevelUpModalOpen}
+            onRequestClose={closeLevelUpModal}
+        >
+            <Container>
                 <header>{level}</header>
 
                 <strong>Parabéns</strong>
@@ -16,7 +22,7 @@ export function LevelUpModal() {
                 <button type="button" onClick={closeLevelUpModal}>
                     <img src="icons/close.svg" alt="Close modal icon" />
                 </button>
-            </div>
-        </Container>
+            </Container>
+        </Modal>
     )
 }

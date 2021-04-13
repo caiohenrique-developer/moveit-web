@@ -9,6 +9,7 @@ export interface ChallengesProviderProps extends ChildrenGlobalType {
 
 export interface ChallengesContextData extends ChallengesProviderProps {
     activeChallenge: Challenge;
+    isLevelUpModalOpen?: boolean;
     experienceToNextLevel: number;
     levelUp: () => void;
     resetChallenge: () => void;

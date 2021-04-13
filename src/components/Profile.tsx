@@ -33,7 +33,6 @@ export function Profile() {
                     animate={{ rotate: 360 }}
                     transition={{ duration: 0.5 }}
                 />
-
                 <Label elementSection="userAvatar" htmlFor="avatar">
                     <Input
                         type="file"

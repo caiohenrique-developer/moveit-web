@@ -1,8 +1,14 @@
 // CountDown
-export interface ButtonProps { active?: boolean; }
+export interface ButtonProps {
+  active?: boolean;
+}
 
 // ChallengeBox
-export interface ChallengeButtonProps { status: string; }
+export interface ChallengeButtonProps {
+  status: string;
+}
 
 // Profile
-export interface ProfileFormProps { elementSection: string; }
+export interface ProfileFormProps {
+  elementSection: string;
+}

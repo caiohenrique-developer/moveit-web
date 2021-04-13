@@ -1,4 +1,4 @@
 // Globals styles
 export interface StylesThemeProps {
-    theme: { [styleProp: string]: string; }
+  theme: { [styleProp: string]: string };
 }

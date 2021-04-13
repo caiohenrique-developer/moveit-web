@@ -1,118 +1,111 @@
 {
-    "branches": [
-        "+([1-9])?(.{+([1-9]),x}).x",
-        "master",
-        "main",
-        "develop",
-        "next",
-        "next-major",
-        {
-            "name": "beta",
-            "prerelease": true
-        },
-        {
-            "name": "alpha",
-            "prerelease": true
+  "branches": [
+    "+([1-9])?(.{+([1-9]),x}).x",
+    "master",
+    "main",
+    "develop",
+    "next",
+    "next-major",
+    {
+      "name": "beta",
+      "prerelease": true
+    },
+    {
+      "name": "alpha",
+      "prerelease": true
+    }
+  ],
+  "plugins": [
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "preset": "angular",
+        "releaseRules": [
+          {
+            "type": "docs",
+            "scope": "README",
+            "release": "patch"
+          },
+          {
+            "type": "FIX",
+            "release": "patch"
+          },
+          {
+            "type": "PERF",
+            "release": "major"
+          },
+          {
+            "type": "FEAT",
+            "release": "minor"
+          },
+          {
+            "type": ":sparkles: [FEAT]",
+            "release": "minor"
+          }
+        ],
+        "parserOpts": {
+          "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]
         }
+      }
     ],
-    "plugins": [
-        [
-            "@semantic-release/commit-analyzer",
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        "preset": "conventionalcommits",
+        "presetConfig": {
+          "types": [
             {
-                "preset": "angular",
-                "releaseRules": [
-                    {
-                        "type": "docs",
-                        "scope": "README",
-                        "release": "patch"
-                    },
-                    {
-                        "type": "FIX",
-                        "release": "patch"
-                    },
-                    {
-                        "type": "PERF",
-                        "release": "major"
-                    },
-                    {
-                        "type": "FEAT",
-                        "release": "minor"
-                    },
-                    {
-                        "type": ":sparkles: [FEAT]",
-                        "release": "minor"
-                    }
-                ],
-                "parserOpts": {
-                    "noteKeywords": [
-                        "BREAKING CHANGE",
-                        "BREAKING CHANGES"
-                    ]
-                }
-            }
-        ],
-        [
-            "@semantic-release/release-notes-generator",
+              "type": "breaking",
+              "section": "Breaking",
+              "hidden": false
+            },
             {
-                "preset": "conventionalcommits",
-                "presetConfig": {
-                    "types": [
-                        {
-                            "type": "breaking",
-                            "section": "Breaking",
-                            "hidden": false
-                        },
-                        {
-                            "type": "new",
-                            "section": "New",
-                            "hidden": false
-                        },
-                        {
-                            "type": "FIX",
-                            "release": "patch"
-                        },
-                        {
-                            "type": "PERF",
-                            "release": "major"
-                        },
-                        {
-                            "type": "FEAT",
-                            "release": "minor"
-                        },
-                        {
-                            "type": ":sparkles: [FEAT]",
-                            "release": "minor"
-                        },
-                        {
-                            "subject": ".*",
-                            "section": "Bug Fixes",
-                            "hidden": false
-                        },
-                        {
-                            "message": ".*",
-                            "section": "Bug Fixes",
-                            "hidden": false
-                        }
-                    ]
-                }
-            }
-        ],
-        "@semantic-release/github",
-        "@semantic-release/changelog",
-        [
-            "@semantic-release/npm",
+              "type": "new",
+              "section": "New",
+              "hidden": false
+            },
             {
-                "npmPublish": false
+              "type": "FIX",
+              "release": "patch"
+            },
+            {
+              "type": "PERF",
+              "release": "major"
+            },
+            {
+              "type": "FEAT",
+              "release": "minor"
+            },
+            {
+              "type": ":sparkles: [FEAT]",
+              "release": "minor"
+            },
+            {
+              "subject": ".*",
+              "section": "Bug Fixes",
+              "hidden": false
+            },
+            {
+              "message": ".*",
+              "section": "Bug Fixes",
+              "hidden": false
             }
-        ],
-        {
-            "path": "@semantic-release/git",
-            "assets": [
-                "package.json",
-                "package-lock.json",
-                "CHANGELOG.md"
-            ],
-            "message": "chore(:bookmark:): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+          ]
         }
-    ]
+      }
+    ],
+    "@semantic-release/github",
+    "@semantic-release/changelog",
+    [
+      "@semantic-release/npm",
+      {
+        "npmPublish": false
+      }
+    ],
+    {
+      "path": "@semantic-release/git",
+      "assets": ["package.json", "package-lock.json", "CHANGELOG.md"],
+      "message": "chore(:bookmark:): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+    }
+  ]
 }

@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { StylesThemeProps } from "../utils/types/styles/GlobalStylesTypes";
+import { StylesThemeProps } from '../utils/types/styles/GlobalStylesTypes';
 
 export default createGlobalStyle<StylesThemeProps>`
     * {
@@ -75,10 +75,10 @@ export default createGlobalStyle<StylesThemeProps>`
     @media(max-width: 1080px) { html { font-size: 93.75%; } }
 
     @media(max-width: 720px) { html { font-size: 87.5%; } }
-    
+
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) { body {} }
-    
+
     /* Small devices (portrait tablets and large phones, 600px and up) */
     @media only screen and (min-width: 600px) and (max-width: 991px) { body {} }
 
@@ -90,4 +90,4 @@ export default createGlobalStyle<StylesThemeProps>`
 
     /* Extra large devices (large laptops and desktops, 1200px and up) */
     @media only screen and (min-width: 1200px) { body {} }
-`
+`;

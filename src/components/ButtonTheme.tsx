@@ -1,4 +1,4 @@
-import { useThemeMode } from '../hooks/useThemeMode';
+import { useThemeMode } from '@hooks/useThemeMode';
 
 export const ThemeButton = () => {
   const { handleThemeModeToggle } = useThemeMode();

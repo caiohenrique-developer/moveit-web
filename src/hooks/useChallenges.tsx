@@ -1,12 +1,12 @@
 import { createContext, useContext, useEffect, useState } from 'react';
-import { LevelUpModal } from '../components/LevelUpModal';
+import { LevelUpModal } from '@components/LevelUpModal';
 import {
   ChallengesContextData,
   ChallengesProviderProps,
-} from '../utils/types/hooks';
+} from '@utils/types/hooks';
 
 import Cookies from 'js-cookie';
-import challenges from '../../challenges.json';
+import challenges from '@assets/challenges.json';
 
 const ChallengesContext = createContext({} as ChallengesContextData);
 

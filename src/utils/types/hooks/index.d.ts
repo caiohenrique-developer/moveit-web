@@ -1,4 +1,4 @@
-import { ChildrenGlobalType } from '../GlobalTypes';
+import { ChildrenGlobalType } from '@utils/types/GlobalTypes';
 
 // useChallenges
 export interface ChallengesProviderProps extends ChildrenGlobalType {

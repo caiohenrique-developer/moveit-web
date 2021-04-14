@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from 'react';
-import { ContextFormat } from '../utils/types/hooks';
-import { ChildrenGlobalType } from '../utils/types/GlobalTypes';
+import { ContextFormat } from '@utils/types/hooks';
+import { ChildrenGlobalType } from '@utils/types/GlobalTypes';
 import { ThemeProvider } from 'styled-components';
 import { motion } from 'framer-motion';
 

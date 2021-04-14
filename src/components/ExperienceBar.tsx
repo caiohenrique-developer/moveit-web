@@ -1,5 +1,5 @@
-import { useChallenges } from '../hooks/useChallenges';
-import { Container } from '../styles/components/ExperienceBar';
+import { useChallenges } from '@hooks/useChallenges';
+import { Container } from '@styles/components/ExperienceBar';
 
 export function ExperienceBar() {
   const { currentExperience, experienceToNextLevel } = useChallenges();

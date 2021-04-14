@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import { useChallenges } from './useChallenges';
-import { CountDownContextData } from '../utils/types/hooks';
-import { ChildrenGlobalType } from '../utils/types/GlobalTypes';
+import { CountDownContextData } from '@utils/types/hooks';
+import { ChildrenGlobalType } from '@utils/types/GlobalTypes';
 
 const CountDownContext = createContext({} as CountDownContextData);
 

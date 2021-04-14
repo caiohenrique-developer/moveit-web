@@ -1,5 +1,5 @@
-import { useChallenges } from '../hooks/useChallenges';
-import { Container } from '../styles/components/CompletedChallenges';
+import { useChallenges } from '@hooks/useChallenges';
+import { Container } from '@styles/components/CompletedChallenges';
 
 export function CompletedChallenges() {
   const { challengesComplited } = useChallenges();

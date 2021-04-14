@@ -1,11 +1,11 @@
-import { useChallenges } from '../hooks/useChallenges';
-import { useCountDown } from '../hooks/useCountDown';
+import { useChallenges } from '@hooks/useChallenges';
+import { useCountDown } from '@hooks/useCountDown';
 import {
   Container,
   ChallengeNotActive,
   ChallengeActive,
   ChallengeButton,
-} from '../styles/components/ChallengeBox';
+} from '@styles/components/ChallengeBox';
 
 export function ChallengeBox() {
   const {

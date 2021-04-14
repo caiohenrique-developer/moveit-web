@@ -1,5 +1,5 @@
-import { useChallenges } from '../hooks/useChallenges';
-import { Container } from '../styles/components/LevelUpModal';
+import { useChallenges } from '@hooks/useChallenges';
+import { Container } from '@styles/components/LevelUpModal';
 import Modal from 'react-modal';
 
 export function LevelUpModal() {

@@ -1,16 +1,16 @@
 import Head from 'next/head';
 
 import { GetServerSideProps } from 'next';
-import { CountDownProvider } from '../hooks/useCountDown';
-import { ChallengesProvider } from '../hooks/useChallenges';
-import { ChallengesProviderProps } from '../utils/types/hooks';
-import { CompletedChallenges } from '../components/CompletedChallenges';
-import { CountDown } from '../components/CountDown';
-import { ExperienceBar } from '../components/ExperienceBar';
-import { Profile } from '../components/Profile';
-import { ChallengeBox } from '../components/ChallengeBox';
-import { ThemeButton } from '../components/ButtonTheme';
-import { Container } from '../styles/pages/Home';
+import { CountDownProvider } from '@hooks/useCountDown';
+import { ChallengesProvider } from '@hooks/useChallenges';
+import { ChallengesProviderProps } from '@utils/types/hooks';
+import { CompletedChallenges } from '@components/CompletedChallenges';
+import { CountDown } from '@components/CountDown';
+import { ExperienceBar } from '@components/ExperienceBar';
+import { Profile } from '@components/Profile';
+import { ChallengeBox } from '@components/ChallengeBox';
+import { ThemeButton } from '@components/ButtonTheme';
+import { Container } from '@styles/pages/Home';
 
 export default function Home(props: ChallengesProviderProps) {
   return (

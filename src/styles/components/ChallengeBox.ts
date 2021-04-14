@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { ChallengeButtonProps } from '../../utils/types/components';
+import { ChallengeButtonProps } from '@utils/types/components';
 
 export const Container = styled.div`
   display: flex;

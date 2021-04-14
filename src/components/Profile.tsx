@@ -1,7 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
 import { FiCheckSquare } from 'react-icons/fi';
-import { useChallenges } from '../hooks/useChallenges';
-import { FormContainer, Label, Input } from '../styles/components/Profile';
+import { useChallenges } from '@hooks/useChallenges';
+import { FormContainer, Label, Input } from '@styles/components/Profile';
 import { motion } from 'framer-motion';
 
 export function Profile() {

@@ -1,7 +1,7 @@
 /* eslint @typescript-eslint/no-empty-interface: "off" */
 
 import 'styled-components';
-import { useThemeMode } from '../../../hooks/useThemeMode';
+import { useThemeMode } from '@hooks/useThemeMode';
 
 // Globals styles
 const { styleProps } = useThemeMode();

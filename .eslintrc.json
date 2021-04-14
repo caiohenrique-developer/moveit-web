@@ -16,6 +16,7 @@
       "jsx": true
     },
     "ecmaVersion": 12,
+    "project": "./tsconfig.json",
     "sourceType": "module"
   },
   "plugins": ["react", "prettier", "react-hooks", "@typescript-eslint"],

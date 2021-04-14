@@ -65,7 +65,9 @@ export const ThemeModeProvider = ({ children }: ChildrenGlobalType) => {
       transition={{ duration: 2 }}
     >
       <ThemeProvider theme={changedTheme}>
-        <ThemeModeContext.Provider value={{ theme, handleThemeModeToggle }}>
+        <ThemeModeContext.Provider
+          value={{ theme, handleThemeModeToggle, styleProps }}
+        >
           {children}
         </ThemeModeContext.Provider>
       </ThemeProvider>

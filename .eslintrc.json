@@ -5,8 +5,8 @@
   },
   "extends": [
     "airbnb",
+    "prettier",
     "plugin:react/recommended",
-    // "prettier/@typescript-eslint",
     "plugin:prettier/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
@@ -58,6 +58,7 @@
         "groups": [
           "/^react/",
           "module",
+          "/^@assets/",
           "/^@components/",
           "/^@hooks/",
           "/^@pages/",

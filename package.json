@@ -17,7 +17,8 @@
     "start": "next start",
     "commit": "git-cz",
     "release": "semantic-release --no-ci",
-    "format": "prettier --write './**/*.{tsx,ts}'"
+    "format": "prettier --write './**/*.{tsx,ts}'",
+    "lint": "eslint ./"
   },
   "config": {
     "commitizen": {

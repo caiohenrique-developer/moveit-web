@@ -3,7 +3,7 @@
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "rootDir": "./src",
+    "rootDir": ".",
     "baseUrl": "./src",
     "outDir": "./dist",
     "paths": {
@@ -25,6 +25,13 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["src", "public", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "src",
+    "public",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.*.js"
+  ],
   "exclude": ["node_modules"]
 }

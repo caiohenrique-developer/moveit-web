@@ -19,7 +19,13 @@
     "project": "./tsconfig.json",
     "sourceType": "module"
   },
-  "plugins": ["react", "prettier", "react-hooks", "@typescript-eslint"],
+  "plugins": [
+    "react",
+    "prettier",
+    "react-hooks",
+    "import-helpers",
+    "@typescript-eslint"
+  ],
   "rules": {
     // ESlint mostra erro caso as regras do Prettier forem violadas
     "prettier/prettier": "error",
@@ -41,6 +47,22 @@
       {
         "ts": "never",
         "tsx": "never"
+      }
+    ],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "module",
+          "/^@components/",
+          "/^@hooks/",
+          "/^@pages/",
+          "/^@styles/",
+          "/^@utils/",
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
       }
     ]
   },

@@ -24,7 +24,8 @@
     "prettier",
     "react-hooks",
     "import-helpers",
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "eslint-plugin-import-helpers"
   ],
   "rules": {
     // ESlint mostra erro caso as regras do Prettier forem violadas

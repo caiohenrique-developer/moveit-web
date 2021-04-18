@@ -1,10 +1,13 @@
-import { ChangeEvent, FormEvent, useState } from 'react';
+import React, { ChangeEvent, FormEvent, useState } from 'react';
 import { FiCheckSquare } from 'react-icons/fi';
-import { useChallenges } from '../hooks/useChallenges';
-import { FormContainer, Label, Input } from '../styles/components/Profile';
+
 import { motion } from 'framer-motion';
 
-export function Profile() {
+import { useChallenges } from '@hooks/useChallenges';
+
+import { FormContainer, Label, Input } from '@styles/components/Profile';
+
+export function Profile(): JSX.Element {
   const { level } = useChallenges();
 
   const [avatar, setAvatar] = useState('');
@@ -19,7 +22,6 @@ export function Profile() {
 
   const handleProfileAvatar = (ev: ChangeEvent<HTMLInputElement>): void => {
     // ToDo: img base64!
-    console.log('Aqui vem o nome do arquivo.');
     setAvatar(ev.target.files[0].name);
     console.log(avatar);
   };
@@ -28,7 +30,7 @@ export function Profile() {
     <FormContainer onSubmit={handleFormSubmit}>
       <section>
         <motion.img
-          src={'github-profile-avatar.jpeg'}
+          src='github-profile-avatar.jpeg'
           alt='GitHub profile avatar'
           animate={{ rotate: 360 }}
           transition={{ duration: 0.5 }}

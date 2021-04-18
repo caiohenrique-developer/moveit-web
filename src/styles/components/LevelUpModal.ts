@@ -38,7 +38,6 @@ export const Container = styled.div`
       font-size: 1.1rem;
     }
   }
-
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
     button:hover {

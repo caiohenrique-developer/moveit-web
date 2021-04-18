@@ -1,13 +1,16 @@
-import { useChallenges } from '../hooks/useChallenges';
-import { useCountDown } from '../hooks/useCountDown';
+import React from 'react';
+
+import { useChallenges } from '@hooks/useChallenges';
+import { useCountDown } from '@hooks/useCountDown';
+
 import {
   Container,
   ChallengeNotActive,
   ChallengeActive,
   ChallengeButton,
-} from '../styles/components/ChallengeBox';
+} from '@styles/components/ChallengeBox';
 
-export function ChallengeBox() {
+export function ChallengeBox(): JSX.Element {
   const {
     activeChallenge,
     resetChallenge,

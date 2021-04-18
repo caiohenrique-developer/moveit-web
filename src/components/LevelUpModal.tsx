@@ -1,8 +1,11 @@
-import { useChallenges } from '../hooks/useChallenges';
-import { Container } from '../styles/components/LevelUpModal';
+import React from 'react';
 import Modal from 'react-modal';
 
-export function LevelUpModal() {
+import { useChallenges } from '@hooks/useChallenges';
+
+import { Container } from '@styles/components/LevelUpModal';
+
+export function LevelUpModal(): JSX.Element {
   const { level, closeLevelUpModal, isLevelUpModalOpen } = useChallenges();
 
   return (

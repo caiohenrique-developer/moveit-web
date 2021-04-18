@@ -1,7 +1,10 @@
-import { useChallenges } from '../hooks/useChallenges';
-import { Container } from '../styles/components/CompletedChallenges';
+import React from 'react';
 
-export function CompletedChallenges() {
+import { useChallenges } from '@hooks/useChallenges';
+
+import { Container } from '@styles/components/CompletedChallenges';
+
+export function CompletedChallenges(): JSX.Element {
   const { challengesComplited } = useChallenges();
 
   return (

@@ -1,7 +1,10 @@
-import { useChallenges } from '../hooks/useChallenges';
-import { Container } from '../styles/components/ExperienceBar';
+import React from 'react';
 
-export function ExperienceBar() {
+import { useChallenges } from '@hooks/useChallenges';
+
+import { Container } from '@styles/components/ExperienceBar';
+
+export function ExperienceBar(): JSX.Element {
   const { currentExperience, experienceToNextLevel } = useChallenges();
 
   const percentToNextLevel =

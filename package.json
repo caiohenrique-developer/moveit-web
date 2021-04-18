@@ -16,7 +16,9 @@
     "build": "next build",
     "start": "next start",
     "commit": "git-cz",
-    "release": "semantic-release --no-ci"
+    "release": "semantic-release --no-ci",
+    "format": "prettier --write './**/*.{tsx,ts}'",
+    "lint": "eslint ./"
   },
   "config": {
     "commitizen": {
@@ -56,6 +58,7 @@
     "eslint-config-prettier": "^8.2.0",
     "eslint-import-resolver-typescript": "^2.4.0",
     "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-import-helpers": "^1.1.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.21.5",

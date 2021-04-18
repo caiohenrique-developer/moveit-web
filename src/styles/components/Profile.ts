@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
-import { ProfileFormProps } from '../../utils/types/components';
+
+import { ProfileFormProps } from '@utils/types/components';
 
 export const FormContainer = styled.form`
   position: relative;

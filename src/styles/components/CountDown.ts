@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
-import { ButtonProps } from '../../utils/types/components';
+
+import { ButtonProps } from '@utils/types/components';
 
 export const Container = styled.div`
   > div {

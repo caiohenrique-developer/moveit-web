@@ -1,23 +1,32 @@
-import Head from 'next/head';
+import React from 'react';
 
 import { GetServerSideProps } from 'next';
-import { CountDownProvider } from '../hooks/useCountDown';
-import { ChallengesProvider } from '../hooks/useChallenges';
-import { ChallengesProviderProps } from '../utils/types/hooks';
-import { CompletedChallenges } from '../components/CompletedChallenges';
-import { CountDown } from '../components/CountDown';
-import { ExperienceBar } from '../components/ExperienceBar';
-import { Profile } from '../components/Profile';
-import { ChallengeBox } from '../components/ChallengeBox';
-import { ThemeButton } from '../components/ButtonTheme';
-import { Container } from '../styles/pages/Home';
+import Head from 'next/head';
 
-export default function Home(props: ChallengesProviderProps) {
+import { ThemeButton } from '@components/ButtonTheme';
+import { ChallengeBox } from '@components/ChallengeBox';
+import { CompletedChallenges } from '@components/CompletedChallenges';
+import { CountDown } from '@components/CountDown';
+import { ExperienceBar } from '@components/ExperienceBar';
+import { Profile } from '@components/Profile';
+
+import { ChallengesProvider } from '@hooks/useChallenges';
+import { CountDownProvider } from '@hooks/useCountDown';
+
+import { Container } from '@styles/pages/Home';
+
+import { ChallengesProviderProps } from '@utils/types/hooks';
+
+export default function Home({
+  level,
+  currentExperience,
+  challengesComplited,
+}: ChallengesProviderProps): JSX.Element {
   return (
     <ChallengesProvider
-      level={props.level}
-      currentExperience={props.currentExperience}
-      challengesComplited={props.challengesComplited}
+      level={level}
+      currentExperience={currentExperience}
+      challengesComplited={challengesComplited}
     >
       <Container>
         <Head>
@@ -45,14 +54,14 @@ export default function Home(props: ChallengesProviderProps) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { level, currentExperience, challengesComplited } = ctx.req.cookies;
+// export const getServerSideProps: GetServerSideProps = async (ctx) => {
+//   const { level, currentExperience, challengesComplited } = ctx.req.cookies;
 
-  return {
-    props: {
-      level: Number(level),
-      currentExperience: Number(currentExperience),
-      challengesComplited: Number(challengesComplited),
-    },
-  };
-};
+//   return {
+//     props: {
+//       level: Number(level),
+//       currentExperience: Number(currentExperience),
+//       challengesComplited: Number(challengesComplited),
+//     },
+//   };
+// };

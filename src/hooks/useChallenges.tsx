@@ -1,19 +1,22 @@
-import { createContext, useContext, useEffect, useState } from 'react';
-import { LevelUpModal } from '../components/LevelUpModal';
+import React, { createContext, useContext, useEffect, useState } from 'react';
+
+import Cookies from 'js-cookie';
+
+import challenges from '@assets/challenges.json';
+
+import { LevelUpModal } from '@components/LevelUpModal';
+
 import {
   ChallengesContextData,
   ChallengesProviderProps,
-} from '../utils/types/hooks';
-
-import Cookies from 'js-cookie';
-import challenges from '../../challenges.json';
+} from '@utils/types/hooks';
 
 const ChallengesContext = createContext({} as ChallengesContextData);
 
 export function ChallengesProvider({
   children,
   ...rest
-}: ChallengesProviderProps) {
+}: ChallengesProviderProps): JSX.Element {
   const [level, setLevel] = useState(rest.level ?? 1);
   const [currentExperience, setCurrentExperience] = useState(
     rest.currentExperience ?? 0,
@@ -24,6 +27,7 @@ export function ChallengesProvider({
   const [activeChallenge, setActiveChallenge] = useState(null);
   const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false);
 
+  /* eslint no-restricted-properties: "off" */
   const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
 
   useEffect(() => {
@@ -54,6 +58,7 @@ export function ChallengesProvider({
     new Audio('/notification.mp3').play();
 
     if (Notification.permission === 'granted') {
+      /* eslint no-new: "off" */
       new Notification('Novo desafio 🎉', {
         body: `Valendo ${challenge.amount}xp!`,
       });
@@ -72,7 +77,7 @@ export function ChallengesProvider({
     let finalExperience = currentExperience + amount;
 
     if (finalExperience >= experienceToNextLevel) {
-      finalExperience = finalExperience - experienceToNextLevel;
+      finalExperience -= experienceToNextLevel;
       levelUp();
     }
 
@@ -104,7 +109,7 @@ export function ChallengesProvider({
   );
 }
 
-export const useChallenges = () => {
+export const useChallenges = (): ChallengesContextData => {
   const context = useContext(ChallengesContext);
 
   return context;

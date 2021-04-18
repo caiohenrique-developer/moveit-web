@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Document, {
   Html,
   Head,
@@ -37,7 +39,7 @@ export default class MyDocument extends Document {
     }
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <Html>
         <Head>

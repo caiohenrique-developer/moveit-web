@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 
@@ -15,12 +17,16 @@ import { Container } from '@styles/pages/Home';
 
 import { ChallengesProviderProps } from '@utils/types/hooks';
 
-export default function Home(props: ChallengesProviderProps) {
+export default function Home({
+  level,
+  currentExperience,
+  challengesComplited,
+}: ChallengesProviderProps): JSX.Element {
   return (
     <ChallengesProvider
-      level={props.level}
-      currentExperience={props.currentExperience}
-      challengesComplited={props.challengesComplited}
+      level={level}
+      currentExperience={currentExperience}
+      challengesComplited={challengesComplited}
     >
       <Container>
         <Head>
@@ -48,14 +54,14 @@ export default function Home(props: ChallengesProviderProps) {
   );
 }
 
-// export const getServerSideProps: GetServerSideProps = async (ctx) => {
-//   const { level, currentExperience, challengesComplited } = ctx.req.cookies;
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const { level, currentExperience, challengesComplited } = ctx.req.cookies;
 
-//   return {
-//     props: {
-//       level: Number(level),
-//       currentExperience: Number(currentExperience),
-//       challengesComplited: Number(challengesComplited),
-//     },
-//   };
-// };
+  return {
+    props: {
+      level: Number(level),
+      currentExperience: Number(currentExperience),
+      challengesComplited: Number(challengesComplited),
+    },
+  };
+};

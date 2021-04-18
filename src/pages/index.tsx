@@ -48,14 +48,14 @@ export default function Home(props: ChallengesProviderProps) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { level, currentExperience, challengesComplited } = ctx.req.cookies;
+// export const getServerSideProps: GetServerSideProps = async (ctx) => {
+//   const { level, currentExperience, challengesComplited } = ctx.req.cookies;
 
-  return {
-    props: {
-      level: Number(level),
-      currentExperience: Number(currentExperience),
-      challengesComplited: Number(challengesComplited),
-    },
-  };
-};
+//   return {
+//     props: {
+//       level: Number(level),
+//       currentExperience: Number(currentExperience),
+//       challengesComplited: Number(challengesComplited),
+//     },
+//   };
+// };

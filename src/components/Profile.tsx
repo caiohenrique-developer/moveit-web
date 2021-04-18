@@ -55,6 +55,7 @@ export function Profile() {
             elementSection='userName'
             value={name}
             onChange={(ev) => setName(ev.target.value)}
+            setValue={setName}
           />
           <button type='submit'>
             <FiCheckSquare />

@@ -39,7 +39,4 @@ export interface CountDownContextData {
 export interface ContextFormat {
   theme: string;
   handleThemeModeToggle(): void;
-  styleProps?: {
-    [styleProp: string]: string;
-  };
 }

@@ -1,12 +1,16 @@
-import { createContext, useContext, useState } from 'react';
-import { ContextFormat } from '@utils/types/hooks';
-import { ChildrenGlobalType } from '@utils/types/GlobalTypes';
-import { ThemeProvider } from 'styled-components';
+import React, { createContext, useContext, useState } from 'react';
+
 import { motion } from 'framer-motion';
+import { ThemeProvider } from 'styled-components';
+
+import { ChildrenGlobalType } from '@utils/types/GlobalTypes';
+import { ContextFormat } from '@utils/types/hooks';
 
 const ThemeModeContext = createContext({} as ContextFormat);
 
-export const ThemeModeProvider = ({ children }: ChildrenGlobalType) => {
+export const ThemeModeProvider = ({
+  children,
+}: ChildrenGlobalType): JSX.Element => {
   const [theme, setTheme] = useState('dark');
 
   const styleProps = {
@@ -51,7 +55,7 @@ export const ThemeModeProvider = ({ children }: ChildrenGlobalType) => {
   };
 
   const handleThemeModeToggle = () => {
-    theme === 'dark' ? setTheme('light') : setTheme('dark');
+    return theme === 'dark' ? setTheme('light') : setTheme('dark');
   };
 
   const changedTheme = () => {
@@ -75,7 +79,7 @@ export const ThemeModeProvider = ({ children }: ChildrenGlobalType) => {
   );
 };
 
-export const useThemeMode = () => {
+export const useThemeMode = (): ContextFormat => {
   const context = useContext(ThemeModeContext);
 
   return context;

@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, useState } from 'react';
+import React, { ChangeEvent, FormEvent, useState } from 'react';
 import { FiCheckSquare } from 'react-icons/fi';
 
 import { motion } from 'framer-motion';
@@ -7,7 +7,7 @@ import { useChallenges } from '@hooks/useChallenges';
 
 import { FormContainer, Label, Input } from '@styles/components/Profile';
 
-export function Profile() {
+export function Profile(): JSX.Element {
   const { level } = useChallenges();
 
   const [avatar, setAvatar] = useState('');
@@ -55,7 +55,6 @@ export function Profile() {
             elementSection='userName'
             value={name}
             onChange={(ev) => setName(ev.target.value)}
-            setValue={setName}
           />
           <button type='submit'>
             <FiCheckSquare />

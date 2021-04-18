@@ -24,7 +24,6 @@
     "react",
     "prettier",
     "react-hooks",
-    "import-helpers",
     "@typescript-eslint",
     "eslint-plugin-import-helpers"
   ],

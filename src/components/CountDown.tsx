@@ -1,7 +1,10 @@
+import React from 'react';
+
 import { useCountDown } from '@hooks/useCountDown';
+
 import { Container, Button } from '@styles/components/CountDown';
 
-export function CountDown() {
+export function CountDown(): JSX.Element {
   const {
     minutes,
     seconds,

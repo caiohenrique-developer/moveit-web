@@ -1,6 +1,8 @@
+import React from 'react';
+
 import { useThemeMode } from '@hooks/useThemeMode';
 
-export const ThemeButton = () => {
+export const ThemeButton = (): JSX.Element => {
   const { handleThemeModeToggle } = useThemeMode();
 
   return (

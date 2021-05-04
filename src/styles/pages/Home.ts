@@ -9,6 +9,33 @@ export const Container = styled.div`
   margin: 0 auto;
   padding: 2.5rem 2rem;
 
+  .badgeStatus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 180px;
+    padding: 5px 20px;
+    margin: 0 auto 20px;
+    background: #ffc14985;
+    border-radius: 50px;
+    font-size: 8px;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    transition: 0.2s;
+
+    &:hover {
+      border: 2px solid #ffc149d6;
+      -webkit-box-shadow: 0px 0px 4px 3px #ffc149d6;
+      box-shadow: 0px 0px 4px 3px #ffc149d6;
+    }
+
+    i {
+      font-style: normal;
+      font-size: 14px;
+    }
+  }
+
   > button {
     position: absolute;
     bottom: 40px;

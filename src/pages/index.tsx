@@ -31,6 +31,12 @@ export default function Home(props: HomeProps) {
           <title>Move.it | Boost yourself!</title>
         </Head>
 
+        <a className={styles.badgeStatus} href="https://github.com/caiohenrique-developer/moveit-web/tree/develop#-roadmap-gem" target="_blank" rel="noopener noreferrer">
+          <i>🚧⠀</i>
+            <strong>Work in progress</strong>
+          <i>⠀🚧</i>
+        </a>
+
         <ExperienceBar />
 
         <CountDownProvider>

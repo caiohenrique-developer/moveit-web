@@ -39,9 +39,9 @@ export default function Home({
           target='_blank'
           rel='noopener noreferrer'
         >
-          <i>🚧⠀</i>
-          <strong>Work in progress</strong>
-          <i>⠀🚧</i>
+          <i>🧬</i>
+          <strong>OnGoing</strong>
+          <i>🧬</i>
         </a>
 
         <ThemeButton />

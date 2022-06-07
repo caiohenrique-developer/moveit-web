@@ -14,32 +14,37 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
 
-    width: 180px;
-    padding: 5px 20px;
-    margin: 0 auto 20px;
-    background: #ffc14985;
-    border-radius: 50px;
-    font-size: 8px;
+    width: 11.25rem;
+    padding: 0.313rem 1.25rem;
+    margin: 0 auto 1.25rem;
+    background: #49a9ff85;
+    border-radius: 3.125rem;
+    font-size: 0.5rem;
     text-transform: uppercase;
     border: 2px solid transparent;
     transition: 0.2s;
 
     &:hover {
-      border: 2px solid #ffc149d6;
-      -webkit-box-shadow: 0px 0px 4px 3px #ffc149d6;
-      box-shadow: 0px 0px 4px 3px #ffc149d6;
+      border: 2px solid #4956ffd6;
+      -webkit-box-shadow: 0px 0px 4px 3px #4956ffd6;
+      box-shadow: 0px 0px 4px 3px #4956ffd6;
     }
 
     i {
       font-style: normal;
-      font-size: 14px;
+      font-size: 0.8rem;
+    }
+
+    strong {
+      margin: 0 0.5rem;
+      letter-spacing: 0.5rem;
     }
   }
 
   > button {
     position: absolute;
-    bottom: 40px;
-    right: 40px;
+    bottom: 2.5rem;
+    right: 2.5rem;
 
     background: transparent;
     color: var(--title);
@@ -68,7 +73,7 @@ export const Container = styled.div`
       grid-gap: 4.25rem;
       gap: 4.25rem;
 
-      margin-top: 80px;
+      margin-top: 5rem;
       padding-bottom: 2.5rem;
 
       > div {

@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { useThemeMode } from '@hooks/useThemeMode';
+
+import { Container } from '@styles/components/ButtonTheme';
 
 export const ThemeButton = (): JSX.Element => {
   const { handleThemeModeToggle } = useThemeMode();
 
+  const [themeToggle, setThemeToggle] = useState(false);
+
+  const handleThemeModeToggleBtn = () => {
+    setThemeToggle(!themeToggle);
+    handleThemeModeToggle();
+  };
+
   return (
-    <button type='button' onClick={handleThemeModeToggle}>
-      <i className='material-icons'>brightness_4</i>
-      <i className='material-icons'>brightness_5</i>
-      <i className='material-icons'>brightness_7</i>
-    </button>
+    <Container type='button' onClick={handleThemeModeToggleBtn}>
+      <input type='checkbox' id='theme-toggle' checked={themeToggle} />
+      <label htmlFor='theme-toggle'>
+        <span className='checkmark' />
+      </label>
+    </Container>
   );
 };

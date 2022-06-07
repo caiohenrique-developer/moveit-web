@@ -28,6 +28,15 @@ export default createGlobalStyle`
         --border: ${({ theme }) => theme.border};
         --invert: ${({ theme }) => theme.invert};
         --revert: ${({ theme }) => theme.revert};
+
+        /* Night/Day theme mode */
+        --toggle-size: 10rem;
+        --switch-w: 4em;
+        --switch-h: 2em;
+        --switch-handle-scale: 0.65;
+        --switch-off-handle-x: -0.125em;
+        --switch-on-handle-x: calc(100% - 0.125em);
+        --switch-transition-duration: 0.2s;
     }
 
     body {

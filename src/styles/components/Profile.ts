@@ -93,26 +93,25 @@ export const Input = styled.input<ProfileFormProps>`
       ? css`
           display: block;
           width: 100%;
-          height: 25px;
+          height: 35px;
           font-size: 1.5rem;
           font-weight: 600;
           color: var(--title);
           padding-right: 10px;
           margin-right: 15px;
           background: transparent;
-          transition: 0.4s;
+          border: 1px solid transparent;
+          transition: 0.6s;
 
           &:focus {
-            height: 35px;
             padding: 10px;
             box-shadow: inset 0 0 30px
               ${({ theme }) =>
                 theme.dark ? css`var(--boxShadow)` : css`var(--boxShadow)`};
-            border: 1px solid
-              ${({ theme }) =>
-                theme.dark
-                  ? css`var(--inputProfileColor)`
-                  : css`var(--inputProfileColor)`};
+            border-color: ${({ theme }) =>
+              theme.dark
+                ? css`var(--inputProfileColor)`
+                : css`var(--inputProfileColor)`};
             border-radius: 4px;
 
             &::-webkit-input-placeholder {
@@ -122,27 +121,26 @@ export const Input = styled.input<ProfileFormProps>`
               font-size: 0.75rem;
             } /* Internet Explorer 10-11 */
             &::placeholder {
-              font-size: 0.75rem;
+              font-size: 0.65rem;
             } /* Default */
           }
           &::-webkit-input-placeholder {
-            /* Edge */
             font-size: 0.95rem;
             font-weight: 400;
             color: var(--buttonTitle);
-          }
+          } /* Edge */
           &:-ms-input-placeholder {
-            /* Internet Explorer 10-11 */
             font-size: 0.95rem;
             font-weight: 400;
             color: var(--buttonTitle);
-          }
+            transition: 0.6s;
+          } /* Internet Explorer 10-11 */
           &::placeholder {
-            /* Default */
             font-size: 0.95rem;
             font-weight: 400;
             color: var(--buttonTitle);
-          }
+            transition: 0.6s;
+          } /* Default */
         `
       : ''}
 `;

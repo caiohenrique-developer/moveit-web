@@ -1,10 +1,24 @@
 import styled from 'styled-components';
 
 export const Container = styled.button`
+  z-index: 8;
+  overflow: hidden;
+
+  opacity: 0.2;
+  transition: var(--switch-transition-duration);
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
   #theme-toggle {
     display: none;
 
     & + label {
+      position: relative;
+      z-index: -1;
+
       font-size: var(--toggle-size);
       display: flex;
       height: var(--switch-h);
@@ -20,7 +34,7 @@ export const Container = styled.button`
         #62e7f7 100%
       );
       transition: var(--switch-transition-duration);
-      border: 0.125em solid hsl(207, 30%, 95%);
+      border: 0.02em solid hsl(207, 30%, 95%);
       overflow: hidden;
 
       &::after {
@@ -33,7 +47,6 @@ export const Container = styled.button`
         transform: translateX(var(--switch-off-handle-x))
           scale(var(--switch-handle-scale));
         transition: var(--switch-transition-duration);
-        cursor: pointer;
         box-shadow: 0 0 0.25em 0.0625em #fbee8d, 0 0 2em 0 #ffeb3b,
           inset -0.25em -0.25em 0 0 #fbee8e,
           inset -0.3125em -0.3125em 0 0.625em #fff5b2;

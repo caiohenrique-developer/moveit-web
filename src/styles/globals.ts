@@ -31,17 +31,17 @@ export default createGlobalStyle`
 
         /* Night/Day theme mode */
         --toggle-size: 10rem;
-        --switch-w: 4em;
-        --switch-h: 2em;
+        --switch-w: 0.4em;
+        --switch-h: 0.2em;
         --switch-handle-scale: 0.65;
-        --switch-off-handle-x: -0.125em;
-        --switch-on-handle-x: calc(100% - 0.125em);
-        --switch-transition-duration: 0.2s;
+        --switch-off-handle-x: -0.02em;
+        --switch-on-handle-x: calc(100% - 0.02em);
+        --switch-transition-duration: 0.4s ease-in-out;
     }
 
     body {
-        background: var(--background);
-        color: var(--text);
+      background: var(--background);
+      color: var(--text);
 
         button { cursor: pointer; }
 

@@ -50,13 +50,10 @@ export const Label = styled.label<ProfileFormProps>`
           transition: 0.3s;
 
           &:hover {
-            background: ${({ theme }) =>
-              theme.dark ? css`var(--white)` : css`var(--white)`};
-            border: 4px solid
-              ${({ theme }) =>
-                theme.dark ? css`var(--blue)` : css`var(--blue)`};
-            opacity: 0.2;
-            transform: scale(1.3);
+            background: var(--white);
+            border: 4px solid var(--blue);
+            opacity: 0.1;
+            transform: scale(1.2);
           }
         `
       : /* userName */
@@ -66,16 +63,21 @@ export const Label = styled.label<ProfileFormProps>`
           align-items: center;
           justify-content: space-between;
 
+          input:focus ~ button {
+            font-size: unset;
+            padding: 0.313rem;
+          }
+
           button {
             display: flex;
             align-items: center;
             justify-content: center;
 
-            padding: 5px;
-            border-radius: 5px;
-
-            svg {
-            }
+            font-size: 0;
+            border-radius: 0.313rem;
+            background: var(--blueDark);
+            color: var(--white);
+            transition: 0.6s ease;
           }
         `
       : ''}
@@ -92,26 +94,20 @@ export const Input = styled.input<ProfileFormProps>`
       elementSection === 'userName'
       ? css`
           display: block;
-          width: 100%;
+          width: 88%;
           height: 35px;
           font-size: 1.5rem;
           font-weight: 600;
           color: var(--title);
           padding-right: 10px;
-          margin-right: 15px;
           background: transparent;
           border: 1px solid transparent;
           transition: 0.6s;
 
           &:focus {
             padding: 10px;
-            box-shadow: inset 0 0 30px
-              ${({ theme }) =>
-                theme.dark ? css`var(--boxShadow)` : css`var(--boxShadow)`};
-            border-color: ${({ theme }) =>
-              theme.dark
-                ? css`var(--inputProfileColor)`
-                : css`var(--inputProfileColor)`};
+            box-shadow: inset 0 0 30px var(--boxShadow);
+            border-color: var(--inputProfileColor);
             border-radius: 4px;
 
             &::-webkit-input-placeholder {

@@ -47,13 +47,12 @@ export const Label = styled.label<ProfileFormProps>`
           border-radius: 50%;
           background: transparent;
           cursor: pointer;
-          transition: 0.3s;
+          transition: 0.4s;
 
           &:hover {
             background: var(--white);
-            border: 4px solid var(--blue);
-            opacity: 0.1;
-            transform: scale(1.2);
+            opacity: 0.5;
+            transform: scale(1.1);
           }
         `
       : /* userName */

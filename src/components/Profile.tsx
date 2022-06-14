@@ -21,16 +21,20 @@ export function Profile(): JSX.Element {
   };
 
   const handleProfileAvatar = (ev: ChangeEvent<HTMLInputElement>): void => {
-    // ToDo: img base64!
-    setAvatar(ev.target.files[0].name);
-    console.log(avatar);
+    ev.preventDefault();
+
+    const updatedAvatar = URL.createObjectURL(ev.target.files[0]);
+
+    console.log('A V A T A R: ', ev.target.files[0]);
+    console.log('A V A T A R: ', URL.createObjectURL(ev.target.files[0]));
+    setAvatar(updatedAvatar);
   };
 
   return (
     <FormContainer onSubmit={handleFormSubmit}>
       <section>
         <motion.img
-          src='github-profile-avatar.jpeg'
+          src={avatar || 'pinpng.com-avatar-png-1146730.png'}
           alt='GitHub profile avatar'
           animate={{ rotate: 360 }}
           transition={{ duration: 0.5 }}
@@ -39,6 +43,7 @@ export function Profile(): JSX.Element {
           <Input
             type='file'
             id='avatar'
+            multiple={false}
             placeholder='Alterar foto'
             elementSection='userAvatar'
             capture

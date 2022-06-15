@@ -53,7 +53,7 @@ export function Profile(): JSX.Element {
           <Input
             type='file'
             id='avatar'
-            // accept='image/*'
+            accept='image/*'
             multiple={false}
             placeholder='Alterar foto'
             elementSection='userAvatar'

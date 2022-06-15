@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 import { FiCheckSquare } from 'react-icons/fi';
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import { useChallenges } from '@hooks/useChallenges';
 
@@ -12,6 +12,7 @@ export function Profile(): JSX.Element {
 
   const [avatar, setAvatar] = useState('');
   const [name, setName] = useState('');
+  const [avatarFeedbackStatus, setAvatarFeedbackStatus] = useState('');
 
   const handleFormSubmit = (ev: FormEvent<HTMLFormElement>): void => {
     ev.preventDefault();
@@ -35,7 +36,8 @@ export function Profile(): JSX.Element {
       const updatedAvatar = URL.createObjectURL(selectedImgFile);
 
       setAvatar(updatedAvatar);
-    } else alert('Invalid image file type');
+      setAvatarFeedbackStatus('');
+    } else setAvatarFeedbackStatus('Invalid image file type');
   };
 
   return (
@@ -59,7 +61,18 @@ export function Profile(): JSX.Element {
             onChange={handleProfileAvatar}
           />
         </Label>
-        <span>Imagem inválida</span>
+        <AnimatePresence>
+          {avatarFeedbackStatus && (
+            <motion.span
+              initial={{ x: -200, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: -200, opacity: 0 }}
+              transition={{ ease: 'easeInOut', duration: 0.5 }}
+            >
+              {avatarFeedbackStatus}
+            </motion.span>
+          )}
+        </AnimatePresence>
       </section>
 
       <section>

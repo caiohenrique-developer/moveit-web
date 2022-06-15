@@ -15,6 +15,14 @@ export const FormContainer = styled.form`
         height: 5.5rem;
         border-radius: 50%;
       }
+
+      span {
+        position: absolute;
+        bottom: -2rem;
+        left: 0;
+
+        color: var(--red);
+      }
     }
     &:nth-of-type(2) {
       margin-left: 1.5rem;

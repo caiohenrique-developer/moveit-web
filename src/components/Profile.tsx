@@ -23,11 +23,19 @@ export function Profile(): JSX.Element {
   const handleProfileAvatar = (ev: ChangeEvent<HTMLInputElement>): void => {
     ev.preventDefault();
 
-    const updatedAvatar = URL.createObjectURL(ev.target.files[0]);
+    const selectedImgFile = ev.target?.files[0];
+    const selectedImgFileType = selectedImgFile?.type;
+    const extractSelectedImgFileType = selectedImgFileType?.split('/')[1];
+    const validImgFileTypesRegExp = /(gif|jpe?g|tiff?|png|svg|webp|bmp)$/i;
+    const validImgTypes = validImgFileTypesRegExp.test(
+      extractSelectedImgFileType,
+    );
 
-    console.log('A V A T A R: ', ev.target.files[0]);
-    console.log('A V A T A R: ', URL.createObjectURL(ev.target.files[0]));
-    setAvatar(updatedAvatar);
+    if (selectedImgFile && validImgTypes) {
+      const updatedAvatar = URL.createObjectURL(selectedImgFile);
+
+      setAvatar(updatedAvatar);
+    } else alert('Invalid image file type');
   };
 
   return (
@@ -43,6 +51,7 @@ export function Profile(): JSX.Element {
           <Input
             type='file'
             id='avatar'
+            accept='image/*'
             multiple={false}
             placeholder='Alterar foto'
             elementSection='userAvatar'

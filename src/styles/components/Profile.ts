@@ -70,17 +70,13 @@ export const Label = styled.label<ProfileFormProps>`
           align-items: center;
           justify-content: space-between;
 
-          input:focus ~ button {
-            font-size: unset;
-            padding: 0.313rem;
-          }
-
           button {
             display: flex;
             align-items: center;
             justify-content: center;
 
-            font-size: 0;
+            padding: 0.313rem;
+            margin-left: 1.5rem;
             border-radius: 0.313rem;
             background: var(--blueDark);
             color: var(--white);
@@ -101,7 +97,7 @@ export const Input = styled.input<ProfileFormProps>`
       elementSection === 'userName'
       ? css`
           display: block;
-          width: 88%;
+          width: 100%;
           height: 35px;
           font-size: 1.5rem;
           font-weight: 600;
@@ -111,6 +107,9 @@ export const Input = styled.input<ProfileFormProps>`
           border: 1px solid transparent;
           transition: 0.6s;
 
+          &:hover {
+            border-bottom: 1px solid var(--grayLine);
+          }
           &:focus {
             padding: 10px;
             box-shadow: inset 0 0 30px var(--boxShadow);

@@ -84,9 +84,19 @@ export function Profile(): JSX.Element {
             value={name}
             onChange={(ev) => setName(ev.target.value)}
           />
-          <button type='submit'>
-            <FiCheckSquare />
-          </button>
+          <AnimatePresence>
+            {name && (
+              <motion.button
+                type='submit'
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0, opacity: 0 }}
+                transition={{ ease: 'easeInOut', duration: 0.1 }}
+              >
+                <FiCheckSquare />
+              </motion.button>
+            )}
+          </AnimatePresence>
         </Label>
         <p>
           <img src='icons/level.svg' alt='Level' />

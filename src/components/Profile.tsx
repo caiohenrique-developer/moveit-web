@@ -37,7 +37,18 @@ export function Profile(): JSX.Element {
 
       setAvatar(updatedAvatar);
       setAvatarFeedbackStatus('');
+      populateStorage(updatedAvatar);
     } else setAvatarFeedbackStatus('Invalid image file type');
+  };
+
+  const populateStorage = (userAvatar?: string, userName?: string) => {
+    localStorage.setItem(
+      '@MoveIt:user-info',
+      JSON.stringify({
+        avatar: userAvatar,
+        name: 'John Doe',
+      }),
+    );
   };
 
   return (

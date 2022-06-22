@@ -10,18 +10,18 @@ import { FormContainer, Label, Input } from '@styles/components/Profile';
 export function Profile(): JSX.Element {
   const { level } = useChallenges();
 
-  const [avatar, setAvatar] = useState('');
+  const [avatar, setAvatar] = useState('pinpng.com-avatar-png-1146730.png');
   const [name, setName] = useState('');
   const [avatarFeedbackStatus, setAvatarFeedbackStatus] = useState('');
 
-  const handleFormSubmit = (ev: FormEvent<HTMLFormElement>): void => {
+  const handleFormSubmit = (ev: FormEvent<HTMLFormElement>) => {
     ev.preventDefault();
 
     console.log(avatar);
     console.log(name);
   };
 
-  const handleProfileAvatar = (ev: ChangeEvent<HTMLInputElement>): void => {
+  const handleProfileAvatar = (ev: ChangeEvent<HTMLInputElement>) => {
     ev.preventDefault();
 
     const selectedImgFile = ev.target?.files[0];
@@ -38,24 +38,28 @@ export function Profile(): JSX.Element {
       setAvatar(updatedAvatar);
       setAvatarFeedbackStatus('');
       populateStorage(updatedAvatar);
-    } else setAvatarFeedbackStatus('Invalid image file type');
+      return;
+    }
+
+    setAvatarFeedbackStatus('Invalid image file type');
   };
 
-  const populateStorage = (userAvatar?: string, userName?: string) => {
-    localStorage.setItem(
-      '@MoveIt:user-info',
+  const populateStorage = (userAvatar?: string, userName = 'John Doe') => {
+    const userInfo =
+      (userAvatar || userName) &&
       JSON.stringify({
+        name: userName,
         avatar: userAvatar,
-        name: 'John Doe',
-      }),
-    );
+      });
+
+    localStorage.setItem('@MoveIt:user-info', userInfo);
   };
 
   return (
     <FormContainer onSubmit={handleFormSubmit}>
       <section>
         <motion.img
-          src={avatar || 'pinpng.com-avatar-png-1146730.png'}
+          src={avatar}
           alt='GitHub profile avatar'
           animate={{ rotate: 360 }}
           transition={{ duration: 0.5 }}

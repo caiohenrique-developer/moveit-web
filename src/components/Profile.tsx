@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FormEvent, useState } from 'react';
+import React, { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import { FiCheckSquare } from 'react-icons/fi';
 
 import { motion, AnimatePresence } from 'framer-motion';
@@ -13,6 +13,14 @@ export function Profile(): JSX.Element {
   const [avatar, setAvatar] = useState('pinpng.com-avatar-png-1146730.png');
   const [name, setName] = useState('');
   const [avatarFeedbackStatus, setAvatarFeedbackStatus] = useState('');
+
+  useEffect(() => {
+    const userAvatarStorage = JSON.parse(
+      localStorage.getItem('@MoveIt:user-info'),
+    );
+
+    if (userAvatarStorage) setAvatar(userAvatarStorage?.avatar);
+  }, []);
 
   const handleFormSubmit = (ev: FormEvent<HTMLFormElement>) => {
     ev.preventDefault();

@@ -41,11 +41,20 @@ export function Profile(): JSX.Element {
     );
 
     if (selectedImgFile && validImgTypes) {
-      const updatedAvatar = URL.createObjectURL(selectedImgFile);
+      const reader = new FileReader();
 
-      setAvatar(updatedAvatar);
-      setAvatarFeedbackStatus('');
-      populateStorage(updatedAvatar);
+      reader.onload = (function (aImg) {
+        return function (e) {
+          aImg.src = e.target.result;
+
+          setAvatar(aImg.src);
+          populateStorage(aImg.src);
+          setAvatarFeedbackStatus('');
+        };
+      })(selectedImgFile);
+
+      reader.readAsDataURL(selectedImgFile);
+
       return;
     }
 

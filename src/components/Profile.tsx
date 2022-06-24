@@ -33,27 +33,21 @@ export function Profile(): JSX.Element {
     ev.preventDefault();
 
     const selectedImgFile = ev.target?.files[0];
-    const selectedImgFileType = selectedImgFile?.type;
-    const extractSelectedImgFileType = selectedImgFileType?.split('/')[1];
-    const validImgFileTypesRegExp = /(gif|jpe?g|tiff?|png|svg|webp|bmp)$/i;
-    const validImgTypes = validImgFileTypesRegExp.test(
-      extractSelectedImgFileType,
-    );
 
-    if (selectedImgFile && validImgTypes) {
-      const reader = new FileReader();
+    if (selectedImgFile && selectedImgFile?.type.startsWith('image/')) {
+      const fileReader = new FileReader();
 
-      reader.onload = (function (aImg) {
-        return function (e) {
-          aImg.src = e.target.result;
+      fileReader.onload = ((file: File) => {
+        return (e) => {
+          const base64 = e.target?.result;
 
-          setAvatar(aImg.src);
-          populateStorage(aImg.src);
+          setAvatar(base64);
+          populateStorage(base64);
           setAvatarFeedbackStatus('');
         };
       })(selectedImgFile);
 
-      reader.readAsDataURL(selectedImgFile);
+      fileReader.readAsDataURL(selectedImgFile);
 
       return;
     }

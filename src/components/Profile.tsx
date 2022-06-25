@@ -10,23 +10,25 @@ import { FormContainer, Label, Input } from '@styles/components/Profile';
 export function Profile(): JSX.Element {
   const { level } = useChallenges();
 
+  const [name, setName] = useState('John Doe');
   const [avatar, setAvatar] = useState('pinpng.com-avatar-png-1146730.png');
-  const [name, setName] = useState('');
   const [avatarFeedbackStatus, setAvatarFeedbackStatus] = useState('');
 
   useEffect(() => {
-    const userAvatarStorage = JSON.parse(
+    const userInfoStoraged = JSON.parse(
       localStorage.getItem('@MoveIt:user-info'),
     );
 
-    if (userAvatarStorage) setAvatar(userAvatarStorage?.avatar);
+    if (userInfoStoraged) {
+      setName(userInfoStoraged?.name);
+      setAvatar(userInfoStoraged?.avatar);
+    }
   }, []);
 
   const handleFormSubmit = (ev: FormEvent<HTMLFormElement>) => {
     ev.preventDefault();
 
-    console.log(avatar);
-    console.log(name);
+    populateStorage(name, avatar);
   };
 
   const handleProfileAvatar = (ev: ChangeEvent<HTMLInputElement>) => {
@@ -42,7 +44,7 @@ export function Profile(): JSX.Element {
           const base64 = e.target?.result;
 
           setAvatar(base64);
-          populateStorage(base64);
+          populateStorage(name, base64);
           setAvatarFeedbackStatus('');
         };
       })(selectedImgFile);
@@ -55,9 +57,9 @@ export function Profile(): JSX.Element {
     setAvatarFeedbackStatus('Invalid image file type');
   };
 
-  const populateStorage = (userAvatar?: string, userName = 'John Doe') => {
+  const populateStorage = (userName?: string, userAvatar?: string) => {
     const userInfo =
-      (userAvatar || userName) &&
+      (userName || userAvatar) &&
       JSON.stringify({
         name: userName,
         avatar: userAvatar,
@@ -77,13 +79,13 @@ export function Profile(): JSX.Element {
         />
         <Label elementSection='userAvatar' htmlFor='avatar'>
           <Input
-            type='file'
+            capture
             id='avatar'
+            type='file'
             accept='image/*'
             multiple={false}
             placeholder='Alterar foto'
             elementSection='userAvatar'
-            capture
             onChange={handleProfileAvatar}
           />
         </Label>
@@ -104,10 +106,11 @@ export function Profile(): JSX.Element {
       <section>
         <Label elementSection='userName'>
           <Input
+            required
             type='text'
-            placeholder='Qual o seu nome?'
-            elementSection='userName'
             value={name}
+            elementSection='userName'
+            placeholder='Qual o seu nome?'
             onChange={(ev) => setName(ev.target.value)}
           />
           <AnimatePresence>

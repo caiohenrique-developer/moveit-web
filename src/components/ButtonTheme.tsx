@@ -16,7 +16,12 @@ export const ThemeButton = (): JSX.Element => {
 
   return (
     <Container type='button' onClick={handleThemeModeToggleBtn}>
-      <input type='checkbox' id='theme-toggle' checked={themeToggle} />
+      <input
+        type='checkbox'
+        id='theme-toggle'
+        checked={themeToggle}
+        onChange={handleThemeModeToggleBtn}
+      />
       <label htmlFor='theme-toggle'>
         <span className='checkmark' />
       </label>

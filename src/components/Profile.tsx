@@ -1,7 +1,14 @@
-import React, { ChangeEvent, FormEvent, useEffect, useState } from 'react';
+import React, {
+  ChangeEvent,
+  FormEvent,
+  useCallback,
+  useEffect,
+  useState,
+} from 'react';
 import { FiCheckSquare } from 'react-icons/fi';
 
 import { motion, AnimatePresence } from 'framer-motion';
+import { object, string } from 'yup';
 
 import { useChallenges } from '@hooks/useChallenges';
 
@@ -25,11 +32,31 @@ export function Profile(): JSX.Element {
     }
   }, []);
 
-  const handleFormSubmit = (ev: FormEvent<HTMLFormElement>) => {
-    ev.preventDefault();
+  const handleFormSubmit = useCallback(
+    async (ev: FormEvent<HTMLFormElement>) => {
+      ev.preventDefault();
 
-    populateStorage(name, avatar);
-  };
+      try {
+        const userSchema = object({
+          name: string().required('Nome é obrigatório!'),
+        });
+
+        // parse and assert validity
+        await userSchema.validate(
+          { name },
+          {
+            strict: true,
+            abortEarly: false,
+          },
+        );
+
+        populateStorage(name, avatar);
+      } catch (err) {
+        console.error('Displaying Yup validation error: ', err);
+      }
+    },
+    [name, avatar],
+  );
 
   const handleProfileAvatar = (ev: ChangeEvent<HTMLInputElement>) => {
     ev.preventDefault();

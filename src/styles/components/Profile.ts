@@ -70,6 +70,18 @@ export const Label = styled.label<ProfileFormProps>`
           align-items: center;
           justify-content: space-between;
 
+          div span {
+            display: block;
+            width: 0;
+            height: 1px;
+            background: var(--grayLine);
+            transition: 0.8s;
+          }
+
+          &:hover div span {
+            width: 100%;
+          }
+
           button {
             display: flex;
             align-items: center;
@@ -107,9 +119,6 @@ export const Input = styled.input<ProfileFormProps>`
           border: 1px solid transparent;
           transition: 0.6s;
 
-          &:hover {
-            border-bottom: 1px solid var(--grayLine);
-          }
           &:focus {
             padding: 10px;
             box-shadow: inset 0 0 30px var(--boxShadow);

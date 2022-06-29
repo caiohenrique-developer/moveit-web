@@ -3,6 +3,7 @@ import React, {
   FormEvent,
   useCallback,
   useEffect,
+  useRef,
   useState,
 } from 'react';
 import { FiCheckSquare } from 'react-icons/fi';
@@ -16,10 +17,12 @@ import { FormContainer, Label, Input } from '@styles/components/Profile';
 
 export function Profile(): JSX.Element {
   const { level } = useChallenges();
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const [name, setName] = useState('John Doe');
   const [avatar, setAvatar] = useState('pinpng.com-avatar-png-1146730.png');
   const [avatarFeedbackStatus, setAvatarFeedbackStatus] = useState('');
+  const [isFocused, setIsFocused] = useState(false);
 
   useEffect(() => {
     const userInfoStoraged = JSON.parse(
@@ -84,6 +87,14 @@ export function Profile(): JSX.Element {
     setAvatarFeedbackStatus('Invalid image file type');
   };
 
+  const handleInputFocused = useCallback(() => {
+    setIsFocused(true);
+  }, []);
+
+  const handleInputBlurred = useCallback(() => {
+    setIsFocused(false);
+  }, []);
+
   const populateStorage = (userName?: string, userAvatar?: string) => {
     const userInfo =
       (userName || userAvatar) &&
@@ -131,17 +142,25 @@ export function Profile(): JSX.Element {
       </section>
 
       <section>
-        <Label elementSection='userName'>
-          <Input
-            required
-            type='text'
-            value={name}
-            elementSection='userName'
-            placeholder='Qual o seu nome?'
-            onChange={(ev) => setName(ev.target.value)}
-          />
+        <Label
+          elementSection='userName'
+          onBlur={handleInputBlurred}
+          onFocus={handleInputFocused}
+        >
+          <div>
+            <Input
+              required
+              type='text'
+              value={name}
+              ref={inputRef}
+              elementSection='userName'
+              placeholder='Qual o seu nome?'
+              onChange={(ev) => setName(ev.target.value)}
+            />
+            <span />
+          </div>
           <AnimatePresence>
-            {name && (
+            {isFocused && (
               <motion.button
                 type='submit'
                 initial={{ scale: 0, opacity: 0 }}

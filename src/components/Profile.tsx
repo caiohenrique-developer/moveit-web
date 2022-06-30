@@ -22,6 +22,7 @@ export function Profile(): JSX.Element {
   const [name, setName] = useState('John Doe');
   const [avatar, setAvatar] = useState('pinpng.com-avatar-png-1146730.png');
   const [feedbackStatus, setFeedbackStatus] = useState('');
+  const [feedbackStatusClass, setFeedbackStatusClass] = useState('');
   const [isFocused, setIsFocused] = useState(false);
 
   useEffect(() => {
@@ -54,9 +55,11 @@ export function Profile(): JSX.Element {
         );
 
         setFeedbackStatus('');
+        setFeedbackStatusClass('');
         populateStorage(name, avatar);
       } catch (err) {
         setFeedbackStatus(err.message);
+        setFeedbackStatusClass('errorName');
         console.error('Displaying Yup validation error: ', err);
       }
     },
@@ -78,6 +81,7 @@ export function Profile(): JSX.Element {
           setAvatar(base64);
           populateStorage(name, base64);
           setFeedbackStatus('');
+          setFeedbackStatusClass('');
         };
       })(selectedImgFile);
 
@@ -86,6 +90,7 @@ export function Profile(): JSX.Element {
       return;
     }
 
+    setFeedbackStatusClass('errorImg');
     setFeedbackStatus('Tipo de arquivo inválido!');
   };
 
@@ -117,7 +122,11 @@ export function Profile(): JSX.Element {
           animate={{ rotate: 360 }}
           transition={{ duration: 0.5 }}
         />
-        <Label elementSection='userAvatar' htmlFor='avatar'>
+        <Label
+          htmlFor='avatar'
+          elementSection='userAvatar'
+          feedbackStatusClass={feedbackStatusClass === 'errorImg'}
+        >
           <Input
             capture
             id='avatar'
@@ -148,6 +157,7 @@ export function Profile(): JSX.Element {
           elementSection='userName'
           onBlur={handleInputBlurred}
           onFocus={handleInputFocused}
+          feedbackStatusClass={feedbackStatusClass === 'errorName'}
         >
           <div>
             <Input

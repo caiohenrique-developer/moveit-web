@@ -41,7 +41,7 @@ export const FormContainer = styled.form`
 
 export const Label = styled.label<ProfileFormProps>`
   /* userAvatar */
-  ${({ elementSection }) =>
+  ${({ elementSection, feedbackStatusClass }) =>
     elementSection === 'userAvatar'
       ? css`
           position: absolute;
@@ -62,6 +62,11 @@ export const Label = styled.label<ProfileFormProps>`
             opacity: 0.5;
             transform: scale(1.1);
           }
+
+          ${feedbackStatusClass &&
+          css`
+            border: 2px solid var(--red);
+          `}
         `
       : /* userName */
       elementSection === 'userName'
@@ -70,12 +75,38 @@ export const Label = styled.label<ProfileFormProps>`
           align-items: center;
           justify-content: space-between;
 
-          div span {
-            display: block;
-            width: 0;
-            height: 1px;
-            background: var(--grayLine);
-            transition: 0.8s;
+          div {
+            span {
+              display: block;
+              width: 0;
+              height: 1px;
+              background: var(--grayLine);
+              transition: 0.8s;
+            }
+
+            ${feedbackStatusClass &&
+            css`
+              input {
+                &::-webkit-input-placeholder {
+                  color: var(--red);
+                } /* Edge */
+                &:-ms-input-placeholder {
+                  color: var(--red);
+                } /* Internet Explorer 10-11 */
+                &::placeholder {
+                  color: var(--red);
+                } /* Default */
+              }
+              &::-webkit-input-placeholder {
+                color: var(--red);
+              } /* Edge */
+              &:-ms-input-placeholder {
+                color: var(--red);
+              } /* Internet Explorer 10-11 */
+              &::placeholder {
+                color: var(--red);
+              } /* Default */
+            `}
           }
 
           &:hover div span {

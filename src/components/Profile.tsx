@@ -86,7 +86,7 @@ export function Profile(): JSX.Element {
       return;
     }
 
-    setFeedbackStatus('Invalid image file type');
+    setFeedbackStatus('Tipo de arquivo inválido!');
   };
 
   const handleInputFocused = useCallback(() => {
@@ -151,7 +151,6 @@ export function Profile(): JSX.Element {
         >
           <div>
             <Input
-              required
               type='text'
               value={name}
               ref={inputRef}

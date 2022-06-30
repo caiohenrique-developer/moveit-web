@@ -23,6 +23,7 @@ export function Profile(): JSX.Element {
   const [avatar, setAvatar] = useState('pinpng.com-avatar-png-1146730.png');
   const [feedbackStatus, setFeedbackStatus] = useState('');
   const [feedbackStatusClass, setFeedbackStatusClass] = useState('');
+  const [buttonFeedbackStatus, setButtonFeedbackStatus] = useState('');
   const [isFocused, setIsFocused] = useState(false);
 
   useEffect(() => {
@@ -56,17 +57,19 @@ export function Profile(): JSX.Element {
 
         setFeedbackStatus('');
         setFeedbackStatusClass('');
+        setButtonFeedbackStatus('successBtn');
         populateStorage(name, avatar);
       } catch (err) {
         setFeedbackStatus(err.message);
         setFeedbackStatusClass('errorName');
+        setButtonFeedbackStatus('errorBtn');
         console.error('Displaying Yup validation error: ', err);
       }
     },
     [name, avatar],
   );
 
-  const handleProfileAvatar = (ev: ChangeEvent<HTMLInputElement>) => {
+  const handleProfileUserAvatar = (ev: ChangeEvent<HTMLInputElement>) => {
     ev.preventDefault();
 
     const selectedImgFile = ev.target?.files[0];
@@ -82,6 +85,7 @@ export function Profile(): JSX.Element {
           populateStorage(name, base64);
           setFeedbackStatus('');
           setFeedbackStatusClass('');
+          setButtonFeedbackStatus('');
         };
       })(selectedImgFile);
 
@@ -91,7 +95,17 @@ export function Profile(): JSX.Element {
     }
 
     setFeedbackStatusClass('errorImg');
+    setButtonFeedbackStatus('errorBtn');
     setFeedbackStatus('Tipo de arquivo inválido!');
+  };
+
+  const handleProfileUserName = (ev: ChangeEvent<HTMLInputElement>) => {
+    ev.preventDefault();
+
+    const inputUserName = ev.target?.value;
+
+    setName(inputUserName);
+    setButtonFeedbackStatus('');
   };
 
   const handleInputFocused = useCallback(() => {
@@ -135,7 +149,7 @@ export function Profile(): JSX.Element {
             multiple={false}
             placeholder='Alterar foto'
             elementSection='userAvatar'
-            onChange={handleProfileAvatar}
+            onChange={handleProfileUserAvatar}
           />
         </Label>
         <AnimatePresence>
@@ -166,7 +180,7 @@ export function Profile(): JSX.Element {
               ref={inputRef}
               elementSection='userName'
               placeholder='Qual o seu nome?'
-              onChange={(ev) => setName(ev.target.value)}
+              onChange={handleProfileUserName}
             />
             <span />
           </div>
@@ -178,6 +192,7 @@ export function Profile(): JSX.Element {
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0, opacity: 0 }}
                 transition={{ ease: 'easeInOut', duration: 0.1 }}
+                className={buttonFeedbackStatus}
               >
                 <FiCheckSquare />
               </motion.button>

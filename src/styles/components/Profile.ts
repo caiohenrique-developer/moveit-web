@@ -121,9 +121,16 @@ export const Label = styled.label<ProfileFormProps>`
             padding: 0.313rem;
             margin-left: 1.5rem;
             border-radius: 0.313rem;
-            background: var(--blueDark);
+            background: #f9aa33;
             color: var(--white);
             transition: 0.6s ease;
+
+            &.errorBtn {
+              background: var(--red);
+            }
+            &.successBtn {
+              background: var(--green);
+            }
           }
         `
       : ''}

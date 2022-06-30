@@ -21,7 +21,7 @@ export function Profile(): JSX.Element {
 
   const [name, setName] = useState('John Doe');
   const [avatar, setAvatar] = useState('pinpng.com-avatar-png-1146730.png');
-  const [avatarFeedbackStatus, setAvatarFeedbackStatus] = useState('');
+  const [feedbackStatus, setFeedbackStatus] = useState('');
   const [isFocused, setIsFocused] = useState(false);
 
   useEffect(() => {
@@ -53,8 +53,10 @@ export function Profile(): JSX.Element {
           },
         );
 
+        setFeedbackStatus('');
         populateStorage(name, avatar);
       } catch (err) {
+        setFeedbackStatus(err.message);
         console.error('Displaying Yup validation error: ', err);
       }
     },
@@ -75,7 +77,7 @@ export function Profile(): JSX.Element {
 
           setAvatar(base64);
           populateStorage(name, base64);
-          setAvatarFeedbackStatus('');
+          setFeedbackStatus('');
         };
       })(selectedImgFile);
 
@@ -84,7 +86,7 @@ export function Profile(): JSX.Element {
       return;
     }
 
-    setAvatarFeedbackStatus('Invalid image file type');
+    setFeedbackStatus('Invalid image file type');
   };
 
   const handleInputFocused = useCallback(() => {
@@ -128,14 +130,14 @@ export function Profile(): JSX.Element {
           />
         </Label>
         <AnimatePresence>
-          {avatarFeedbackStatus && (
+          {feedbackStatus && (
             <motion.span
               initial={{ x: -200, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -200, opacity: 0 }}
               transition={{ ease: 'easeInOut', duration: 0.5 }}
             >
-              {avatarFeedbackStatus}
+              {feedbackStatus}
             </motion.span>
           )}
         </AnimatePresence>

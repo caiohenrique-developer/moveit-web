@@ -6,7 +6,7 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import { FiCheckSquare } from 'react-icons/fi';
+import { FiCheckCircle, FiAlertTriangle, FiLoader } from 'react-icons/fi';
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { object, string } from 'yup';
@@ -194,7 +194,13 @@ export function Profile(): JSX.Element {
                 transition={{ ease: 'easeInOut', duration: 0.1 }}
                 className={buttonFeedbackStatus}
               >
-                <FiCheckSquare />
+                {buttonFeedbackStatus === 'successBtn' ? (
+                  <FiCheckCircle />
+                ) : buttonFeedbackStatus === 'errorBtn' ? (
+                  <FiAlertTriangle />
+                ) : (
+                  <FiLoader />
+                )}
               </motion.button>
             )}
           </AnimatePresence>

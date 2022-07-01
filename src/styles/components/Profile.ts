@@ -130,6 +130,7 @@ export const Label = styled.label<ProfileFormProps>`
             }
             &.successBtn {
               background: var(--green);
+              border-radius: 50%;
             }
           }
         `

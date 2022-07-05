@@ -38,17 +38,17 @@ export function Profile(): JSX.Element {
   }, []);
 
   useEffect(() => {
-    if (
+    const successValidation =
       feedbackStatusClass === 'successName' ||
-      feedbackStatusClass === 'successImg'
-    ) {
+      feedbackStatusClass === 'successImg';
+    const errorValidation =
+      feedbackStatusClass === 'errorName' || feedbackStatusClass === 'errorImg';
+
+    if (successValidation) {
       setTimeout(() => setFeedbackStatus(''), 2000);
       setTimeout(() => setFeedbackStatusClass(''), 2500);
       setTimeout(() => setButtonFeedbackStatus(''), 3000);
-    } else if (
-      feedbackStatusClass === 'errorName' ||
-      feedbackStatusClass === 'errorImg'
-    ) {
+    } else if (errorValidation) {
       setTimeout(() => setFeedbackStatus(''), 5000);
       setTimeout(() => setFeedbackStatusClass(''), 5500);
       setTimeout(() => setButtonFeedbackStatus(''), 6000);

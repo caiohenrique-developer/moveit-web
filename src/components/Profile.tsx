@@ -37,6 +37,24 @@ export function Profile(): JSX.Element {
     }
   }, []);
 
+  useEffect(() => {
+    if (
+      feedbackStatusClass === 'successName' ||
+      feedbackStatusClass === 'successImg'
+    ) {
+      setTimeout(() => setFeedbackStatus(''), 2000);
+      setTimeout(() => setFeedbackStatusClass(''), 2500);
+      setTimeout(() => setButtonFeedbackStatus(''), 3000);
+    } else if (
+      feedbackStatusClass === 'errorName' ||
+      feedbackStatusClass === 'errorImg'
+    ) {
+      setTimeout(() => setFeedbackStatus(''), 5000);
+      setTimeout(() => setFeedbackStatusClass(''), 5500);
+      setTimeout(() => setButtonFeedbackStatus(''), 6000);
+    }
+  }, [buttonFeedbackStatus, feedbackStatusClass]);
+
   const handleFormSubmit = useCallback(
     async (ev: FormEvent<HTMLFormElement>) => {
       ev.preventDefault();
@@ -56,7 +74,7 @@ export function Profile(): JSX.Element {
         );
 
         setFeedbackStatus('');
-        setFeedbackStatusClass('');
+        setFeedbackStatusClass('successName');
         setButtonFeedbackStatus('successBtn');
         populateStorage(name, avatar);
       } catch (err) {
@@ -84,8 +102,8 @@ export function Profile(): JSX.Element {
           setAvatar(base64);
           populateStorage(name, base64);
           setFeedbackStatus('');
-          setFeedbackStatusClass('');
-          setButtonFeedbackStatus('');
+          setFeedbackStatusClass('successImg');
+          setButtonFeedbackStatus('successBtn');
         };
       })(selectedImgFile);
 
@@ -143,6 +161,7 @@ export function Profile(): JSX.Element {
         <Label
           htmlFor='avatar'
           elementSection='userAvatar'
+          className={feedbackStatusClass && feedbackStatusClass}
           feedbackStatusClass={feedbackStatusClass === 'errorImg'}
         >
           <Input
@@ -175,6 +194,7 @@ export function Profile(): JSX.Element {
           elementSection='userName'
           onBlur={handleInputBlurred}
           onFocus={handleInputFocused}
+          className={feedbackStatusClass && feedbackStatusClass}
           feedbackStatusClass={feedbackStatusClass === 'errorName'}
         >
           <div>

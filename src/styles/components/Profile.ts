@@ -62,11 +62,12 @@ export const Label = styled.label<ProfileFormProps>`
             opacity: 0.5;
             transform: scale(1.1);
           }
-
-          ${feedbackStatusClass &&
-          css`
+          &.successImg {
+            border: 2px solid var(--green);
+          }
+          &.errorImg {
             border: 2px solid var(--red);
-          `}
+          }
         `
       : /* userName */
       elementSection === 'userName'
@@ -112,6 +113,9 @@ export const Label = styled.label<ProfileFormProps>`
           &:hover div span {
             width: 100%;
           }
+          &.successName div input {
+            color: var(--green);
+          }
 
           button {
             display: flex;
@@ -125,12 +129,12 @@ export const Label = styled.label<ProfileFormProps>`
             color: var(--white);
             transition: 0.6s ease;
 
-            &.errorBtn {
-              background: var(--red);
-            }
             &.successBtn {
               background: var(--green);
               border-radius: 50%;
+            }
+            &.errorBtn {
+              background: var(--red);
             }
           }
         `

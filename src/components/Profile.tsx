@@ -1,7 +1,6 @@
 import React, {
   ChangeEvent,
   FormEvent,
-  useCallback,
   useEffect,
   useRef,
   useState,
@@ -55,37 +54,34 @@ export function Profile(): JSX.Element {
     }
   }, [buttonFeedbackStatus, feedbackStatusClass]);
 
-  const handleFormSubmit = useCallback(
-    async (ev: FormEvent<HTMLFormElement>) => {
-      ev.preventDefault();
+  const handleFormSubmit = async (ev: FormEvent<HTMLFormElement>) => {
+    ev.preventDefault();
 
-      try {
-        const userSchema = object({
-          name: string().required('Nome é obrigatório!'),
-        });
+    try {
+      const userSchema = object({
+        name: string().required('Nome é obrigatório!'),
+      });
 
-        // parse and assert validity
-        await userSchema.validate(
-          { name },
-          {
-            strict: true,
-            abortEarly: false,
-          },
-        );
+      // parse and assert validity
+      await userSchema.validate(
+        { name },
+        {
+          strict: true,
+          abortEarly: false,
+        },
+      );
 
-        setFeedbackStatus('');
-        setFeedbackStatusClass('successName');
-        setButtonFeedbackStatus('successBtn');
-        populateStorage(name, avatar);
-      } catch (err) {
-        setFeedbackStatus(err.message);
-        setFeedbackStatusClass('errorName');
-        setButtonFeedbackStatus('errorBtn');
-        console.error('Displaying Yup validation error: ', err);
-      }
-    },
-    [name, avatar],
-  );
+      setFeedbackStatus('');
+      setFeedbackStatusClass('successName');
+      setButtonFeedbackStatus('successBtn');
+      populateStorage(name, avatar);
+    } catch (err) {
+      setFeedbackStatus(err.message);
+      setFeedbackStatusClass('errorName');
+      setButtonFeedbackStatus('errorBtn');
+      console.error('Displaying Yup validation error: ', err);
+    }
+  };
 
   const handleProfileUserAvatar = (ev: ChangeEvent<HTMLInputElement>) => {
     ev.preventDefault();
@@ -129,14 +125,6 @@ export function Profile(): JSX.Element {
     setFeedbackStatusClass('');
     setButtonFeedbackStatus('');
   };
-
-  const handleInputFocused = useCallback(() => {
-    setIsFocused(true);
-  }, []);
-
-  const handleInputBlurred = useCallback(() => {
-    setIsFocused(false);
-  }, []);
 
   const populateStorage = (userName?: string, userAvatar?: string) => {
     const userInfo =
@@ -192,8 +180,8 @@ export function Profile(): JSX.Element {
       <section>
         <Label
           elementSection='userName'
-          onBlur={handleInputBlurred}
-          onFocus={handleInputFocused}
+          onBlur={() => setIsFocused(false)}
+          onFocus={() => setIsFocused(true)}
           className={feedbackStatusClass && feedbackStatusClass}
           feedbackStatusClass={feedbackStatusClass === 'errorName'}
         >

@@ -118,7 +118,7 @@ export function Profile(): JSX.Element {
 
     const inputUserName = ev.target?.value;
 
-    if (/^\s/.test(inputUserName)) return false;
+    if (/^\s/.test(inputUserName)) return;
 
     setName(inputUserName);
     setFeedbackStatus('');

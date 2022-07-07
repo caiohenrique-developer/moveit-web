@@ -8,6 +8,7 @@ import { ChallengeBox } from '@components/ChallengeBox';
 import { CompletedChallenges } from '@components/CompletedChallenges';
 import { CountDown } from '@components/CountDown';
 import { ExperienceBar } from '@components/ExperienceBar';
+import { Footer } from '@components/Footer';
 import { Profile } from '@components/Profile';
 
 import { ChallengesProvider } from '@hooks/useChallenges';
@@ -60,6 +61,8 @@ export default function Home({
             </div>
           </section>
         </CountDownProvider>
+
+        <Footer />
       </Container>
     </ChallengesProvider>
   );

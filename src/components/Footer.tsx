@@ -2,6 +2,8 @@ import React from 'react';
 
 import Link from 'next/link';
 
+import { ThemeButton } from '@components/ButtonTheme';
+
 import { Container } from '@styles/components/Footer';
 
 export const Footer = (): JSX.Element => {
@@ -24,6 +26,8 @@ export const Footer = (): JSX.Element => {
         </Link>
         .
       </p>
+
+      <ThemeButton />
     </Container>
   );
 };

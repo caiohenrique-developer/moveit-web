@@ -41,14 +41,6 @@ export const Container = styled.div`
     }
   }
 
-  > button {
-    position: absolute;
-    bottom: 2.5rem;
-    right: 2.5rem;
-
-    background: transparent;
-    color: var(--title);
-  }
   > section {
     flex: 1;
     gap: 4rem;

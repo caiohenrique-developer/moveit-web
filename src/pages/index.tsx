@@ -3,7 +3,6 @@ import React from 'react';
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 
-import { ThemeButton } from '@components/ButtonTheme';
 import { ChallengeBox } from '@components/ChallengeBox';
 import { CompletedChallenges } from '@components/CompletedChallenges';
 import { CountDown } from '@components/CountDown';
@@ -44,8 +43,6 @@ export default function Home({
           <strong>OnGoing</strong>
           <i>🧬</i>
         </a>
-
-        <ThemeButton />
 
         <ExperienceBar />
 

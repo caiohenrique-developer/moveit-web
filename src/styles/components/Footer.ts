@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 
 export const Container = styled.footer`
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
   width: 100%;
 
   p {
-    padding: 2.6rem;
-
     color: var(--text);
-    text-align: center;
     font-size: min(14px, 3vw);
 
     a {

@@ -1,9 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.button`
+  position: absolute;
+  right: 0;
+
   z-index: 8;
   overflow: hidden;
 
+  background: transparent;
+  color: var(--title);
   opacity: 0.2;
   transition: var(--switch-transition-duration);
 

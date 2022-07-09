@@ -6,8 +6,8 @@ import Head from 'next/head';
 import { ChallengeBox } from '@components/ChallengeBox';
 import { CompletedChallenges } from '@components/CompletedChallenges';
 import { CountDown } from '@components/CountDown';
-import { ExperienceBar } from '@components/ExperienceBar';
 import { Footer } from '@components/Footer';
+import { Header } from '@components/Header';
 import { Profile } from '@components/Profile';
 
 import { ChallengesProvider } from '@hooks/useChallenges';
@@ -33,18 +33,7 @@ export default function Home({
           <title>Move.it | Boost yourself!</title>
         </Head>
 
-        <a
-          className='badgeStatus'
-          href='https://github.com/caiohenrique-developer/moveit-web/tree/develop#-roadmap-gem'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <i>🧬</i>
-          <strong>OnGoing</strong>
-          <i>🧬</i>
-        </a>
-
-        <ExperienceBar />
+        <Header />
 
         <CountDownProvider>
           <section>

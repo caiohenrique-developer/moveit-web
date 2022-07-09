@@ -4,7 +4,7 @@ import { useThemeMode } from '@hooks/useThemeMode';
 
 import { Container } from '@styles/components/ButtonTheme';
 
-export const ThemeButton = (): JSX.Element => {
+export function ThemeButton(): JSX.Element {
   const { handleThemeModeToggle } = useThemeMode();
 
   const [themeToggle, setThemeToggle] = useState(false);
@@ -27,4 +27,4 @@ export const ThemeButton = (): JSX.Element => {
       </label>
     </Container>
   );
-};
+}

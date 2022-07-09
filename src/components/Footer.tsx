@@ -6,7 +6,7 @@ import { ThemeButton } from '@components/ButtonTheme';
 
 import { Container } from '@styles/components/Footer';
 
-export const Footer = (): JSX.Element => {
+export function Footer(): JSX.Element {
   const appCreatedAt = new Date('2021-06-01').getFullYear();
   const currentYear = new Date().getFullYear();
   const year =
@@ -30,4 +30,4 @@ export const Footer = (): JSX.Element => {
       <ThemeButton />
     </Container>
   );
-};
+}

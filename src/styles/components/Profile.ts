@@ -15,6 +15,14 @@ export const FormContainer = styled.form`
         height: 5.5rem;
         border-radius: 50%;
       }
+
+      span {
+        position: absolute;
+        bottom: -2rem;
+        left: 0;
+
+        color: var(--red);
+      }
     }
     &:nth-of-type(2) {
       margin-left: 1.5rem;
@@ -33,7 +41,7 @@ export const FormContainer = styled.form`
 
 export const Label = styled.label<ProfileFormProps>`
   /* userAvatar */
-  ${({ elementSection }) =>
+  ${({ elementSection, feedbackStatusClass }) =>
     elementSection === 'userAvatar'
       ? css`
           position: absolute;
@@ -47,16 +55,18 @@ export const Label = styled.label<ProfileFormProps>`
           border-radius: 50%;
           background: transparent;
           cursor: pointer;
-          transition: 0.3s;
+          transition: 0.4s;
 
           &:hover {
-            background: ${({ theme }) =>
-              theme.dark ? css`var(--white)` : css`var(--white)`};
-            border: 4px solid
-              ${({ theme }) =>
-                theme.dark ? css`var(--blue)` : css`var(--blue)`};
-            opacity: 0.2;
-            transform: scale(1.3);
+            background: var(--white);
+            opacity: 0.5;
+            transform: scale(1.1);
+          }
+          &.successImg {
+            border: 2px solid var(--green);
+          }
+          &.errorImg {
+            border: 2px solid var(--red);
           }
         `
       : /* userName */
@@ -66,15 +76,65 @@ export const Label = styled.label<ProfileFormProps>`
           align-items: center;
           justify-content: space-between;
 
+          div {
+            span {
+              display: block;
+              width: 0;
+              height: 1px;
+              background: var(--grayLine);
+              transition: 0.8s;
+            }
+
+            ${feedbackStatusClass &&
+            css`
+              input {
+                &::-webkit-input-placeholder {
+                  color: var(--red);
+                } /* Edge */
+                &:-ms-input-placeholder {
+                  color: var(--red);
+                } /* Internet Explorer 10-11 */
+                &::placeholder {
+                  color: var(--red);
+                } /* Default */
+              }
+              &::-webkit-input-placeholder {
+                color: var(--red);
+              } /* Edge */
+              &:-ms-input-placeholder {
+                color: var(--red);
+              } /* Internet Explorer 10-11 */
+              &::placeholder {
+                color: var(--red);
+              } /* Default */
+            `}
+          }
+
+          &:hover div span {
+            width: 100%;
+          }
+          &.successName div input {
+            color: var(--green);
+          }
+
           button {
             display: flex;
             align-items: center;
             justify-content: center;
 
-            padding: 5px;
-            border-radius: 5px;
+            padding: 0.313rem;
+            margin-left: 1.5rem;
+            border-radius: 0.313rem;
+            background: #f9aa33;
+            color: var(--white);
+            transition: 0.6s ease;
 
-            svg {
+            &.successBtn {
+              background: var(--green);
+              border-radius: 50%;
+            }
+            &.errorBtn {
+              background: var(--red);
             }
           }
         `
@@ -93,26 +153,19 @@ export const Input = styled.input<ProfileFormProps>`
       ? css`
           display: block;
           width: 100%;
-          height: 25px;
+          height: 35px;
           font-size: 1.5rem;
           font-weight: 600;
           color: var(--title);
           padding-right: 10px;
-          margin-right: 15px;
           background: transparent;
-          transition: 0.4s;
+          border: 1px solid transparent;
+          transition: 0.6s;
 
           &:focus {
-            height: 35px;
             padding: 10px;
-            box-shadow: inset 0 0 30px
-              ${({ theme }) =>
-                theme.dark ? css`var(--boxShadow)` : css`var(--boxShadow)`};
-            border: 1px solid
-              ${({ theme }) =>
-                theme.dark
-                  ? css`var(--inputProfileColor)`
-                  : css`var(--inputProfileColor)`};
+            box-shadow: inset 0 0 30px var(--boxShadow);
+            border-color: var(--inputProfileColor);
             border-radius: 4px;
 
             &::-webkit-input-placeholder {
@@ -122,27 +175,26 @@ export const Input = styled.input<ProfileFormProps>`
               font-size: 0.75rem;
             } /* Internet Explorer 10-11 */
             &::placeholder {
-              font-size: 0.75rem;
+              font-size: 0.65rem;
             } /* Default */
           }
           &::-webkit-input-placeholder {
-            /* Edge */
             font-size: 0.95rem;
             font-weight: 400;
             color: var(--buttonTitle);
-          }
+          } /* Edge */
           &:-ms-input-placeholder {
-            /* Internet Explorer 10-11 */
             font-size: 0.95rem;
             font-weight: 400;
             color: var(--buttonTitle);
-          }
+            transition: 0.6s;
+          } /* Internet Explorer 10-11 */
           &::placeholder {
-            /* Default */
             font-size: 0.95rem;
             font-weight: 400;
             color: var(--buttonTitle);
-          }
+            transition: 0.6s;
+          } /* Default */
         `
       : ''}
 `;

@@ -22,12 +22,12 @@ export const ThemeModeProvider = ({
         : '',
     boxShadow:
       theme === 'dark'
-        ? 'rgb(255 255 255 / 18%)'
+        ? 'rgb(255 255 255 / 8%)'
         : theme === 'light'
         ? 'rgb(0 0 0 / 8%)'
         : '',
     inputProfileColor:
-      theme === 'dark' ? '#ffffff2e' : theme === 'light' ? '#ffffff2b' : '',
+      theme === 'dark' ? '#ffffff12' : theme === 'light' ? '#ffffff' : '',
     text: theme === 'dark' ? '#f7f7f7' : theme === 'light' ? '#666' : '',
     white: theme === 'dark' ? '#222222' : theme === 'light' ? '#fff' : '',
     grayLine: theme === 'dark' ? '#dcdde0' : theme === 'light' ? '#dcdde0' : '',

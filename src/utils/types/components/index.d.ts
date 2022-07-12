@@ -11,4 +11,5 @@ export interface ChallengeButtonProps {
 // Profile
 export interface ProfileFormProps {
   elementSection: string;
+  feedbackStatusClass?: boolean;
 }

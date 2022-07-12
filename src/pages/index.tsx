@@ -3,11 +3,11 @@ import React from 'react';
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 
-import { ThemeButton } from '@components/ButtonTheme';
 import { ChallengeBox } from '@components/ChallengeBox';
 import { CompletedChallenges } from '@components/CompletedChallenges';
 import { CountDown } from '@components/CountDown';
-import { ExperienceBar } from '@components/ExperienceBar';
+import { Footer } from '@components/Footer';
+import { Header } from '@components/Header';
 import { Profile } from '@components/Profile';
 
 import { ChallengesProvider } from '@hooks/useChallenges';
@@ -33,9 +33,7 @@ export default function Home({
           <title>Move.it | Boost yourself!</title>
         </Head>
 
-        <ThemeButton />
-
-        <ExperienceBar />
+        <Header />
 
         <CountDownProvider>
           <section>
@@ -49,19 +47,21 @@ export default function Home({
             </div>
           </section>
         </CountDownProvider>
+
+        <Footer />
       </Container>
     </ChallengesProvider>
   );
 }
 
-// export const getServerSideProps: GetServerSideProps = async (ctx) => {
-//   const { level, currentExperience, challengesComplited } = ctx.req.cookies;
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const { level, currentExperience, challengesComplited } = ctx.req.cookies;
 
-//   return {
-//     props: {
-//       level: Number(level),
-//       currentExperience: Number(currentExperience),
-//       challengesComplited: Number(challengesComplited),
-//     },
-//   };
-// };
+  return {
+    props: {
+      level: Number(level),
+      currentExperience: Number(currentExperience),
+      challengesComplited: Number(challengesComplited),
+    },
+  };
+};

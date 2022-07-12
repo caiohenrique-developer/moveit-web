@@ -28,11 +28,20 @@ export default createGlobalStyle`
         --border: ${({ theme }) => theme.border};
         --invert: ${({ theme }) => theme.invert};
         --revert: ${({ theme }) => theme.revert};
+
+        /* Night/Day theme mode */
+        --toggle-size: 10rem;
+        --switch-w: 0.4em;
+        --switch-h: 0.2em;
+        --switch-handle-scale: 0.65;
+        --switch-off-handle-x: -0.02em;
+        --switch-on-handle-x: calc(100% - 0.02em);
+        --switch-transition-duration: 0.4s ease-in-out;
     }
 
     body {
-        background: var(--background);
-        color: var(--text);
+      background: var(--background);
+      color: var(--text);
 
         button { cursor: pointer; }
 

@@ -30,8 +30,6 @@
 
 ## [🔝](#top) Roadmap :gem:
 
-<img align="right" src="https://img.shields.io/badge/Project%20Status%20-🧬%20(OnGoing)%20🧬-2C8EBB?style=flat&logo=statuspage&logoColor=white&color=blue"/>
-
 - [x] Countdown
   - [x] Restart countdown
 - [x] Challenges
@@ -39,14 +37,9 @@
 - [x] Levels
 - [x] Experience
 - [x] Pop-up congratulations
-- [x] Responsive
-- [ ] Manage countdown time
-- [ ] Effects & Animations
-- [ ] Dark mode (default), Light mode toggle
-- [ ] PWA
-- [ ] Change your avatar and profile name
-- [ ] GitHub login
-- [ ] Share experiences in any social community
+- [x] Effects & Animations
+- [x] Dark mode (default), Light mode toggle
+- [x] Change your avatar and profile name
 - Any suggestion?
   - <a href="#-contact-me-phone">Contact me!</a>
 

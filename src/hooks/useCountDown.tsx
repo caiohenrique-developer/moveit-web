@@ -29,7 +29,7 @@ export function CountDownProvider({
     clearTimeout(countDownTimeout);
     setIsActive(false);
     setHasFinished(false);
-    setTime(0.1 * 60);
+    setTime(25 * 60);
   }
 
   useEffect(() => {

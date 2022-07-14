@@ -40,8 +40,9 @@ export default createGlobalStyle`
     }
 
     body {
-      background: var(--background);
+      height: 100vh;
       color: var(--text);
+      background: var(--background);
 
         button { cursor: pointer; }
 

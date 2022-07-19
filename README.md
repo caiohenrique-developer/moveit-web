@@ -38,6 +38,7 @@
 - [x] Experience
 - [x] Pop-up congratulations
 - [x] Effects & Animations
+- [x] Responsive layout
 - [x] Dark mode (default), Light mode toggle
 - [x] Change your avatar and profile name
 - Any suggestion?
@@ -150,7 +151,7 @@ $ yarn dev
 
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white"/>
 
-  <!-- <img src="https://img.shields.io/badge/styled--components-DB7093?style=flat&logo=styled-components&logoColor=white"/> -->
+  <img src="https://img.shields.io/badge/styled--components-DB7093?style=flat&logo=styled-components&logoColor=white"/>
 
   <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white"/>
 

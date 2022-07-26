@@ -8,6 +8,7 @@ export const Container = styled.footer`
   justify-content: space-between;
 
   width: 100%;
+  margin-top: 3.125rem;
 
   p {
     color: var(--text);

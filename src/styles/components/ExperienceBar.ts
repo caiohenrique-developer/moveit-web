@@ -4,6 +4,8 @@ export const Container = styled.header`
   display: flex;
   align-items: center;
 
+  margin-bottom: 3.125rem;
+
   span {
     font-size: 1rem;
   }
@@ -13,19 +15,21 @@ export const Container = styled.header`
 
     flex: 1;
 
-    height: 4px;
-    border-radius: 4px;
-    background: var(--grayLine);
     margin: 0 1.5rem;
+    background: var(--grayLine);
 
-    > div {
+    &,
+    & > div {
       height: 4px;
       border-radius: 4px;
+    }
+
+    > div {
       background: var(--green);
     }
     span {
       position: absolute;
-      top: 12px;
+      top: 0.75rem;
 
       transform: translateX(-50%);
     }
